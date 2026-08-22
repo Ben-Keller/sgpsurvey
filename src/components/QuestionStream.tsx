@@ -131,7 +131,6 @@ export function VirtualQuestionSection({
 }) {
   const host = useRef<HTMLElement>(null);
   const content = useRef<HTMLDivElement>(null);
-  const pendingHeight = useRef<number | null>(null);
   const [mounted, setMounted] = useState(active);
   const [height, setHeight] = useState(() => estimatedQuestionHeight(question));
   const visible = mounted || active;
@@ -150,35 +149,15 @@ export function VirtualQuestionSection({
   useEffect(() => {
     const element = content.current;
     if (!element || !visible) return;
-    let settleTimer = 0;
-    const commitHeight = () => {
-      settleTimer = 0;
-      const measured = pendingHeight.current;
-      pendingHeight.current = null;
-      if (measured !== null && measured > 200) setHeight(measured);
-    };
-    const scheduleCommit = () => {
-      window.clearTimeout(settleTimer);
-      // Keep the document height stable while a wheel, touch gesture, or native
-      // scrollbar drag is still in progress. Reflowing the stream too quickly
-      // makes the browser's scrollbar thumb move underneath the pointer.
-      settleTimer = window.setTimeout(commitHeight, 520);
-    };
     const updateHeight = () => {
       const measured = Math.ceil(element.getBoundingClientRect().height);
-      if (measured > 200) {
-        pendingHeight.current = measured;
-        scheduleCommit();
-      }
+      if (measured > 200) setHeight((current) => current === measured ? current : measured);
     };
     updateHeight();
     const observer = new ResizeObserver(updateHeight);
     observer.observe(element);
-    window.addEventListener("scroll", scheduleCommit, { passive: true });
     return () => {
-      window.clearTimeout(settleTimer);
       observer.disconnect();
-      window.removeEventListener("scroll", scheduleCommit);
     };
   }, [visible]);
 
@@ -189,7 +168,7 @@ export function VirtualQuestionSection({
       className={active ? "virtual-question active" : "virtual-question"}
       data-question-number={question.number}
       data-mounted={visible ? "true" : "false"}
-      style={{ ...sectionAccentStyle(groupKey, sectionIndex), height: `${height}px` }}
+      style={{ ...sectionAccentStyle(groupKey, sectionIndex), height: visible ? "auto" : `${height}px` }}
       aria-label={`Question ${question.number}`}
     >
       {visible ? (

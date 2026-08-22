@@ -111,7 +111,23 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
 
   if (chart === "treemap") {
     const treemapLabel = { show: true, color: "#ffffff", fontSize: exportMode ? 14 : 12, fontWeight: 700, textBorderColor: "rgba(0,0,0,.42)", textBorderWidth: 2, overflow: exportMode ? "truncate" as const : "break" as const, formatter: "{b}" };
-    return { ...motion, color: palette, tooltip, series: [{ type: "treemap", roam: false, breadcrumb: { show: false }, label: treemapLabel, upperLabel: treemapLabel, levels: [{ label: treemapLabel, upperLabel: treemapLabel }, { label: treemapLabel, upperLabel: treemapLabel }], data: ordered.map((item) => ({ name: exportMode ? `${item.label} - ${item.count}` : item.label, value: item.count })) }] };
+    const treemapData = ordered.map((item) => ({
+      name: exportMode ? `${item.label} - ${item.count}` : item.label,
+      value: item.count,
+      surveyLabel: item.label,
+      responseCount: item.count,
+      responsePercent: item.percent,
+      responseBase: analysis.validResponses
+    }));
+    const treemapTooltip = {
+      trigger: "item" as const,
+      formatter: (params: any) => {
+        const node = params.data as typeof treemapData[number] | undefined;
+        if (!node || typeof node.responseCount !== "number") return "";
+        return `<strong>${node.surveyLabel}</strong><br/>${node.responseCount} of ${node.responseBase} responses · ${node.responsePercent.toFixed(1)}%`;
+      }
+    };
+    return { ...motion, color: palette, tooltip: treemapTooltip, series: [{ type: "treemap", roam: false, breadcrumb: { show: false }, label: treemapLabel, upperLabel: treemapLabel, levels: [{ label: treemapLabel, upperLabel: treemapLabel }, { label: treemapLabel, upperLabel: treemapLabel }], data: treemapData }] };
   }
 
   const matrixBars = analysis.matrix.length

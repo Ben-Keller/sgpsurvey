@@ -119,6 +119,23 @@ test("virtualizes the question stream and follows the reading position", async (
   await expect(page.locator("#question-29 .question-reveal")).toHaveCSS("animation-name", "question-in");
 });
 
+test("removes stale reserved space as soon as a question mounts", async ({ page }) => {
+  await page.goto("/country-teams/q14");
+  const question = page.locator("#question-14");
+  await expect(question).toHaveAttribute("data-mounted", "true");
+  expect(await question.evaluate((element) => element.style.height)).toBe("auto");
+  const gap = await question.evaluate((element) => {
+    const content = element.querySelector<HTMLElement>(".virtual-question__content");
+    if (!content) return Number.POSITIVE_INFINITY;
+    return Math.abs(element.getBoundingClientRect().height - content.getBoundingClientRect().height);
+  });
+  expect(gap).toBeLessThan(2);
+
+  const distant = page.locator("#question-2");
+  await expect(distant).toHaveAttribute("data-mounted", "false");
+  expect(await distant.evaluate((element) => element.style.height)).toMatch(/^\d+px$/);
+});
+
 test("keeps an existing chart canvas stable while the next question becomes active", async ({ page }) => {
   await page.goto("/country-teams/q14");
   const originalCanvas = page.locator("#question-14 canvas").first();
