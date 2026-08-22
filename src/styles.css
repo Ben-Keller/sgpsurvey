@@ -123,8 +123,8 @@ a { color: inherit; }
 .full-data-toggle { min-height: 44px; border-color: var(--accent-border); background: var(--accent-soft-2); color: var(--forest); font-size: 12px; white-space: nowrap; }
 .icon-button { width: 44px; padding: 0; font-size: 18px; }
 .visual-frame { position: relative; width: 100%; height: clamp(400px, 52vw, 590px); margin-top: 12px; border: 1px solid var(--border); border-radius: 13px; background: #fff; overflow: hidden; opacity: 0; }
-.visual-frame.is-in-view { animation: visual-frame-in 560ms cubic-bezier(.2,.72,.25,1) both; }
-@keyframes visual-frame-in { from { opacity: 0; clip-path: inset(0 0 14% 0 round 13px); transform: translateY(12px); } to { opacity: 1; clip-path: inset(0 0 0 0 round 13px); transform: translateY(0); } }
+.visual-frame.is-in-view { animation: visual-frame-in 500ms cubic-bezier(.2,.72,.25,1) both; }
+@keyframes visual-frame-in { from { opacity: .22; clip-path: inset(0 0 7% 0 round 13px); transform: translateY(8px); } to { opacity: 1; clip-path: inset(0 0 0 0 round 13px); transform: translateY(0); } }
 .download-icon-button { width: 40px; min-height: 40px; padding: 0; display: grid; place-items: center; border-color: rgb(var(--section-rgb, var(--accent-rgb)) / .22); border-radius: 9px; background: rgba(255,255,255,.92); color: var(--section-color, var(--forest)); }
 .download-icon-button:hover { border-color: rgb(var(--section-rgb, var(--accent-rgb)) / .4); background: #fff; }
 .download-icon-button svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -134,6 +134,10 @@ a { color: inherit; }
 .chart-download-button { position: absolute; z-index: 4; top: 12px; right: 12px; box-shadow: 0 3px 12px rgba(23,33,43,.1); backdrop-filter: blur(6px); }
 .chart-shell, .chart { width: 100%; height: 100%; }
 .chart-shell { position: relative; }
+.chart-shell.chart-intro .chart { animation: chart-canvas-in 760ms cubic-bezier(.2,.72,.25,1) both; }
+.chart-shell.chart-intro--donut .chart, .chart-shell.chart-intro--treemap .chart { animation-name: chart-canvas-scale-in; }
+@keyframes chart-canvas-in { from { opacity: .16; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes chart-canvas-scale-in { from { opacity: .14; transform: scale(.985); } to { opacity: 1; transform: scale(1); } }
 .radar-hover-tooltip { position: absolute; z-index: 5; width: min(255px, calc(100% - 24px)); display: grid; gap: 4px; padding: 10px 12px; border: 1px solid rgb(var(--section-rgb, var(--accent-rgb)) / .5); border-radius: 7px; background: rgba(255,255,255,.96); color: #33424d; box-shadow: 0 4px 14px rgba(23,33,43,.15); pointer-events: none; font-family: var(--font-body); font-size: 12.5px; line-height: 1.4; }
 .radar-hover-tooltip strong { color: #17212b; font-size: 13px; }
 .chart-loading { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 12px; background: rgba(255,255,255,.92); color: var(--muted); font-size: 13px; font-weight: 600; }

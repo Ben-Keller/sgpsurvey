@@ -38,7 +38,17 @@ export function wrapChartLabel(value: string, maxCharacters: number, maxLines: n
 
 export function makeChartOption(question: Question, analysis: Analysis, chart: ChartType, groupKey: string, sectionIndex: number, exportMode = false): EChartsOption {
   const palette = sectionChartPalette(groupKey, sectionIndex);
-  const motion = { animation: false, textStyle: { fontFamily: "PP Neue Montreal, Arial, sans-serif" } } as const;
+  const reduceMotion = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  const motion = exportMode || reduceMotion
+    ? { animation: false, textStyle: { fontFamily: "PP Neue Montreal, Arial, sans-serif" } }
+    : {
+        animation: true,
+        animationDuration: 720,
+        animationEasing: "cubicOut" as const,
+        animationDelay: (index: number) => Math.min(index * 28, 224),
+        animationDurationUpdate: 0,
+        textStyle: { fontFamily: "PP Neue Montreal, Arial, sans-serif" }
+      };
   const ordered = optionOrder(question, analysis.categories);
   const labels = ordered.map((item) => item.label);
   const values = ordered.map((item) => Number(item.percent.toFixed(1)));
@@ -61,7 +71,7 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
       radar: {
         radius: "62%",
         triggerEvent: true,
-        indicator: analysis.matrix.map((item) => ({ name: exportMode ? `${item.label}\n${(item.normalized ?? 0).toFixed(1)}%` : item.label.length > 25 ? `${item.label.slice(0, 23)}…` : item.label, max: 100 })),
+        indicator: analysis.matrix.map((item) => { const compactLabel = item.label.length > 28 ? `${item.label.slice(0, 26)}…` : item.label; return { name: exportMode ? `${compactLabel} ${(item.normalized ?? 0).toFixed(1)}%` : item.label.length > 25 ? `${item.label.slice(0, 23)}…` : item.label, max: 100 }; }),
         axisName: { color: "#33424d", fontSize: exportMode ? 13 : 11 },
         splitArea: { areaStyle: { color: ["#fafaf6", "#f0f2ec"] } },
         splitLine: { lineStyle: { color: "#dde2dc" } }
@@ -94,13 +104,13 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
       color: palette,
       tooltip,
       legend: { type: "plain", orient: "horizontal", left: 24, right: 24, bottom: 8, itemWidth: 13, itemHeight: 13, itemGap: 16 },
-      series: [{ type: "pie", radius: ["44%", "68%"], center: ["50%", "40%"], label: { formatter: exportMode ? "{b}\n{c} ({d}%)" : "{b}\n{d}%" }, data: ordered.map((item) => ({ name: item.label, value: item.count })) }],
+      series: [{ type: "pie", animationType: "scale", animationTypeUpdate: "transition", radius: ["44%", "68%"], center: ["50%", "40%"], label: { formatter: exportMode ? "{b}: {c} ({d}%)" : "{b}\n{d}%" }, data: ordered.map((item) => ({ name: item.label, value: item.count })) }],
       media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { legend: { left: 10, right: 10, bottom: 8, itemWidth: 10, itemHeight: 10, itemGap: 9, textStyle: { fontSize: 10 } }, series: [{ radius: ["34%", "56%"], center: ["50%", "34%"], label: { fontSize: 10 } }] } }]
     };
   }
 
   if (chart === "treemap") {
-    const treemapLabel = { show: true, color: "#ffffff", fontSize: exportMode ? 14 : 12, fontWeight: 700, textBorderColor: "rgba(0,0,0,.42)", textBorderWidth: 2, overflow: "break" as const, formatter: "{b}" };
+    const treemapLabel = { show: true, color: "#ffffff", fontSize: exportMode ? 14 : 12, fontWeight: 700, textBorderColor: "rgba(0,0,0,.42)", textBorderWidth: 2, overflow: exportMode ? "truncate" as const : "break" as const, formatter: "{b}" };
     return { ...motion, color: palette, tooltip, series: [{ type: "treemap", roam: false, breadcrumb: { show: false }, label: treemapLabel, upperLabel: treemapLabel, levels: [{ label: treemapLabel, upperLabel: treemapLabel }, { label: treemapLabel, upperLabel: treemapLabel }], data: ordered.map((item) => ({ name: exportMode ? `${item.label} - ${item.count}` : item.label, value: item.count })) }] };
   }
 
@@ -127,9 +137,9 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
     ...motion,
     color: [palette[0]],
     tooltip: barTooltip,
-    grid: { top: 12, right: 65, bottom: 35, left: 220, containLabel: false },
+    grid: { top: 12, right: 65, bottom: 35, left: exportMode ? 360 : 220, containLabel: false },
     xAxis: { type: "value", max: 100, axisLabel: { formatter: "{value}%" }, splitLine: { lineStyle: { color: "#e5e8e1" } } },
-    yAxis: { type: "category", inverse: true, triggerEvent: true, data: barLabels, axisLabel: { color: "#33424d", width: 205, lineHeight: 14, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, exportMode ? 34 : 30, desktopLabelLines) } },
+    yAxis: { type: "category", inverse: true, triggerEvent: true, data: barLabels, axisLabel: { color: "#33424d", width: exportMode ? 340 : 205, fontSize: exportMode ? 13 : undefined, lineHeight: 14, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, exportMode ? 46 : 30, exportMode ? 1 : desktopLabelLines) } },
     series: [{ type: "bar", data: barValues, barMaxWidth: isDot ? 5 : 26, showBackground: !isDot, backgroundStyle: { color: "#eeefe9" }, itemStyle: { borderRadius: 5 }, label: { show: true, position: "right", formatter: exportMode && !matrixBars ? (params: any) => { const item = ordered[params.dataIndex]; return item ? `${item.count} (${item.percent.toFixed(1)}%)` : ""; } : "{c}%" } }],
     media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { grid: { top: 16, right: 46, bottom: 34, left: 116 }, xAxis: { axisLabel: { fontSize: 9 } }, yAxis: { axisLabel: { width: 104, fontSize: 9.5, lineHeight: 12, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, 17, mobileLabelLines) } }, series: [{ label: { fontSize: 9 } }] } }]
   };
@@ -144,7 +154,9 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
   const radarLabelHover = useRef(false);
   const onReadyRef = useRef(onReady);
   const readyFrame = useRef(0);
+  const introTimer = useRef(0);
   const [readyChart, setReadyChart] = useState<ChartType | null>(null);
+  const [introPlaying, setIntroPlaying] = useState(false);
   const [radarTooltip, setRadarTooltip] = useState<{ x: number; y: number; label: string; normalized: number | null; mean: number | null; count: number } | null>(null);
   const option = useMemo(() => makeChartOption(question, analysis, chart, groupKey, sectionIndex), [question, analysis, chart, groupKey, sectionIndex]);
 
@@ -162,12 +174,17 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
     let disposed = false;
     let resizeFrame = 0;
     let resizeObserver: ResizeObserver | undefined;
+    let viewportObserver: IntersectionObserver | undefined;
     let resizeHandler: (() => void) | undefined;
-    void import("echarts").then((echarts) => {
+    const initialize = () => void import("echarts").then((echarts) => {
       if (disposed || !host.current) return;
       const chartInstance = echarts.init(host.current, undefined, { renderer: "canvas" });
       instance.current = chartInstance;
       chartInstance.setOption(optionRef.current ?? {}, { notMerge: true, lazyUpdate: true });
+      const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+      setIntroPlaying(!reduceMotion);
+      window.clearTimeout(introTimer.current);
+      introTimer.current = window.setTimeout(() => setIntroPlaying(false), reduceMotion ? 20 : 980);
       const showAxisLabelTooltip = (params: any) => {
         if (params.componentType !== "yAxis" || params.targetType !== "axisLabel") return;
         const currentOption = chartInstance.getOption() as any;
@@ -213,10 +230,22 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
       resizeObserver = new ResizeObserver(resizeHandler);
       resizeObserver.observe(host.current);
     });
+    if (host.current && "IntersectionObserver" in window) {
+      viewportObserver = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        viewportObserver?.disconnect();
+        initialize();
+      }, { rootMargin: "80px 0px", threshold: 0.08 });
+      viewportObserver.observe(host.current);
+    } else {
+      initialize();
+    }
     return () => {
       disposed = true;
       cancelAnimationFrame(resizeFrame);
       cancelAnimationFrame(readyFrame.current);
+      window.clearTimeout(introTimer.current);
+      viewportObserver?.disconnect();
       resizeObserver?.disconnect();
       if (resizeHandler) window.removeEventListener("resize", resizeHandler);
       instance.current?.dispose();
@@ -226,7 +255,9 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
 
   useEffect(() => {
     if (!instance.current || instance.current.isDisposed()) return;
-    instance.current.setOption(option, { notMerge: true, lazyUpdate: true });
+    setIntroPlaying(false);
+    setReadyChart(null);
+    instance.current.setOption({ ...option, animation: false }, { notMerge: true, lazyUpdate: true });
     cancelAnimationFrame(readyFrame.current);
     readyFrame.current = requestAnimationFrame(() => {
       readyFrame.current = requestAnimationFrame(() => setReadyChart(chart));
@@ -279,5 +310,5 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
   };
 
   const ready = readyChart === chart;
-  return <div className="chart-shell" aria-busy={!ready} onPointerMove={handleRadarPointerMove} onPointerLeave={() => { radarLabelHover.current = false; setRadarTooltip(null); }}><div className="chart" ref={host} role="img" aria-label={`${question.prompt}. ${analysis.validResponses} valid responses shown as ${chart.replaceAll("_", " ")}.`} />{chart === "radar" && radarTooltip && <div className="radar-hover-tooltip" role="tooltip" style={{ left: radarTooltip.x, top: radarTooltip.y }}><strong>{radarTooltip.label}</strong>{radarTooltip.normalized === null ? <span>No scored responses</span> : <><span>Normalized score: {radarTooltip.normalized.toFixed(1)}%</span><span>Mean: {radarTooltip.mean?.toFixed(2)} · {radarTooltip.count} scored responses</span></>}</div>}<div className="chart-loading" hidden={ready}><span />Updating visualization…</div></div>;
+  return <div className={`chart-shell${introPlaying ? ` chart-intro chart-intro--${chart}` : ""}`} data-intro={introPlaying ? "playing" : "complete"} aria-busy={!ready} onPointerMove={handleRadarPointerMove} onPointerLeave={() => { radarLabelHover.current = false; setRadarTooltip(null); }}><div className="chart" ref={host} role="img" aria-label={`${question.prompt}. ${analysis.validResponses} valid responses shown as ${chart.replaceAll("_", " ")}.`} />{chart === "radar" && radarTooltip && <div className="radar-hover-tooltip" role="tooltip" style={{ left: radarTooltip.x, top: radarTooltip.y }}><strong>{radarTooltip.label}</strong>{radarTooltip.normalized === null ? <span>No scored responses</span> : <><span>Normalized score: {radarTooltip.normalized.toFixed(1)}%</span><span>Mean: {radarTooltip.mean?.toFixed(2)} · {radarTooltip.count} scored responses</span></>}</div>}<div className="chart-loading" hidden={ready}><span />Updating visualization…</div></div>;
 }

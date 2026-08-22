@@ -54,6 +54,15 @@ test("starts visualization motion only when the ready frame enters the viewport"
   const frame = page.locator("#question-14 .visual-frame");
   await expect(frame).toHaveClass(/is-in-view/);
   await expect(frame).toHaveCSS("animation-name", "visual-frame-in");
+  const radarShell = frame.locator(".chart-shell");
+  await expect(radarShell).toHaveAttribute("data-intro", "playing");
+  await expect(radarShell.locator(".chart")).toHaveCSS("animation-name", "chart-canvas-in");
+  await expect(radarShell).toHaveAttribute("data-intro", "complete", { timeout: 2000 });
+
+  await page.goto("/country-teams/q3");
+  const donutShell = page.locator("#question-3 .chart-shell");
+  await expect(donutShell).toHaveAttribute("data-intro", "playing");
+  await expect(donutShell.locator(".chart")).toHaveCSS("animation-name", "chart-canvas-scale-in");
 
   await page.goto("/country-teams/q3?chart=data_table");
   const tableFrame = page.locator("#question-3 .visual-frame");
