@@ -1,0 +1,11 @@
+node_modules/
+dist/
+data/source/
+playwright-report/
+test-results/
+.vite/
+.DS_Store
+public/data/internal/
+data/qa/internal-qualitative-review.json
+*.local
+*.tsbuildinfo

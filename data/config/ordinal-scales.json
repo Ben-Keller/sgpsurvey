@@ -1,0 +1,6 @@
+{
+  "defaultUnscored": ["I don’t know", "I don't know", "Not sure", "Unsure", "Inaccessible/unavailable", "Not applicable / too early to assess"],
+  "frequency": ["Never", "Rarely", "Sometimes", "Frequently"],
+  "value": ["Not important", "Moderately valuable", "Valuable", "Highly valuable"],
+  "importance": ["Not important", "Moderately important", "Important", "Very important"]
+}

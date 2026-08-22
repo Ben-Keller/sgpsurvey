@@ -1,0 +1,60 @@
+{
+  "global": {
+    "computer": "Laptop or desktop computer",
+    "laptop or desktop computer": "Laptop or desktop computer",
+    "mobile telephone": "Mobile phone",
+    "mobile phone": "Mobile phone",
+    "programme assistant": "Programme Assistant",
+    "program assistant": "Programme Assistant",
+    "often": "Frequently",
+    "extremely valuable": "Highly valuable",
+    "timor leste": "Timor-Leste",
+    "togo": "Togo",
+    "botswana": "Botswana"
+  },
+  "matrix": {
+    "never": "Never",
+    "rarely": "Rarely",
+    "sometimes": "Sometimes",
+    "frequently": "Frequently",
+    "not important": "Not important",
+    "moderately valuable": "Moderately valuable",
+    "valuable": "Valuable",
+    "highly valuable": "Highly valuable",
+    "moderately important": "Moderately important",
+    "important": "Important",
+    "very important": "Very important",
+    "i don't know": "I don’t know",
+    "i do not know": "I don’t know",
+    "not sure": "Not sure",
+    "unsure": "Unsure",
+    "inaccessible/unavailable": "Inaccessible/unavailable",
+    "inaccessible / unavailable": "Inaccessible/unavailable",
+    "very important, important": "Invalid composite rating"
+  },
+  "knownCompoundOptions": [
+    "Unrealistic work plan, timeframe",
+    "Shared cloud storage (Google Drive, OneDrive, etc.)",
+    "Workshops, exchanges, or peer networks",
+    "Technical guidance (manuals, case studies, etc.)",
+    "Government agencies or technical institutes (local, national, regional)",
+    "NSC governance tools and templates (e.g., roles, meeting records)",
+    "Online portal or shared databases (e.g., the SGP database)",
+    "Shared cloud storage (e.g., Google Drive, OneDrive, etc.)",
+    "Step-by-step written instructions (guides, manuals)",
+    "Short explainer videos (5-10 minutes)",
+    "Limited time, given that the NSC role is part-time or voluntary"
+  ],
+  "languageAliases": {
+    "english": "English",
+    "french": "French",
+    "spanish": "Spanish",
+    "russian": "Russian",
+    "portuguese": "Portuguese",
+    "arabic": "Arabic",
+    "khmer": "Khmer",
+    "tetum": "Tetum",
+    "setswana": "Setswana",
+    "thimbukushu": "Thimbukushu"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "aliases": {
+    "timor leste": { "name": "Timor-Leste", "iso3": "TLS" },
+    "togo": { "name": "Togo", "iso3": "TGO" },
+    "botswana": { "name": "Botswana", "iso3": "BWA" },
+    "saint kitts and nevis": { "name": "Saint Kitts and Nevis", "iso3": "KNA" }
+  }
+}

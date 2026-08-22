@@ -1,0 +1,258 @@
+import { expect, test } from "@playwright/test";
+
+const isMobileProject = (name: string) => name === "mobile" || name === "narrow";
+
+async function openMobileMenuAction(page: import("@playwright/test").Page, action: "Questions" | "Filters") {
+  await page.getByRole("button", { name: "Open menu" }).click();
+  await page.getByRole("dialog", { name: "Menu" }).getByRole("button", { name: new RegExp(`^${action}`) }).click();
+}
+
+test("opens a direct question, changes chart, and preserves navigation state", async ({ page }) => {
+  await page.goto("/country-teams/q14");
+  await expect(page.locator("#question-14").getByRole("heading", { level: 2 })).toContainText("Q14");
+  const activeQuestion = page.locator("#question-14");
+  await expect(activeQuestion.getByLabel("Chart type")).toHaveValue("radar");
+  await activeQuestion.getByLabel("Chart type").selectOption("heatmap");
+  await expect(page).toHaveURL(/chart=heatmap/);
+  await page.getByRole("link", { name: /Next/ }).last().click();
+  await expect(page).toHaveURL(/country-teams\/q15/);
+});
+
+test("keeps the visualization frame stable across chart and table changes", async ({ page }) => {
+  await page.goto("/country-teams/q3");
+  const question = page.locator("#question-3");
+  const frame = question.locator(".visual-frame");
+  await expect(frame.getByRole("button", { name: "Download chart as PNG" })).toHaveAttribute("data-tooltip", "Download PNG image");
+  await expect(frame.locator(".chart-shell")).toHaveAttribute("aria-busy", "false");
+  let previousHeight = -1;
+  let stableSamples = 0;
+  await expect.poll(async () => {
+    const height = await question.evaluate((element) => element.getBoundingClientRect().height);
+    stableSamples = Math.abs(height - previousHeight) < 0.1 ? stableSamples + 1 : 0;
+    previousHeight = height;
+    return stableSamples;
+  }, { intervals: [100], timeout: 3000 }).toBeGreaterThanOrEqual(2);
+  const initialFrame = await frame.boundingBox();
+  const initialQuestionHeight = await question.evaluate((element) => element.getBoundingClientRect().height);
+
+  await question.getByLabel("Chart type").selectOption("donut");
+  await expect(frame).toHaveAttribute("data-chart-view", "donut");
+  await expect(frame.locator(".chart-shell")).toHaveAttribute("aria-busy", "false");
+  expect(Math.abs((await frame.boundingBox())!.height - initialFrame!.height)).toBeLessThan(0.1);
+
+  await question.getByLabel("Chart type").selectOption("data_table");
+  await expect(frame).toHaveAttribute("data-chart-view", "data_table");
+  await expect(frame.getByRole("region", { name: "Full data for question 3" })).toBeVisible();
+  await expect(frame.getByRole("button", { name: "Download data as CSV" })).toHaveAttribute("data-tooltip", "Download CSV data");
+  expect(Math.abs((await frame.boundingBox())!.height - initialFrame!.height)).toBeLessThan(0.1);
+  const tableQuestionHeight = await question.evaluate((element) => element.getBoundingClientRect().height);
+  expect(Math.abs(tableQuestionHeight - initialQuestionHeight)).toBeLessThan(3);
+});
+
+test("starts visualization motion only when the ready frame enters the viewport", async ({ page }) => {
+  await page.goto("/country-teams/q14");
+  const frame = page.locator("#question-14 .visual-frame");
+  await expect(frame).toHaveClass(/is-in-view/);
+  await expect(frame).toHaveCSS("animation-name", "visual-frame-in");
+
+  await page.goto("/country-teams/q3?chart=data_table");
+  const tableFrame = page.locator("#question-3 .visual-frame");
+  await expect(tableFrame).toHaveClass(/is-in-view/);
+  await expect(tableFrame).toHaveCSS("animation-name", "visual-frame-in");
+});
+
+test("keeps stakeholder tabs inside the sticky header without an About link", async ({ page }, testInfo) => {
+  await page.goto("/country-teams/q14");
+  const header = page.locator("header.site-header");
+  await expect(header.getByRole("navigation", { name: "Stakeholder groups" })).toBeVisible();
+  if (isMobileProject(testInfo.project.name)) await expect(header.getByRole("button", { name: "Open menu" })).toBeVisible();
+  else await expect(header.getByRole("button", { name: "Filters" })).toBeVisible();
+  await expect(header.locator(".brand, .brand-mark")).toHaveCount(0);
+  await expect(header).not.toContainText("Survey Explorer");
+  await expect(header).toHaveCSS("position", "sticky");
+  if (!isMobileProject(testInfo.project.name)) await expect(header.getByRole("button", { name: "Download PDF" })).toHaveAttribute("data-tooltip", "Download PDF report");
+  await expect(page.getByRole("link", { name: "About the survey" })).toHaveCount(0);
+  await expect(page.locator(".context-bar")).toHaveCount(0);
+  await expect(page.locator(".metadata")).toHaveCount(0);
+});
+
+test("uses a distinct accessible accent for each stakeholder type", async ({ page }) => {
+  const routes = ["country-teams/q2", "grantee-partners/q30", "implementing-agencies/q64", "steering-committees/q72"];
+  const accents: string[] = [];
+  for (const route of routes) {
+    await page.goto(`/${route}`);
+    accents.push(await page.locator(".app-shell").evaluate((element) => getComputedStyle(element).getPropertyValue("--forest").trim()));
+  }
+  expect(new Set(accents).size).toBe(4);
+});
+
+test("shows each subsection title once instead of repeating it on every question", async ({ page }) => {
+  await page.goto("/country-teams/q17");
+  await expect(page.locator(".question-subsection:has(#question-17) > .subsection-marker h2")).toHaveText("Implementation support and knowledge sources");
+  await expect(page.locator(".question-subsection:has(#question-17) > .subsection-marker")).toHaveCount(1);
+  await expect(page.locator(".question-header > .eyebrow")).toHaveCount(0);
+});
+
+test("virtualizes the question stream and follows the reading position", async ({ page }) => {
+  await page.goto("/country-teams/q14");
+  await expect(page.locator("#question-14")).toHaveAttribute("data-mounted", "true");
+  await expect(page.locator("#question-14").getByRole("heading", { level: 2 })).toContainText("Q14");
+
+  const initiallyMounted = await page.locator("[data-mounted=true]").count();
+  expect(initiallyMounted).toBeLessThan(8);
+  await expect(page.locator("#question-2")).toHaveAttribute("data-mounted", "false");
+
+  await page.evaluate(() => window.dispatchEvent(new Event("touchstart")));
+  await page.locator("#question-29").scrollIntoViewIfNeeded();
+  await expect(page).toHaveURL(/country-teams\/q29/);
+  await expect(page.locator(".question-nav-indicator")).toHaveAttribute("data-question-number", "29");
+  await expect(page.locator("#question-14")).toHaveAttribute("data-mounted", "false");
+  await expect(page.locator("#question-29 .question-reveal")).toHaveCSS("animation-name", "question-in");
+});
+
+test("keeps an existing chart canvas stable while the next question becomes active", async ({ page }) => {
+  await page.goto("/country-teams/q14");
+  const originalCanvas = page.locator("#question-14 canvas").first();
+  await expect(originalCanvas).toBeVisible();
+  await originalCanvas.evaluate((canvas) => canvas.setAttribute("data-lifecycle-marker", "stable"));
+
+  await page.evaluate(() => window.dispatchEvent(new Event("touchstart")));
+  await page.locator("#question-15").scrollIntoViewIfNeeded();
+  await expect(page).toHaveURL(/country-teams\/q15/);
+  await expect(page.locator("#question-14")).toHaveAttribute("data-mounted", "true");
+  await expect(page.locator('#question-14 canvas[data-lifecycle-marker="stable"]')).toHaveCount(1);
+});
+
+test("keeps distant menu navigation locked while the viewport indicator glides", async ({ page }, testInfo) => {
+  await page.goto("/country-teams/q2");
+  if (isMobileProject(testInfo.project.name)) await openMobileMenuAction(page, "Questions");
+  await page.evaluate(() => {
+    const sampledPaths: string[] = [];
+    (window as any).__sampledPaths = sampledPaths;
+    (window as any).__pathSampler = window.setInterval(() => sampledPaths.push(window.location.pathname), 20);
+  });
+
+  const destination = page.getByRole("navigation", { name: "Country Teams questions" }).getByRole("link", { name: /Q29/ });
+  const persistentDestination = page.locator('.question-nav a[href*="/country-teams/q29"]');
+  await destination.click();
+  await expect(page).toHaveURL(/country-teams\/q29/);
+  await expect(page.locator("#question-29")).toBeInViewport();
+  await page.waitForTimeout(250);
+
+  const sampledPaths = await page.evaluate(() => {
+    window.clearInterval((window as any).__pathSampler);
+    return [...new Set((window as any).__sampledPaths as string[])];
+  });
+  expect(sampledPaths.filter((path) => path !== "/country-teams/q2")).toEqual(["/country-teams/q29"]);
+  await expect(persistentDestination).not.toHaveClass(/active/);
+});
+
+test("releases automatic scrolling before a later manual scrollbar move", async ({ page }, testInfo) => {
+  await page.goto("/country-teams/q2");
+  if (isMobileProject(testInfo.project.name)) await openMobileMenuAction(page, "Questions");
+  await page.getByRole("navigation", { name: "Country Teams questions" }).getByRole("link", { name: /Q14/ }).click();
+  await expect(page).toHaveURL(/country-teams\/q14/);
+  await page.waitForTimeout(2100);
+
+  const manualPosition = await page.evaluate(() => {
+    window.scrollBy({ top: 720, behavior: "auto" });
+    return window.scrollY;
+  });
+  await page.waitForTimeout(700);
+  const settledPosition = await page.evaluate(() => window.scrollY);
+  expect(Math.abs(settledPosition - manualPosition)).toBeLessThan(80);
+});
+
+test("public small-cell filters suppress all results", async ({ page }, testInfo) => {
+  await page.goto("/implementing-agencies/q64");
+  if (isMobileProject(testInfo.project.name)) await openMobileMenuAction(page, "Filters");
+  else await page.getByRole("button", { name: /Filters/ }).click();
+  await page.getByRole("checkbox", { name: /Arabic 1/ }).click();
+  await page.getByRole("button", { name: "Show results" }).click();
+  await expect(page.locator("#question-64").getByRole("heading", { name: "Insufficient responses for this filtered view" })).toBeVisible();
+});
+
+test("publishes approved qualitative responses with local search", async ({ page }) => {
+  await page.goto("/grantee-partners/q45");
+  const question = page.locator("#question-45");
+  await expect(question.getByRole("region", { name: "Qualitative responses" })).toBeVisible();
+  await expect(question).not.toContainText("pending review");
+  await expect(question.getByRole("searchbox", { name: "Search responses" })).toHaveAttribute("placeholder", "Search responses");
+  await expect(question.getByRole("button", { name: "Download responses as CSV" })).toHaveAttribute("data-tooltip", "Download CSV responses");
+  await expect(question.getByText("Sort", { exact: true })).toHaveCount(0);
+  const displayMode = question.getByRole("switch", { name: "Response display mode" });
+  await expect(displayMode).toBeChecked();
+  const fullPadding = await question.locator(".response-card").first().evaluate((element) => getComputedStyle(element).padding);
+  await displayMode.focus();
+  await displayMode.press("Space");
+  await expect(displayMode).not.toBeChecked();
+  const firstCard = question.locator(".response-card").first();
+  await expect.poll(() => firstCard.evaluate((element) => getComputedStyle(element).padding)).toBe(fullPadding);
+  await expect(firstCard.getByRole("button", { name: "Expand" })).toBeVisible();
+  await expect(firstCard.locator("p")).toHaveCSS("-webkit-line-clamp", "2");
+  await firstCard.getByRole("button", { name: "Expand" }).click();
+  await expect(firstCard).toHaveClass(/expanded/);
+  await expect(firstCard.getByRole("button", { name: "Collapse" })).toBeVisible();
+  await expect(question.locator(".response-card").first()).toBeVisible();
+
+  const firstResponse = (await question.locator(".response-card p").first().innerText()).trim();
+  const searchTerm = firstResponse.split(/\s+/).find((word) => word.length >= 5) ?? firstResponse;
+  await question.getByRole("searchbox", { name: "Search responses" }).fill(searchTerm);
+  await expect(question.locator(".response-card").first()).toContainText(new RegExp(searchTerm, "i"));
+});
+
+test("shows all implementing-agency responses for Q68", async ({ page }) => {
+  await page.goto("/implementing-agencies/q68");
+  const question = page.locator("#question-68");
+  await expect(question.locator(".reader-count")).toContainText("17 responses · 0 blank answers");
+  await expect(question.locator(".response-card").first()).toBeVisible();
+  await expect(question).not.toContainText("No qualitative responses");
+});
+
+test("mobile question drawer remains usable", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile");
+  await page.goto("/grantee-partners/q30");
+  await openMobileMenuAction(page, "Questions");
+  await expect(page.getByRole("navigation", { name: "Grantee Partners questions" })).toBeVisible();
+});
+
+test("@narrow keeps the complete mobile navigation flow inside 320px", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "narrow");
+  await page.goto("/country-teams/q14");
+  await expect(page.locator("#question-14 .chart-shell")).toHaveAttribute("aria-busy", "false");
+
+  const layout = await page.evaluate(() => ({
+    viewport: document.documentElement.clientWidth,
+    documentWidth: document.documentElement.scrollWidth,
+    headerHeight: document.querySelector(".site-header")?.getBoundingClientRect().height ?? 0,
+    frameRight: document.querySelector("#question-14 .visual-frame")?.getBoundingClientRect().right ?? 0
+  }));
+  expect(layout.viewport).toBe(320);
+  expect(layout.documentWidth).toBeLessThanOrEqual(320);
+  expect(layout.headerHeight).toBe(116);
+  expect(layout.frameRight).toBeLessThanOrEqual(320);
+
+  await page.getByRole("button", { name: "Open menu" }).click();
+  const menu = page.getByRole("dialog", { name: "Menu" });
+  await expect(menu).toBeVisible();
+  await expect(menu.getByRole("button", { name: /^Questions/ })).toBeVisible();
+  await expect(menu.getByRole("button", { name: /^Filters/ })).toBeVisible();
+  await expect(menu.getByRole("button", { name: /^Copy link/ })).toBeVisible();
+  await expect(menu.getByRole("button", { name: /^Download PDF/ })).toBeVisible();
+  await expect(menu).toHaveCSS("transform", "matrix(1, 0, 0, 1, 0, 0)");
+  const menuBox = (await menu.boundingBox())!;
+  expect(menuBox.x + menuBox.width).toBeLessThanOrEqual(320);
+
+  await menu.getByRole("button", { name: /^Questions/ }).click();
+  await expect(page.getByRole("navigation", { name: "Country Teams questions" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Close questions" })).toBeVisible();
+  await page.getByRole("button", { name: "Close questions" }).click();
+
+  await openMobileMenuAction(page, "Filters");
+  const filters = page.getByRole("dialog", { name: "Filters" });
+  await expect(filters).toBeVisible();
+  const filterBox = (await filters.boundingBox())!;
+  expect(filterBox.x).toBeGreaterThanOrEqual(0);
+  expect(filterBox.x + filterBox.width).toBeLessThanOrEqual(320);
+  await page.getByRole("button", { name: "Close filters" }).click();
+});

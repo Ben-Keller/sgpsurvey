@@ -1,0 +1,3649 @@
+{
+  "schemaVersion": "1.1.0",
+  "sourceFile": "GEF_SGP_Survey_Responses_English (3).xlsx",
+  "generatedAt": "2026-08-21T16:17:00.509Z",
+  "totalRespondents": 280,
+  "totalQuestions": 96,
+  "groups": [
+    {
+      "key": "country_team",
+      "label": "Country Teams",
+      "sourceSheet": "Country Team",
+      "respondentCount": 38,
+      "questionRange": "Q2–Q29",
+      "filters": [
+        {
+          "key": "response_language",
+          "label": "Original response language",
+          "source": "Original response language"
+        },
+        {
+          "key": "country",
+          "label": "Country",
+          "source": "country_team.q2"
+        },
+        {
+          "key": "role",
+          "label": "Role",
+          "source": "country_team.q3"
+        },
+        {
+          "key": "tenure",
+          "label": "Years with SGP",
+          "source": "country_team.q4"
+        },
+        {
+          "key": "agency",
+          "label": "GEF agency",
+          "source": "country_team.q5"
+        },
+        {
+          "key": "internet",
+          "label": "Internet reliability",
+          "source": "country_team.q7"
+        },
+        {
+          "key": "device",
+          "label": "Primary device",
+          "source": "country_team.q8"
+        }
+      ],
+      "questions": [
+        {
+          "id": "country_team.q2",
+          "number": 2,
+          "section": "Profile and access",
+          "prompt": "Please indicate your country.",
+          "kind": "dimension",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "treemap",
+            "alternatives": [
+              "world_map",
+              "ranked_bar",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 2,
+              "header": "Q2. Please indicate your country."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q3",
+          "number": 3,
+          "section": "Profile and access",
+          "prompt": "Please indicate your role.",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "donut",
+            "alternatives": [
+              "ranked_bar",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 3,
+              "header": "Q3. Please indicate your role."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q4",
+          "number": 4,
+          "section": "Profile and access",
+          "prompt": "Please indicate the number of years you have worked for the SGP in your country.",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 4,
+              "header": "Q4. Please indicate the number of years you have worked for the SGP in your country."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q5",
+          "number": 5,
+          "section": "Profile and access",
+          "prompt": "Please indicate the GEF agency supporting your country program.",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "donut",
+            "alternatives": [
+              "ranked_bar",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 5,
+              "header": "Q5. Please indicate the GEF agency supporting your country program."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q6",
+          "number": 6,
+          "section": "Profile and access",
+          "prompt": "In which language(s) do you most need knowledge and learning materials?",
+          "kind": "language_need",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "treemap",
+            "alternatives": [
+              "lollipop",
+              "ranked_bar",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 6,
+              "header": "Q6. In which language(s) do you most need knowledge and learning materials?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q7",
+          "number": 7,
+          "section": "Profile and access",
+          "prompt": "What is your typical Internet reliability, and your ability to download/upload large files?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 7,
+              "header": "Q7. What is your typical Internet reliability, and your ability to download/upload large files?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q8",
+          "number": 8,
+          "section": "Profile and access",
+          "prompt": "What main device would you use to access the platform?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 8,
+              "header": "Q8. What main device would you use to access the platform?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q9",
+          "number": 9,
+          "section": "Proposal development and review",
+          "prompt": "Which stages of the SGP project lifecycle typically require the greatest amount of country team time and support effort?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 9,
+              "header": "Q9. Which stages of the SGP project lifecycle typically require the greatest amount of country team time and support effort?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q10",
+          "number": 10,
+          "section": "Proposal development and review",
+          "prompt": "What tasks are the most repetitive across incoming proposals?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 10,
+              "header": "Q10. What tasks are the most repetitive across incoming proposals?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q11",
+          "number": 11,
+          "section": "Proposal development and review",
+          "prompt": "What proposal weaknesses or misunderstandings occur most frequently?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 11,
+              "header": "Q11. What proposal weaknesses or misunderstandings occur most frequently?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q12",
+          "number": 12,
+          "section": "Proposal development and review",
+          "prompt": "Where does your expertise add the most value during proposal development?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 12,
+              "header": "Q12. Where does your expertise add the most value during proposal development?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q13",
+          "number": 13,
+          "section": "Proposal development and review",
+          "prompt": "Where are proposal materials for proposals that were not approved or did not move forward typically stored?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 13,
+              "header": "Q13. Where are proposal materials for proposals that were not approved or did not move forward typically stored?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q14",
+          "number": 14,
+          "section": "Proposal development and review",
+          "prompt": "How often do the following information sources inform your proposal review or guidance work?",
+          "kind": "matrix_frequency",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "radar",
+            "alternatives": [
+              "ranked_bar",
+              "heatmap",
+              "diverging_stacked"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 14,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [SGP database]"
+            },
+            {
+              "index": 15,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [SGP Intranet]"
+            },
+            {
+              "index": 16,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Innovation Library]"
+            },
+            {
+              "index": 17,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Guidance from agency country or regional offices]"
+            },
+            {
+              "index": 18,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Guidance from agency headquarters]"
+            },
+            {
+              "index": 19,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Previously approved proposal examples]"
+            },
+            {
+              "index": 20,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Previous proposal review comments or reviewer feedback]"
+            },
+            {
+              "index": 21,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [External consultants or technical experts]"
+            },
+            {
+              "index": 22,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [NGOs or other partner organizations]"
+            },
+            {
+              "index": 23,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Government experts or agencies]"
+            },
+            {
+              "index": 24,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Public data or statistics]"
+            },
+            {
+              "index": 25,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Workshops, exchanges, or peer networks]"
+            },
+            {
+              "index": 26,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [NSC decisions or minutes (prior grant approvals, conditions)]"
+            },
+            {
+              "index": 27,
+              "header": "Q14. How often do the following information sources inform your proposal review or guidance work? [Other]"
+            }
+          ],
+          "matrixItems": [
+            "SGP database",
+            "SGP Intranet",
+            "Innovation Library",
+            "Guidance from agency country or regional offices",
+            "Guidance from agency headquarters",
+            "Previously approved proposal examples",
+            "Previous proposal review comments or reviewer feedback",
+            "External consultants or technical experts",
+            "NGOs or other partner organizations",
+            "Government experts or agencies",
+            "Public data or statistics",
+            "Workshops, exchanges, or peer networks",
+            "NSC decisions or minutes (prior grant approvals, conditions)",
+            "Other"
+          ],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q15",
+          "number": 15,
+          "section": "Proposal development and review",
+          "prompt": "If other information sources inform your proposal review or guidance work, please specify.",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 22,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "country_team.q14",
+            "rule": "other_selected"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 28,
+              "header": "Q15. If other information sources inform your proposal review or guidance work, please specify."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q16",
+          "number": 16,
+          "section": "Proposal development and review",
+          "prompt": "What factors are limiting your use of tools and information sources listed in the previous question?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 29,
+              "header": "Q16. What factors are limiting your use of tools and information sources listed in the previous question?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q17",
+          "number": 17,
+          "section": "Implementation support and knowledge sources",
+          "prompt": "How often do the following information sources inform your project implementation support activities?",
+          "kind": "matrix_frequency",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "radar",
+            "alternatives": [
+              "ranked_bar",
+              "heatmap",
+              "diverging_stacked"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 30,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [SGP database]"
+            },
+            {
+              "index": 31,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [SGP Intranet]"
+            },
+            {
+              "index": 32,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Innovation Library]"
+            },
+            {
+              "index": 33,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Guidance from agency country or regional offices]"
+            },
+            {
+              "index": 34,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Guidance from agency headquarters]"
+            },
+            {
+              "index": 35,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Previous project implementation examples]"
+            },
+            {
+              "index": 36,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Previous evaluation reports]"
+            },
+            {
+              "index": 37,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [External consultants or technical experts]"
+            },
+            {
+              "index": 38,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [NGOs or other partner organizations]"
+            },
+            {
+              "index": 39,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Government experts or agencies]"
+            },
+            {
+              "index": 40,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Public data or statistics]"
+            },
+            {
+              "index": 41,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Non-SGP online resources]"
+            },
+            {
+              "index": 42,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Workshops, exchanges, or peer networks]"
+            },
+            {
+              "index": 43,
+              "header": "Q17. How often do the following information sources inform your project implementation support activities? [Other]"
+            }
+          ],
+          "matrixItems": [
+            "SGP database",
+            "SGP Intranet",
+            "Innovation Library",
+            "Guidance from agency country or regional offices",
+            "Guidance from agency headquarters",
+            "Previous project implementation examples",
+            "Previous evaluation reports",
+            "External consultants or technical experts",
+            "NGOs or other partner organizations",
+            "Government experts or agencies",
+            "Public data or statistics",
+            "Non-SGP online resources",
+            "Workshops, exchanges, or peer networks",
+            "Other"
+          ],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q18",
+          "number": 18,
+          "section": "Implementation support and knowledge sources",
+          "prompt": "If other information sources inform your project implementation support activities, please specify.",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 18,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "country_team.q17",
+            "rule": "other_selected"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 44,
+              "header": "Q18. If other information sources inform your project implementation support activities, please specify."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q19",
+          "number": 19,
+          "section": "Implementation support and knowledge sources",
+          "prompt": "How clear and manageable are changes in SGP and/or GEF agency priorities, requirements, or review expectations over time?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 45,
+              "header": "Q19. How clear and manageable are changes in SGP and/or GEF agency priorities, requirements, or review expectations over time?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q20",
+          "number": 20,
+          "section": "Implementation support and knowledge sources",
+          "prompt": "During project implementation,  which types of expertise or support do you most commonly need to source or refer grantee partners to?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 46,
+              "header": "Q20. During project implementation,  which types of expertise or support do you most commonly need to source or refer grantee partners to?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q21",
+          "number": 21,
+          "section": "Implementation support and knowledge sources",
+          "prompt": "Based on your experience, what factors most commonly create challenges for project success?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 47,
+              "header": "Q21. Based on your experience, what factors most commonly create challenges for project success?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q22",
+          "number": 22,
+          "section": "Learning and knowledge sharing",
+          "prompt": "Which learning formats are most useful to you?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 48,
+              "header": "Q22. Which learning formats are most useful to you?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q23",
+          "number": 23,
+          "section": "Learning and knowledge sharing",
+          "prompt": "Would you share lessons, examples, or templates on the platform, and what would make that realistic?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 49,
+              "header": "Q23. Would you share lessons, examples, or templates on the platform, and what would make that realistic?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q24",
+          "number": 24,
+          "section": "Learning and knowledge sharing",
+          "prompt": "When a project closes, how is the lessons learned content from the grantee's final report typically handled in your country program?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 50,
+              "header": "Q24. When a project closes, how is the lessons learned content from the grantee's final report typically handled in your country program?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q25",
+          "number": 25,
+          "section": "Learning and knowledge sharing",
+          "prompt": "If your country program has produced case studies, good practice case studies, or similar knowledge products from project experience, how easy is this process?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 51,
+              "header": "Q25. If your country program has produced case studies, good practice case studies, or similar knowledge products from project experience, how easy is this process?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q26",
+          "number": 26,
+          "section": "Learning and knowledge sharing",
+          "prompt": "Please describe your experience in uploading knowledge management products to the SGP Innovation Library?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 52,
+              "header": "Q26. Please describe your experience in uploading knowledge management products to the SGP Innovation Library?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q27",
+          "number": 27,
+          "section": "Learning and knowledge sharing",
+          "prompt": "In your experience, where is hands-on guidance or local experience most important across the entire project cycle, and why?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 53,
+              "header": "Q27. In your experience, where is hands-on guidance or local experience most important across the entire project cycle, and why?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q28",
+          "number": 28,
+          "section": "Learning and knowledge sharing",
+          "prompt": "What are the main barriers to learning from other country teams, and what would make a peer network worth using? Please briefly explain.",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 54,
+              "header": "Q28. What are the main barriers to learning from other country teams, and what would make a peer network worth using? Please briefly explain."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "country_team.q29",
+          "number": 29,
+          "section": "Learning and knowledge sharing",
+          "prompt": "If there were one type of information or support that would have been most useful at the right time, what would it have been, and why?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 38,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 55,
+              "header": "Q29. If there were one type of information or support that would have been most useful at the right time, what would it have been, and why?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        }
+      ]
+    },
+    {
+      "key": "grantee_partners",
+      "label": "Grantee Partners",
+      "sourceSheet": "Grantee Partners",
+      "respondentCount": 168,
+      "questionRange": "Q30–Q63",
+      "filters": [
+        {
+          "key": "response_language",
+          "label": "Original response language",
+          "source": "Original response language"
+        },
+        {
+          "key": "country",
+          "label": "Country",
+          "source": "grantee_partners.q30"
+        },
+        {
+          "key": "internet",
+          "label": "Internet reliability",
+          "source": "grantee_partners.q32"
+        },
+        {
+          "key": "proposal_count",
+          "label": "Proposal experience",
+          "source": "grantee_partners.q35"
+        },
+        {
+          "key": "proposal_status",
+          "label": "Most recent proposal status",
+          "source": "grantee_partners.q36"
+        },
+        {
+          "key": "implementation_experience",
+          "label": "Implementation experience",
+          "source": "grantee_partners.q46"
+        },
+        {
+          "key": "project_status",
+          "label": "Most recent project status",
+          "source": "grantee_partners.q48"
+        }
+      ],
+      "questions": [
+        {
+          "id": "grantee_partners.q30",
+          "number": 30,
+          "section": "Profile and proposal experience",
+          "prompt": "Please indicate your country.",
+          "kind": "dimension",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "world_map",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 2,
+              "header": "Q30. Please indicate your country."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q31",
+          "number": 31,
+          "section": "Profile and proposal experience",
+          "prompt": "In which language(s) do you most need knowledge and learning materials?",
+          "kind": "language_need",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 3,
+              "header": "Q31. In which language(s) do you most need knowledge and learning materials?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q32",
+          "number": 32,
+          "section": "Profile and proposal experience",
+          "prompt": "What is your typical Internet reliability, and your ability to download/upload large files  ?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 4,
+              "header": "Q32.  What is your typical Internet reliability, and your ability to download/upload large files  ?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q33",
+          "number": 33,
+          "section": "Profile and proposal experience",
+          "prompt": "How did you first learn about SGP funding opportunities?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 5,
+              "header": "Q33. How did you first learn about SGP funding opportunities?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q34",
+          "number": 34,
+          "section": "Profile and proposal experience",
+          "prompt": "Are you aware that project preparation grant support is available?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 6,
+              "header": "Q34. Are you aware that project preparation grant support is available?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q35",
+          "number": 35,
+          "section": "Profile and proposal experience",
+          "prompt": "How many SGP proposals has your organization submitted since SGP has existed in your country?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 7,
+              "header": "Q35. How many SGP proposals has your organization submitted since SGP has existed in your country?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q36",
+          "number": 36,
+          "section": "Profile and proposal experience",
+          "prompt": "What is the status of your organization's most recent SGP proposal ?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 8,
+              "header": "Q36. What is the status of your organization's most recent SGP proposal ?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q37",
+          "number": 37,
+          "section": "Proposal development",
+          "prompt": "What parts of proposal development were most difficult?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 9,
+              "header": "Q37. What parts of proposal development were most difficult?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q38",
+          "number": 38,
+          "section": "Proposal development",
+          "prompt": "What types of support were most helpful during proposal development?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 10,
+              "header": "Q38. What types of support were most helpful during proposal development?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q39",
+          "number": 39,
+          "section": "Proposal development",
+          "prompt": "Did your organization receive outside support in preparing your most recent SGP proposal?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 11,
+              "header": "Q39. Did your organization receive outside support in preparing your most recent SGP proposal?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q40",
+          "number": 40,
+          "section": "Proposal development",
+          "prompt": "For your organization's most recent SGP proposal, were you asked to revise the proposal?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 12,
+              "header": "Q40. For your organization's most recent SGP proposal, were you asked to revise the proposal?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q41",
+          "number": 41,
+          "section": "Proposal development",
+          "prompt": "If revisions were requested, what were the most common reasons for those revisions",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 110,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q40",
+            "rule": "revision_requested"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 13,
+              "header": "Q41. If revisions were requested, what were the most common reasons for those revisions"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q42",
+          "number": 42,
+          "section": "Proposal development",
+          "prompt": "Which SGP knowledge resources or support materials did you use during proposal development?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 14,
+              "header": "Q42. Which SGP knowledge resources or support materials did you use during proposal development?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q43",
+          "number": 43,
+          "section": "Proposal development",
+          "prompt": "Which types of information support might have helped you better prepare or refine your proposal more easily?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 15,
+              "header": "Q43. Which types of information support might have helped you better prepare or refine your proposal more easily?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q44",
+          "number": 44,
+          "section": "Proposal development",
+          "prompt": "At the proposal stage, did your organization expect that project activities or benefits would continue beyond the SGP funding period?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 16,
+              "header": "Q44. At the proposal stage, did your organization expect that project activities or benefits would continue beyond the SGP funding period?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q45",
+          "number": 45,
+          "section": "Proposal development",
+          "prompt": "What lessons did you learn about GEF grant project proposal development that you would apply to future proposal applications?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 17,
+              "header": "Q45. What lessons did you learn about GEF grant project proposal development that you would apply to future proposal applications?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q46",
+          "number": 46,
+          "section": "Project implementation",
+          "prompt": "Has your organization implemented approved SGP projects, or is an approved project currently under implementation?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 168,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 18,
+              "header": "Q46. Has your organization implemented approved SGP projects, or is an approved project currently under implementation?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q47",
+          "number": 47,
+          "section": "Project implementation",
+          "prompt": "How many GEF-funded grant projects has your organization implemented (including the most recent one)?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 19,
+              "header": "Q47. How many GEF-funded grant projects has your organization implemented (including the most recent one)?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q48",
+          "number": 48,
+          "section": "Project implementation",
+          "prompt": "What best describes the current status of your most recent GEF-funded grant project?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 20,
+              "header": "Q48. What best describes the current status of your most recent GEF-funded grant project?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q49",
+          "number": 49,
+          "section": "Project implementation",
+          "prompt": "Were the expectations and requirements for implementing your most recent GEF-funded grant project clear at the beginning of the project?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 21,
+              "header": "Q49. Were the expectations and requirements for implementing your most recent GEF-funded grant project clear at the beginning of the project?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q50",
+          "number": 50,
+          "section": "Project implementation",
+          "prompt": "What types of challenges created the most difficulty during implementation?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 22,
+              "header": "Q50. What types of challenges created the most difficulty during implementation?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q51",
+          "number": 51,
+          "section": "Project implementation",
+          "prompt": "What types of support were useful during implementation?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 23,
+              "header": "Q51. What types of support were useful during implementation?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q52",
+          "number": 52,
+          "section": "Project implementation",
+          "prompt": "During implementation, did the project approach or activities change?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 24,
+              "header": "Q52. During implementation, did the project approach or activities change?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q53",
+          "number": 53,
+          "section": "Project implementation",
+          "prompt": "If changes were made, what were the main reasons for those changes",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 92,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q52",
+            "rule": "activities_changed"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 25,
+              "header": "Q53. If changes were made, what were the main reasons for those changes"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q54",
+          "number": 54,
+          "section": "Project implementation",
+          "prompt": "What types of information or support might have helped implementation go more smoothly?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 26,
+              "header": "Q54. What types of information or support might have helped implementation go more smoothly?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q55",
+          "number": 55,
+          "section": "Project implementation",
+          "prompt": "Which knowledge resources or support mechanisms did you use during implementation?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 27,
+              "header": "Q55. Which knowledge resources or support mechanisms did you use during implementation?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q56",
+          "number": 56,
+          "section": "Project implementation",
+          "prompt": "What do you wish you had known before implementation began?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 28,
+              "header": "Q56. What do you wish you had known before implementation began?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q57",
+          "number": 57,
+          "section": "Project implementation",
+          "prompt": "What knowledge or learning resources contributed most to your project's success or progress?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 29,
+              "header": "Q57. What knowledge or learning resources contributed most to your project's success or progress?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q58",
+          "number": 58,
+          "section": "Project implementation",
+          "prompt": "How confident are you that project activities or benefits will continue after the GEF grant funding ends?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 30,
+              "header": "Q58. How confident are you that project activities or benefits will continue after the GEF grant funding ends?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q59",
+          "number": 59,
+          "section": "Project implementation",
+          "prompt": "Did your project consider whether the approach could also be useful in other communities or locations?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 31,
+              "header": "Q59. Did your project consider whether the approach could also be useful in other communities or locations?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q60",
+          "number": 60,
+          "section": "Closure and learning",
+          "prompt": "When completing the final report for your most recent GEF-funded grant project, how clear and useful was the section asking about lessons learned and what worked or did not work?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 32,
+              "header": "Q60. When completing the final report for your most recent GEF-funded grant project, how clear and useful was the section asking about lessons learned and what worked or did not work?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q61",
+          "number": 61,
+          "section": "Closure and learning",
+          "prompt": "Were you asked to complete any separate form, questionnaire, or template specifically about lessons learned or project results — separate from the main final report?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 33,
+              "header": "Q61. Were you asked to complete any separate form, questionnaire, or template specifically about lessons learned or project results — separate from the main final report?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q62",
+          "number": 62,
+          "section": "Closure and learning",
+          "prompt": "Are you aware of whether your project was used as a case study or good practice example by the national SGP team or SGP Global?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 34,
+              "header": "Q62. Are you aware of whether your project was used as a case study or good practice example by the national SGP team or SGP Global?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "grantee_partners.q63",
+          "number": 63,
+          "section": "Closure and learning",
+          "prompt": "What would you most want other grantee partners to know before starting implementation?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 146,
+          "eligibility": {
+            "mode": "branch",
+            "basedOn": "grantee_partners.q46",
+            "rule": "has_implementation_experience"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 35,
+              "header": "Q63. What would you most want other grantee partners to know before starting implementation?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        }
+      ]
+    },
+    {
+      "key": "implementing_agencies",
+      "label": "Implementing Agencies",
+      "sourceSheet": "Implementing Agencies",
+      "respondentCount": 17,
+      "questionRange": "Q64–Q71",
+      "filters": [
+        {
+          "key": "response_language",
+          "label": "Original response language",
+          "source": "Original response language"
+        },
+        {
+          "key": "agency",
+          "label": "Agency",
+          "source": "implementing_agencies.q64"
+        }
+      ],
+      "questions": [
+        {
+          "id": "implementing_agencies.q64",
+          "number": 64,
+          "section": "Profile",
+          "prompt": "Please indicate your agency.",
+          "kind": "dimension",
+          "responseCountUnfiltered": 17,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 2,
+              "header": "Q64. Please indicate your agency."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "implementing_agencies.q65",
+          "number": 65,
+          "section": "Content, processes and platform features",
+          "prompt": "What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items)",
+          "kind": "matrix_rating",
+          "responseCountUnfiltered": 17,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "radar",
+            "alternatives": [
+              "ranked_bar",
+              "heatmap",
+              "diverging_stacked"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 3,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Proposal development guidance]"
+            },
+            {
+              "index": 4,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Project implementation tools and templates]"
+            },
+            {
+              "index": 5,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Monitoring & evaluation guidance]"
+            },
+            {
+              "index": 6,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Case studies and lessons learned]"
+            },
+            {
+              "index": 7,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Technical guidance]"
+            },
+            {
+              "index": 8,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Online e-learning resources]"
+            },
+            {
+              "index": 9,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Community engagement tools]"
+            },
+            {
+              "index": 10,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Gender and social inclusion resources]"
+            },
+            {
+              "index": 11,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [NSC governance tools and templates (e.g., proposal review checklists, site visit guides)]"
+            },
+            {
+              "index": 12,
+              "header": "Q65. What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items) [Communication and visibility materials]"
+            }
+          ],
+          "matrixItems": [
+            "Proposal development guidance",
+            "Project implementation tools and templates",
+            "Monitoring & evaluation guidance",
+            "Case studies and lessons learned",
+            "Technical guidance",
+            "Online e-learning resources",
+            "Community engagement tools",
+            "Gender and social inclusion resources",
+            "NSC governance tools and templates (e.g., proposal review checklists, site visit guides)",
+            "Communication and visibility materials"
+          ],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "implementing_agencies.q66",
+          "number": 66,
+          "section": "Content, processes and platform features",
+          "prompt": "Which of the following best describes the current process for turning country program project experience into published knowledge products (e.g. case studies, innovation notes)?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 17,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 13,
+              "header": "Q66. Which of the following best describes the current process for turning country program project experience into published knowledge products (e.g. case studies, innovation notes)?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "implementing_agencies.q67",
+          "number": 67,
+          "section": "Content, processes and platform features",
+          "prompt": "Which platform features would provide the greatest value to your agency? (rate each of the line items)",
+          "kind": "matrix_rating",
+          "responseCountUnfiltered": 17,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "radar",
+            "alternatives": [
+              "ranked_bar",
+              "heatmap",
+              "diverging_stacked"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 14,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [Searchable knowledge repository]"
+            },
+            {
+              "index": 15,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [Interactive dashboard of projects and results]"
+            },
+            {
+              "index": 16,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [Online training/learning resources]"
+            },
+            {
+              "index": 17,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [Communities of practice]"
+            },
+            {
+              "index": 18,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [Mentoring and peer-learning tools]"
+            },
+            {
+              "index": 19,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [AI-assisted search]"
+            },
+            {
+              "index": 20,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [AI-assisted proposal development support]"
+            },
+            {
+              "index": 21,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [AI-assisted reporting support]"
+            },
+            {
+              "index": 22,
+              "header": "Q67. Which platform features would provide the greatest value to your agency? (rate each of the line items) [Multilingual features]"
+            }
+          ],
+          "matrixItems": [
+            "Searchable knowledge repository",
+            "Interactive dashboard of projects and results",
+            "Online training/learning resources",
+            "Communities of practice",
+            "Mentoring and peer-learning tools",
+            "AI-assisted search",
+            "AI-assisted proposal development support",
+            "AI-assisted reporting support",
+            "Multilingual features"
+          ],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "implementing_agencies.q68",
+          "number": 68,
+          "section": "Resources, adoption and sustainability",
+          "prompt": "What information, knowledge resources, or data systems within your organization could be useful to the broader SGP community (SGP country teams, CSO/CBO grantee partners, or other SGP stakeholders)?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 17,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 23,
+              "header": "Q68. What information, knowledge resources, or data systems within your organization could be useful to the broader SGP community (SGP country teams, CSO/CBO grantee partners, or other SGP stakeholders)?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "implementing_agencies.q69",
+          "number": 69,
+          "section": "Resources, adoption and sustainability",
+          "prompt": "What barriers may limit the successful adoption and use of an SGP-wide Knowledge and Learning Platform supporting knowledge sharing, grant preparation, project implementation, and learning across the SGP?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 17,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 24,
+              "header": "Q69. What barriers may limit the successful adoption and use of an SGP-wide Knowledge and Learning Platform supporting knowledge sharing, grant preparation, project implementation, and learning across the SGP?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "implementing_agencies.q70",
+          "number": 70,
+          "section": "Resources, adoption and sustainability",
+          "prompt": "What measures would be important to ensure the long-term sustainability of the platform?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 17,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 25,
+              "header": "Q70. What measures would be important to ensure the long-term sustainability of the platform?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "implementing_agencies.q71",
+          "number": 71,
+          "section": "Resources, adoption and sustainability",
+          "prompt": "Please provide any additional recommendations for ensuring the SGP Knowledge and Learning Platform becomes a useful and sustainable resource for the global SGP community.",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 11,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 26,
+              "header": "Q71. Please provide any additional recommendations for ensuring the SGP Knowledge and Learning Platform becomes a useful and sustainable resource for the global SGP community."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        }
+      ]
+    },
+    {
+      "key": "steering_committee",
+      "label": "Steering Committees",
+      "sourceSheet": "Steering Committee",
+      "respondentCount": 57,
+      "questionRange": "Q72–Q97",
+      "filters": [
+        {
+          "key": "response_language",
+          "label": "Original response language",
+          "source": "Original response language"
+        },
+        {
+          "key": "country",
+          "label": "Country",
+          "source": "steering_committee.q72"
+        },
+        {
+          "key": "affiliation",
+          "label": "Affiliation",
+          "source": "steering_committee.q73"
+        },
+        {
+          "key": "tenure",
+          "label": "NSC tenure",
+          "source": "steering_committee.q74"
+        },
+        {
+          "key": "agency",
+          "label": "GEF agency",
+          "source": "steering_committee.q75"
+        },
+        {
+          "key": "internet",
+          "label": "Internet reliability",
+          "source": "steering_committee.q77"
+        },
+        {
+          "key": "device",
+          "label": "Primary device",
+          "source": "steering_committee.q78"
+        }
+      ],
+      "questions": [
+        {
+          "id": "steering_committee.q72",
+          "number": 72,
+          "section": "Profile and working arrangements",
+          "prompt": "Please indicate your country.",
+          "kind": "dimension",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "world_map",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 2,
+              "header": "Q72. Please indicate your country."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q73",
+          "number": 73,
+          "section": "Profile and working arrangements",
+          "prompt": "Please indicate your primary sector or organizational affiliation.",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 3,
+              "header": "Q73. Please indicate your primary sector or organizational affiliation."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q74",
+          "number": 74,
+          "section": "Profile and working arrangements",
+          "prompt": "How long have you served on the National Steering Committee?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 4,
+              "header": "Q74. How long have you served on the National Steering Committee?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q75",
+          "number": 75,
+          "section": "Profile and working arrangements",
+          "prompt": "Please indicate the GEF agency supporting your country program.",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 5,
+              "header": "Q75. Please indicate the GEF agency supporting your country program."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q76",
+          "number": 76,
+          "section": "Profile and working arrangements",
+          "prompt": "In which language(s) do you most need knowledge and learning materials?",
+          "kind": "language_need",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 6,
+              "header": "Q76. In which language(s) do you most need knowledge and learning materials?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q77",
+          "number": 77,
+          "section": "Profile and working arrangements",
+          "prompt": "What is your typical Internet reliability?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 7,
+              "header": "Q77. What is your typical Internet reliability?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q78",
+          "number": 78,
+          "section": "Profile and working arrangements",
+          "prompt": "What main device would you primarily use to access the platform?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 8,
+              "header": "Q78. What main device would you primarily use to access the platform?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q79",
+          "number": 79,
+          "section": "Profile and working arrangements",
+          "prompt": "How frequently does your National Steering Committee typically meet?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 9,
+              "header": "Q79. How frequently does your National Steering Committee typically meet?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q80",
+          "number": 80,
+          "section": "Profile and working arrangements",
+          "prompt": "How do you currently receive proposal packages and program documents for NSC review?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 10,
+              "header": "Q80. How do you currently receive proposal packages and program documents for NSC review?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q81",
+          "number": 81,
+          "section": "Profile and working arrangements",
+          "prompt": "How much time do you typically have to review proposals before an NSC meeting?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 11,
+              "header": "Q81. How much time do you typically have to review proposals before an NSC meeting?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q82",
+          "number": 82,
+          "section": "Proposal review and country strategy",
+          "prompt": "Which aspects of proposal review do you find most challenging?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 12,
+              "header": "Q82. Which aspects of proposal review do you find most challenging?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q83",
+          "number": 83,
+          "section": "Proposal review and country strategy",
+          "prompt": "Were you involved in developing or reviewing the Country Program Strategy (CPS) for the current or most recent GEF operational phase?",
+          "kind": "single_choice",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "donut",
+              "lollipop",
+              "treemap",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 13,
+              "header": "Q83. Were you involved in developing or reviewing the Country Program Strategy (CPS) for the current or most recent GEF operational phase?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q84",
+          "number": 84,
+          "section": "Proposal review and country strategy",
+          "prompt": "When developing or reviewing the Country Program Strategy, which types of information or evidence would most strengthen the process?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 14,
+              "header": "Q84. When developing or reviewing the Country Program Strategy, which types of information or evidence would most strengthen the process?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q85",
+          "number": 85,
+          "section": "Proposal review and country strategy",
+          "prompt": "What would have made the most recent CPS development or review process more effective for NSC members?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 15,
+              "header": "Q85. What would have made the most recent CPS development or review process more effective for NSC members?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q86",
+          "number": 86,
+          "section": "Proposal review and country strategy",
+          "prompt": "How often do the following information sources inform your NSC review and oversight work?",
+          "kind": "matrix_frequency",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "radar",
+            "alternatives": [
+              "ranked_bar",
+              "heatmap",
+              "diverging_stacked"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 16,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [SGP Country Program Strategy (for your country)]"
+            },
+            {
+              "index": 17,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [NSC minutes and prior grant decisions]"
+            },
+            {
+              "index": 18,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [Proposal review guidelines or checklists]"
+            },
+            {
+              "index": 19,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [Previously approved proposal examples]"
+            },
+            {
+              "index": 20,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [Annual or portfolio progress reports]"
+            },
+            {
+              "index": 21,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [External technical guidance or scientific reports]"
+            },
+            {
+              "index": 22,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [Guidance or briefings from the National Coordinator]"
+            },
+            {
+              "index": 23,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [SGP database]"
+            },
+            {
+              "index": 24,
+              "header": "Q86. How often do the following information sources inform your NSC review and oversight work? [SGP Innovation Library or online resources]"
+            }
+          ],
+          "matrixItems": [
+            "SGP Country Program Strategy (for your country)",
+            "NSC minutes and prior grant decisions",
+            "Proposal review guidelines or checklists",
+            "Previously approved proposal examples",
+            "Annual or portfolio progress reports",
+            "External technical guidance or scientific reports",
+            "Guidance or briefings from the National Coordinator",
+            "SGP database",
+            "SGP Innovation Library or online resources"
+          ],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q87",
+          "number": 87,
+          "section": "Proposal review and country strategy",
+          "prompt": "What factors most limit your access to or use of information for NSC review and oversight work?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 25,
+              "header": "Q87. What factors most limit your access to or use of information for NSC review and oversight work?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q88",
+          "number": 88,
+          "section": "Monitoring, capacity and governance",
+          "prompt": "Does your NSC conduct site visits to monitor funded projects?",
+          "kind": "ordinal_choice",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ordered_bar",
+            "alternatives": [
+              "diverging_bar",
+              "lollipop",
+              "donut",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 26,
+              "header": "Q88. Does your NSC conduct site visits to monitor funded projects?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q89",
+          "number": 89,
+          "section": "Monitoring, capacity and governance",
+          "prompt": "During portfolio monitoring and site visits, what types of information do you most need?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 27,
+              "header": "Q89. During portfolio monitoring and site visits, what types of information do you most need?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q90",
+          "number": 90,
+          "section": "Monitoring, capacity and governance",
+          "prompt": "What types of support would most strengthen your NSC's monitoring and oversight capacity?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 28,
+              "header": "Q90. What types of support would most strengthen your NSC's monitoring and oversight capacity?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q91",
+          "number": 91,
+          "section": "Monitoring, capacity and governance",
+          "prompt": "Which learning formats are most useful to you in your NSC role?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 29,
+              "header": "Q91. Which learning formats are most useful to you in your NSC role?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q92",
+          "number": 92,
+          "section": "Monitoring, capacity and governance",
+          "prompt": "What are the main barriers to your NSC performing its governance role effectively?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 30,
+              "header": "Q92. What are the main barriers to your NSC performing its governance role effectively?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q93",
+          "number": 93,
+          "section": "Monitoring, capacity and governance",
+          "prompt": "In your experience, what is the single most important change that would improve the NSC's ability to fulfil its governance role?",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 31,
+              "header": "Q93. In your experience, what is the single most important change that would improve the NSC's ability to fulfil its governance role?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q94",
+          "number": 94,
+          "section": "Platform content and features",
+          "prompt": "What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item)",
+          "kind": "matrix_rating",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "radar",
+            "alternatives": [
+              "ranked_bar",
+              "heatmap",
+              "diverging_stacked"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 32,
+              "header": "Q94. What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item) [Proposal review guidance and checklists]"
+            },
+            {
+              "index": 33,
+              "header": "Q94. What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item) [Country Program Strategy templates and examples from other countries]"
+            },
+            {
+              "index": 34,
+              "header": "Q94. What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item) [NSC minutes and decision templates (sample formats)]"
+            },
+            {
+              "index": 35,
+              "header": "Q94. What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item) [Portfolio monitoring frameworks and site visit tools]"
+            },
+            {
+              "index": 36,
+              "header": "Q94. What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item) [Technical guidance on GEF focal areas relevant to your country portfolio]"
+            },
+            {
+              "index": 37,
+              "header": "Q94. What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item) [Case studies of funded projects from similar countries or contexts]"
+            },
+            {
+              "index": 38,
+              "header": "Q94. What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item) [Gender and social inclusion resources]"
+            },
+            {
+              "index": 39,
+              "header": "Q94. What types of content would be most valuable for NSC members in the SGP Knowledge and Learning Platform? (rate each item) [Communication and visibility guidance for NSC members]"
+            }
+          ],
+          "matrixItems": [
+            "Proposal review guidance and checklists",
+            "Country Program Strategy templates and examples from other countries",
+            "NSC minutes and decision templates (sample formats)",
+            "Portfolio monitoring frameworks and site visit tools",
+            "Technical guidance on GEF focal areas relevant to your country portfolio",
+            "Case studies of funded projects from similar countries or contexts",
+            "Gender and social inclusion resources",
+            "Communication and visibility guidance for NSC members"
+          ],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q95",
+          "number": 95,
+          "section": "Platform content and features",
+          "prompt": "Which platform features would provide the most value to NSC members? (rate each item)",
+          "kind": "matrix_rating",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "radar",
+            "alternatives": [
+              "ranked_bar",
+              "heatmap",
+              "diverging_stacked"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 40,
+              "header": "Q95. Which platform features would provide the most value to NSC members? (rate each item) [Searchable repository of approved proposals and project outcomes]"
+            },
+            {
+              "index": 41,
+              "header": "Q95. Which platform features would provide the most value to NSC members? (rate each item) [Country portfolio dashboard with results and progress summaries]"
+            },
+            {
+              "index": 42,
+              "header": "Q95. Which platform features would provide the most value to NSC members? (rate each item) [Guidance on NSC roles, responsibilities, and governance procedures]"
+            },
+            {
+              "index": 43,
+              "header": "Q95. Which platform features would provide the most value to NSC members? (rate each item) [Examples of Country Programme Strategies from other countries]"
+            },
+            {
+              "index": 44,
+              "header": "Q95. Which platform features would provide the most value to NSC members? (rate each item) [Communities of practice connecting NSC members across countries]"
+            },
+            {
+              "index": 45,
+              "header": "Q95. Which platform features would provide the most value to NSC members? (rate each item) [Meeting preparation templates (agenda, decision log, minutes)]"
+            },
+            {
+              "index": 46,
+              "header": "Q95. Which platform features would provide the most value to NSC members? (rate each item) [Multilingual features and document translation support]"
+            }
+          ],
+          "matrixItems": [
+            "Searchable repository of approved proposals and project outcomes",
+            "Country portfolio dashboard with results and progress summaries",
+            "Guidance on NSC roles, responsibilities, and governance procedures",
+            "Examples of Country Programme Strategies from other countries",
+            "Communities of practice connecting NSC members across countries",
+            "Meeting preparation templates (agenda, decision log, minutes)",
+            "Multilingual features and document translation support"
+          ],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q96",
+          "number": 96,
+          "section": "Platform content and features",
+          "prompt": "What barriers might prevent you from accessing or using the Knowledge and Learning Platform?",
+          "kind": "multi_select",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "ranked_bar",
+            "alternatives": [
+              "lollipop",
+              "treemap",
+              "dot_plot",
+              "data_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 47,
+              "header": "Q96. What barriers might prevent you from accessing or using the Knowledge and Learning Platform?"
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": true,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": true,
+            "allowCsvExport": true
+          }
+        },
+        {
+          "id": "steering_committee.q97",
+          "number": 97,
+          "section": "Platform content and features",
+          "prompt": "Please provide any additional recommendations for how the SGP Knowledge and Learning Platform could support NSC governance, proposal review, and learning functions.",
+          "kind": "qualitative",
+          "responseCountUnfiltered": 57,
+          "eligibility": {
+            "mode": "all_respondents_in_tab"
+          },
+          "chart": {
+            "default": "response_reader",
+            "alternatives": [
+              "response_table"
+            ]
+          },
+          "sourceColumns": [
+            {
+              "index": 48,
+              "header": "Q97. Please provide any additional recommendations for how the SGP Knowledge and Learning Platform could support NSC governance, proposal review, and learning functions."
+            }
+          ],
+          "matrixItems": [],
+          "display": {
+            "showCountAndPercent": false,
+            "denominator": "valid_or_eligible_responses",
+            "allowChartCycling": false,
+            "allowCsvExport": true
+          }
+        }
+      ]
+    }
+  ]
+}
