@@ -85,6 +85,15 @@ test("keeps stakeholder tabs inside the sticky header without an About link", as
   await expect(page.locator(".metadata")).toHaveCount(0);
 });
 
+test("aligns the main stakeholder title to the page rather than the question rail", async ({ page }) => {
+  await page.goto("/country-teams/q14");
+  const titleLeft = await page.locator(".survey-masthead h1").evaluate((element) => element.getBoundingClientRect().left);
+  const railRight = await page.locator(".navigator-shell").evaluate((element) => element.getBoundingClientRect().right);
+
+  expect(titleLeft).toBeLessThan(90);
+  expect(titleLeft).toBeLessThan(railRight);
+});
+
 test("uses a distinct accessible accent for each stakeholder type", async ({ page }) => {
   const routes = ["country-teams/q2", "grantee-partners/q30", "implementing-agencies/q64", "steering-committees/q72"];
   const accents: string[] = [];
