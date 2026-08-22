@@ -140,6 +140,8 @@ a { color: inherit; }
 .radar-hover-tooltip { position: absolute; z-index: 5; width: min(255px, calc(100% - 24px)); display: grid; gap: 4px; padding: 10px 12px; border: 1px solid rgb(var(--section-rgb, var(--accent-rgb)) / .5); border-radius: 7px; background: rgba(255,255,255,.96); color: #33424d; box-shadow: 0 4px 14px rgba(23,33,43,.15); pointer-events: none; font-family: var(--font-body); font-size: 12.5px; line-height: 1.4; }
 .radar-hover-tooltip strong { color: #17212b; font-size: 13px; }
 .radar-tooltip-value { color: var(--section-color, var(--forest)); font-family: var(--font-display); font-size: 18px; font-weight: 600; line-height: 1.15; }
+.manual-chart-tooltip { position: absolute; z-index: 6; width: min(280px, calc(100% - 16px)); display: grid; gap: 3px; padding: 10px 12px; border-radius: 9px; background: rgba(23,33,43,.96); color: #fff; box-shadow: 0 8px 24px rgba(23,33,43,.22); pointer-events: none; font-family: var(--font-body); font-size: 13px; line-height: 1.4; overflow-wrap: anywhere; }
+.manual-chart-tooltip strong { font-family: var(--font-display); font-size: 13px; font-weight: 600; }
 .chart-loading { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 12px; background: rgba(255,255,255,.92); color: var(--muted); font-size: 13px; font-weight: 600; }
 .chart-loading[hidden] { display: none; }
 .chart-loading span { width: 28px; height: 28px; border: 3px solid #dbe8e3; border-top-color: var(--teal); border-radius: 50%; animation: chart-spin .7s linear infinite; }

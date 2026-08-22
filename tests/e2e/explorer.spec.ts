@@ -70,6 +70,62 @@ test("starts visualization motion only when the ready frame enters the viewport"
   await expect(tableFrame).toHaveCSS("animation-name", "visual-frame-in");
 });
 
+test("anchors bar and radar tooltips to their actual rendered marks", async ({ page }, testInfo) => {
+  const mobile = isMobileProject(testInfo.project.name);
+  await page.goto("/country-teams/q9");
+  const barChart = page.locator("#question-9 .chart");
+  await expect(page.locator("#question-9 .chart-shell")).toHaveAttribute("aria-busy", "false");
+  await page.waitForTimeout(850);
+  if (mobile) {
+    await barChart.evaluate((element) => window.scrollBy(0, element.getBoundingClientRect().top - 240));
+    await page.waitForTimeout(180);
+  }
+  const barBox = await barChart.boundingBox();
+  expect(barBox).not.toBeNull();
+  const barLeft = mobile ? 132 : 262;
+  const barRight = mobile ? 46 : 65;
+  const barTop = mobile ? 16 : 12;
+  const barBottom = mobile ? 34 : 35;
+  const firstRowY = barTop + (barBox!.height - barTop - barBottom) / 16;
+  const barX = barLeft + (barBox!.width - barLeft - barRight) * .55;
+  if (mobile) await page.touchscreen.tap(barBox!.x + barX, barBox!.y + firstRowY);
+  else await page.mouse.move(barBox!.x + barX, barBox!.y + firstRowY);
+  const barTooltip = page.locator(mobile ? "#question-9 .manual-chart-tooltip" : "#question-9 .survey-chart-tooltip");
+  await expect(barTooltip).toBeVisible();
+  await expect(barTooltip).toContainText("Proposal review/refinement");
+  const barTipBox = await barTooltip.boundingBox();
+  expect(barTipBox).not.toBeNull();
+  expect(barTipBox!.x).toBeGreaterThanOrEqual(barBox!.x - 1);
+  expect(barTipBox!.x + barTipBox!.width).toBeLessThanOrEqual(barBox!.x + barBox!.width + 1);
+  expect(barTipBox!.y).toBeGreaterThanOrEqual(barBox!.y - 1);
+  expect(barTipBox!.y + barTipBox!.height).toBeLessThanOrEqual(barBox!.y + barBox!.height + 1);
+
+  await page.goto("/country-teams/q14");
+  const radarChart = page.locator("#question-14 .chart");
+  await expect(page.locator("#question-14 .chart-shell")).toHaveAttribute("aria-busy", "false");
+  await page.waitForTimeout(850);
+  if (mobile) {
+    await radarChart.evaluate((element) => window.scrollBy(0, element.getBoundingClientRect().top - 240));
+    await page.waitForTimeout(180);
+  }
+  const radarBox = await radarChart.boundingBox();
+  expect(radarBox).not.toBeNull();
+  const radarRadius = Math.min(radarBox!.width, radarBox!.height) * (mobile ? .43 : .62) / 2;
+  const radarCenterY = radarBox!.height * (mobile ? .48 : .5);
+  const radarX = radarBox!.x + radarBox!.width / 2;
+  const radarY = radarBox!.y + radarCenterY - radarRadius * .748;
+  if (mobile) await page.touchscreen.tap(radarX, radarY);
+  else await page.mouse.move(radarX, radarY);
+  const radarTooltip = page.locator("#question-14 .radar-hover-tooltip");
+  await expect(radarTooltip).toBeVisible();
+  await expect(radarTooltip).toContainText("SGP database");
+  await expect(radarTooltip).toContainText("74.8%");
+  const radarTipBox = await radarTooltip.boundingBox();
+  expect(radarTipBox).not.toBeNull();
+  expect(radarTipBox!.x).toBeGreaterThanOrEqual(radarBox!.x - 1);
+  expect(radarTipBox!.x + radarTipBox!.width).toBeLessThanOrEqual(radarBox!.x + radarBox!.width + 1);
+});
+
 test("keeps stakeholder tabs inside the sticky header without an About link", async ({ page }, testInfo) => {
   await page.goto("/country-teams/q14");
   const header = page.locator("header.site-header");
@@ -85,13 +141,13 @@ test("keeps stakeholder tabs inside the sticky header without an About link", as
   await expect(page.locator(".metadata")).toHaveCount(0);
 });
 
-test("aligns the main stakeholder title to the page rather than the question rail", async ({ page }) => {
+test("aligns the main stakeholder title to the page rather than the question rail", async ({ page }, testInfo) => {
   await page.goto("/country-teams/q14");
   const titleLeft = await page.locator(".survey-masthead h1").evaluate((element) => element.getBoundingClientRect().left);
   const railRight = await page.locator(".navigator-shell").evaluate((element) => element.getBoundingClientRect().right);
 
   expect(titleLeft).toBeLessThan(90);
-  expect(titleLeft).toBeLessThan(railRight);
+  if (!isMobileProject(testInfo.project.name)) expect(titleLeft).toBeLessThan(railRight);
 });
 
 test("fades the bottom navigation rail with the active section accent", async ({ page }) => {

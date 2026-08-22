@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ECharts, EChartsOption } from "echarts";
 import type { Analysis, ChartType, Question } from "../types";
 import { optionOrder } from "../lib/analysis";
@@ -52,10 +52,23 @@ export function chartLabelLayout(itemCount: number, viewport: LabelViewport) {
   return { axisWidth: 205, gridLeft: 220, maxCharacters: 28, maxLines: 1, fontSize: 11, lineHeight: 14 };
 }
 
-export function positionChartTooltip(point: number[], size: { contentSize: number[]; viewSize: number[] }) {
+type TooltipSize = { contentSize: number[]; viewSize: number[] };
+type TooltipRect = { x: number; y: number; width: number; height: number };
+
+export function positionChartTooltip(
+  point: number[],
+  paramsOrSize: unknown,
+  _dom?: unknown,
+  itemRect?: TooltipRect | null,
+  callbackSize?: TooltipSize
+) {
+  const size = callbackSize ?? paramsOrSize as TooltipSize;
   const edge = 8;
   const gap = 12;
-  const [pointerX = 0, pointerY = 0] = point;
+  const rectIsUsable = itemRect && [itemRect.x, itemRect.y, itemRect.width, itemRect.height].every(Number.isFinite);
+  const [pointerX = 0, pointerY = 0] = rectIsUsable
+    ? [itemRect.x + itemRect.width, itemRect.y + itemRect.height / 2]
+    : point;
   const [contentWidth = 0, contentHeight = 0] = size.contentSize;
   const [viewWidth = 0, viewHeight = 0] = size.viewSize;
   const maximumX = Math.max(edge, viewWidth - contentWidth - edge);
@@ -65,6 +78,24 @@ export function positionChartTooltip(point: number[], size: { contentSize: numbe
   const maximumY = Math.max(edge, viewHeight - contentHeight - edge);
   const y = Math.max(edge, Math.min(preferredY + contentHeight <= viewHeight - edge ? preferredY : aboveY, maximumY));
   return [Math.round(x), Math.round(y)];
+}
+
+export function nearestRadarPoint(
+  pointer: [number, number],
+  points: Array<{ index: number; point: [number, number] }>,
+  threshold = 22
+): { index: number; distance: number } | null {
+  let nearest: { index: number; distance: number } | null = null;
+  for (const { index, point } of points) {
+    const distance = Math.hypot(pointer[0] - point[0], pointer[1] - point[1]);
+    if (distance <= threshold && (!nearest || distance < nearest.distance)) nearest = { index, distance };
+  }
+  return nearest;
+}
+
+export function categoryIndexAtPoint(pointerY: number, grid: { y: number; height: number }, itemCount: number) {
+  if (!itemCount || pointerY < grid.y || pointerY > grid.y + grid.height) return null;
+  return Math.min(itemCount - 1, Math.max(0, Math.floor((pointerY - grid.y) / grid.height * itemCount)));
 }
 
 export function makeChartOption(question: Question, analysis: Analysis, chart: ChartType, groupKey: string, sectionIndex: number, exportMode = false): EChartsOption {
@@ -94,6 +125,7 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
     borderWidth: 0,
     padding: [10, 12],
     textStyle: { color: "#ffffff", fontFamily: "PP Neue Montreal, Arial, sans-serif", fontSize: 13, lineHeight: 18 },
+    className: "survey-chart-tooltip",
     extraCssText: "max-width:280px;white-space:normal;overflow-wrap:anywhere;border-radius:9px;box-shadow:0 8px 24px rgba(23,33,43,.22);"
   };
   const tooltip = {
@@ -229,6 +261,7 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
   const [readyChart, setReadyChart] = useState<ChartType | null>(null);
   const [introPlaying, setIntroPlaying] = useState(false);
   const [radarTooltip, setRadarTooltip] = useState<{ x: number; y: number; label: string; value: number | null } | null>(null);
+  const [manualChartTooltip, setManualChartTooltip] = useState<{ x: number; y: number; label: string; value: string } | null>(null);
   const option = useMemo(() => makeChartOption(question, analysis, chart, groupKey, sectionIndex), [question, analysis, chart, groupKey, sectionIndex]);
 
   useEffect(() => {
@@ -270,7 +303,14 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
       };
       const showRadarLabelTooltip = (params: any) => {
         const name = String(params.target?.style?.text ?? params.target?.parent?.style?.text ?? "");
-        const item = analysisRef.current.matrix.find((candidate) => candidate.label === name || (candidate.label.length > 25 ? `${candidate.label.slice(0, 23)}…` : candidate.label) === name || (candidate.label.length > 18 ? `${candidate.label.slice(0, 16)}…` : candidate.label) === name);
+        const normalizeLabel = (value: string) => value.replace(/…/g, "").replace(/\s+/g, " ").trim().toLocaleLowerCase();
+        const renderedName = normalizeLabel(name);
+        const item = analysisRef.current.matrix.find((candidate) => {
+          const full = normalizeLabel(candidate.label);
+          const desktop = normalizeLabel(wrapChartLabel(candidate.label, 23, 2));
+          const mobile = normalizeLabel(wrapChartLabel(candidate.label, 15, 2));
+          return renderedName === full || renderedName === desktop || renderedName === mobile || (renderedName.length >= 5 && full.startsWith(renderedName));
+        });
         if (!item || chartRef.current !== "radar" || !host.current) {
           if (radarLabelHover.current) {
             radarLabelHover.current = false;
@@ -285,8 +325,10 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
         setRadarTooltip({ x: Math.max(8, Math.min(pointerX + 14, rect.width - 270)), y: Math.max(8, Math.min(pointerY + 14, rect.height - 105)), label: item.label, value: item.normalized });
       };
       chartInstance.on("mouseover", showAxisLabelTooltip);
+      chartInstance.on("click", showAxisLabelTooltip);
       chartInstance.on("mouseout", hideAxisLabelTooltip);
       chartInstance.getZr().on("mousemove", showRadarLabelTooltip);
+      chartInstance.getZr().on("click", showRadarLabelTooltip);
       onReadyRef.current?.(chartInstance);
       readyFrame.current = requestAnimationFrame(() => {
         readyFrame.current = requestAnimationFrame(() => setReadyChart(chartRef.current));
@@ -326,6 +368,8 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
 
   useEffect(() => {
     if (!instance.current || instance.current.isDisposed()) return;
+    setManualChartTooltip(null);
+    setRadarTooltip(null);
     setIntroPlaying(false);
     setReadyChart(null);
     instance.current.setOption({ ...option, animation: false }, { notMerge: true, lazyUpdate: true });
@@ -335,49 +379,88 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
     });
   }, [option, chart]);
 
-  const handleRadarPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+  const handleRadarPointerMove = (event: { clientX: number; clientY: number; pointerType?: string }) => {
     if (chart !== "radar" || !analysis.matrix.length) {
       setRadarTooltip((current) => current ? null : current);
       return;
     }
-    const rect = event.currentTarget.getBoundingClientRect();
+    const chartHost = host.current;
+    const chartInstance = instance.current;
+    if (!chartHost || !chartInstance || chartInstance.isDisposed()) return;
+    const rect = chartHost.getBoundingClientRect();
     const pointerX = event.clientX - rect.left;
     const pointerY = event.clientY - rect.top;
-    const centerX = rect.width * .5;
-    const centerY = rect.height * .44;
-    const radius = Math.min(rect.width, rect.height) * .26;
     if (radarLabelHover.current) return;
-    let hovered: Analysis["matrix"][number] | null = null;
-    let closestDistance = Number.POSITIVE_INFINITY;
-
-    analysis.matrix.forEach((item, index) => {
-      const angle = Math.PI / 2 - (Math.PI * 2 * index) / analysis.matrix.length;
-      const cos = Math.cos(angle);
-      const sin = Math.sin(angle);
-      const valueRadius = radius * ((item.normalized ?? 0) / 100);
-      const valueX = centerX + cos * valueRadius;
-      const valueY = centerY - sin * valueRadius;
-      const pointDistance = Math.hypot(pointerX - valueX, pointerY - valueY);
-
-      if (pointDistance <= 18 && pointDistance < closestDistance) {
-        hovered = item;
-        closestDistance = pointDistance;
-      }
+    const seriesModel = (chartInstance as any).getModel().getSeriesByIndex(0);
+    const coordinateSystem = seriesModel?.coordinateSystem;
+    if (!coordinateSystem?.dataToPoint) return;
+    const plottedPoints = analysis.matrix.flatMap((item, index) => {
+      if (item.normalized === null) return [];
+      const point = coordinateSystem.dataToPoint(item.normalized, index) as [number, number];
+      return Number.isFinite(point?.[0]) && Number.isFinite(point?.[1]) ? [{ index, point }] : [];
     });
-
-    if (!hovered) {
+    const pointerType = event.pointerType ?? "mouse";
+    const hit = nearestRadarPoint([pointerX, pointerY], plottedPoints, pointerType === "touch" ? 30 : 22);
+    if (!hit) {
       setRadarTooltip((current) => current ? null : current);
       return;
     }
-    const item = hovered as Analysis["matrix"][number];
+    const item = analysis.matrix[hit.index];
+    if (!item) return;
+    const anchor = plottedPoints.find((candidate) => candidate.index === hit.index)?.point ?? [pointerX, pointerY];
     setRadarTooltip({
-      x: Math.max(8, Math.min(pointerX + 14, rect.width - 270)),
-      y: Math.max(8, Math.min(pointerY + 14, rect.height - 105)),
+      x: Math.max(8, Math.min(anchor[0] + 14, rect.width - Math.min(263, rect.width - 8))),
+      y: Math.max(8, Math.min(anchor[1] + 14, rect.height - 82)),
       label: item.label,
       value: item.normalized,
     });
   };
 
+  const handleChartPointerDown = (event: { clientX: number; clientY: number; pointerType?: string }) => {
+    if (chart === "radar") {
+      handleRadarPointerMove(event);
+      return;
+    }
+    if (!["ranked_bar", "ordered_bar", "diverging_bar", "lollipop", "dot_plot", "diverging_stacked"].includes(chart)) return;
+    const chartHost = host.current;
+    const chartInstance = instance.current;
+    if (!chartHost || !chartInstance || chartInstance.isDisposed()) return;
+    const rect = chartHost.getBoundingClientRect();
+    const pointerY = event.clientY - rect.top;
+    const seriesModel = (chartInstance as any).getModel().getSeriesByIndex(0);
+    const grid = seriesModel?.coordinateSystem?.getArea?.() ?? seriesModel?.coordinateSystem?.getRect?.();
+    if (!grid) return;
+    const itemCount = analysis.matrix.length || analysis.categories.length;
+    const dataIndex = categoryIndexAtPoint(pointerY, grid, itemCount);
+    if (dataIndex === null) return;
+    if (event.pointerType === "touch") {
+      const matrixItems = analysis.matrix.length ? [...analysis.matrix].sort((a, b) => (b.normalized ?? -1) - (a.normalized ?? -1)) : null;
+      const categoryItems = optionOrder(question, analysis.categories);
+      const item = matrixItems?.[dataIndex] ?? categoryItems[dataIndex];
+      if (!item) return;
+      const layout = seriesModel.getData?.().getItemLayout?.(dataIndex);
+      const anchorX = layout && Number.isFinite(layout.x) && Number.isFinite(layout.width)
+        ? Math.max(layout.x, layout.x + layout.width)
+        : grid.x + grid.width / 2;
+      const anchorY = layout && Number.isFinite(layout.y) && Number.isFinite(layout.height)
+        ? layout.y + layout.height / 2
+        : grid.y + (dataIndex + .5) * grid.height / itemCount;
+      const tooltipWidth = Math.min(280, rect.width - 16);
+      const tooltipHeight = 76;
+      const x = Math.max(8, Math.min(anchorX + 12, rect.width - tooltipWidth - 8));
+      const y = Math.max(8, Math.min(anchorY + 12 + tooltipHeight <= rect.height - 8 ? anchorY + 12 : anchorY - tooltipHeight - 12, rect.height - tooltipHeight - 8));
+      const value = "normalized" in item
+        ? `${(item.normalized ?? 0).toFixed(1)}% · ${item.count} responses`
+        : `${item.count} of ${analysis.validResponses} responses · ${item.percent.toFixed(1)}%`;
+      setManualChartTooltip({ x, y, label: item.label, value });
+      return;
+    }
+    const show = () => {
+      if (!chartInstance.isDisposed()) chartInstance.dispatchAction({ type: "showTip", seriesIndex: 0, dataIndex });
+    };
+    show();
+  };
+
   const ready = readyChart === chart;
-  return <div className={`chart-shell${introPlaying ? ` chart-intro chart-intro--${chart}` : ""}`} data-intro={introPlaying ? "playing" : "complete"} aria-busy={!ready} onPointerMove={handleRadarPointerMove} onPointerLeave={() => { radarLabelHover.current = false; setRadarTooltip(null); }}><div className="chart" ref={host} role="img" aria-label={`${question.prompt}. ${analysis.validResponses} valid responses shown as ${chart.replaceAll("_", " ")}.`} />{chart === "radar" && radarTooltip && <div className="radar-hover-tooltip" role="tooltip" style={{ left: radarTooltip.x, top: radarTooltip.y }}><strong>{radarTooltip.label}</strong><span className="radar-tooltip-value">{radarTooltip.value === null ? "—" : `${radarTooltip.value.toFixed(1)}%`}</span></div>}<div className="chart-loading" hidden={ready}><span />Updating visualization…</div></div>;
+  return <div className={`chart-shell${introPlaying ? ` chart-intro chart-intro--${chart}` : ""}`} data-intro={introPlaying ? "playing" : "complete"} aria-busy={!ready} onPointerMove={(event) => handleRadarPointerMove(event)} onPointerDown={(event) => handleChartPointerDown(event)} onClick={(event) => handleChartPointerDown(event)} onTouchEnd={(event) => { const touch = event.changedTouches[0]; if (touch) handleChartPointerDown({ clientX: touch.clientX, clientY: touch.clientY, pointerType: "touch" }); }} onPointerLeave={() => { radarLabelHover.current = false; setRadarTooltip(null); }}><div className="chart" ref={host} role="img" aria-label={`${question.prompt}. ${analysis.validResponses} valid responses shown as ${chart.replaceAll("_", " ")}.`} />{chart === "radar" && radarTooltip && <div className="radar-hover-tooltip" role="tooltip" style={{ left: radarTooltip.x, top: radarTooltip.y }}><strong>{radarTooltip.label}</strong><span className="radar-tooltip-value">{radarTooltip.value === null ? "—" : `${radarTooltip.value.toFixed(1)}%`}</span></div>}{manualChartTooltip && <div className="manual-chart-tooltip" role="tooltip" style={{ left: manualChartTooltip.x, top: manualChartTooltip.y }}><strong>{manualChartTooltip.label}</strong><span>{manualChartTooltip.value}</span></div>}<div className="chart-loading" hidden={ready}><span />Updating visualization…</div></div>;
 }
