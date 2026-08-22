@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { makeChartOption } from "../src/components/SurveyChart";
+import { makeChartOption, positionChartTooltip } from "../src/components/SurveyChart";
 import type { Analysis, Question } from "../src/types";
 
 const question: Question = {
@@ -40,5 +40,28 @@ describe("treemap tooltip data", () => {
     expect(tooltip).toContain("15 of 28 responses");
     expect(tooltip).toContain("53.6%");
     expect(tooltip).not.toContain("English");
+  });
+});
+
+describe("mobile chart tooltip placement", () => {
+  it("keeps tooltips inside narrow chart viewports and flips them above near the bottom", () => {
+    expect(positionChartTooltip([310, 420], { contentSize: [180, 90], viewSize: [320, 460] })).toEqual([132, 318]);
+    expect(positionChartTooltip([2, 4], { contentSize: [180, 90], viewSize: [320, 460] })).toEqual([14, 16]);
+  });
+
+  it("applies confined, wrapping tooltip styling to treemaps", () => {
+    const option = makeChartOption(question, analysis, "treemap", "country_team", 0) as any;
+    expect(option.tooltip.confine).toBe(true);
+    expect(option.tooltip.triggerOn).toContain("click");
+    expect(option.tooltip.extraCssText).toContain("white-space:normal");
+    expect(option.tooltip.textStyle.fontSize).toBe(13);
+  });
+});
+
+describe("radar tooltip behavior", () => {
+  it("disables the generic ECharts tooltip so only the detailed custom tooltip appears", () => {
+    const radarAnalysis = { ...analysis, categories: [], matrix: [{ label: "Guidance quality", count: 20, mean: 3, normalized: 66.7, distribution: {} }] };
+    const option = makeChartOption(question, radarAnalysis, "radar", "country_team", 0) as any;
+    expect(option.tooltip).toMatchObject({ show: false, triggerOn: "none" });
   });
 });

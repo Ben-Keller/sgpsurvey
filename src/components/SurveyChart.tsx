@@ -36,6 +36,37 @@ export function wrapChartLabel(value: string, maxCharacters: number, maxLines: n
   return lines.join("\n");
 }
 
+type LabelViewport = "desktop" | "mobile" | "export";
+
+export function chartLabelLayout(itemCount: number, viewport: LabelViewport) {
+  if (viewport === "export") return { axisWidth: 340, gridLeft: 360, maxCharacters: 46, maxLines: 1, fontSize: 13, lineHeight: 16 };
+  if (viewport === "mobile") {
+    if (itemCount <= 5) return { axisWidth: 126, gridLeft: 140, maxCharacters: 19, maxLines: 4, fontSize: 10, lineHeight: 12 };
+    if (itemCount <= 9) return { axisWidth: 118, gridLeft: 132, maxCharacters: 18, maxLines: 3, fontSize: 9.5, lineHeight: 12 };
+    if (itemCount <= 14) return { axisWidth: 110, gridLeft: 124, maxCharacters: 17, maxLines: 2, fontSize: 9.5, lineHeight: 12 };
+    return { axisWidth: 104, gridLeft: 118, maxCharacters: 16, maxLines: 1, fontSize: 9, lineHeight: 11 };
+  }
+  if (itemCount <= 5) return { axisWidth: 260, gridLeft: 278, maxCharacters: 38, maxLines: 4, fontSize: 12, lineHeight: 16 };
+  if (itemCount <= 9) return { axisWidth: 244, gridLeft: 262, maxCharacters: 35, maxLines: 3, fontSize: 12, lineHeight: 15 };
+  if (itemCount <= 14) return { axisWidth: 220, gridLeft: 238, maxCharacters: 31, maxLines: 2, fontSize: 11.5, lineHeight: 14 };
+  return { axisWidth: 205, gridLeft: 220, maxCharacters: 28, maxLines: 1, fontSize: 11, lineHeight: 14 };
+}
+
+export function positionChartTooltip(point: number[], size: { contentSize: number[]; viewSize: number[] }) {
+  const edge = 8;
+  const gap = 12;
+  const [pointerX = 0, pointerY = 0] = point;
+  const [contentWidth = 0, contentHeight = 0] = size.contentSize;
+  const [viewWidth = 0, viewHeight = 0] = size.viewSize;
+  const maximumX = Math.max(edge, viewWidth - contentWidth - edge);
+  const x = Math.max(edge, Math.min(pointerX + gap, maximumX));
+  const preferredY = pointerY + gap;
+  const aboveY = pointerY - contentHeight - gap;
+  const maximumY = Math.max(edge, viewHeight - contentHeight - edge);
+  const y = Math.max(edge, Math.min(preferredY + contentHeight <= viewHeight - edge ? preferredY : aboveY, maximumY));
+  return [Math.round(x), Math.round(y)];
+}
+
 export function makeChartOption(question: Question, analysis: Analysis, chart: ChartType, groupKey: string, sectionIndex: number, exportMode = false): EChartsOption {
   const palette = sectionChartPalette(groupKey, sectionIndex);
   const reduceMotion = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
@@ -52,7 +83,21 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
   const ordered = optionOrder(question, analysis.categories);
   const labels = ordered.map((item) => item.label);
   const values = ordered.map((item) => Number(item.percent.toFixed(1)));
+  const tooltipSurface = {
+    confine: true,
+    triggerOn: "mousemove|click|mousewheel" as const,
+    showDelay: 35,
+    hideDelay: 180,
+    transitionDuration: .12,
+    position: positionChartTooltip as any,
+    backgroundColor: "rgba(23,33,43,.96)",
+    borderWidth: 0,
+    padding: [10, 12],
+    textStyle: { color: "#ffffff", fontFamily: "PP Neue Montreal, Arial, sans-serif", fontSize: 13, lineHeight: 18 },
+    extraCssText: "max-width:280px;white-space:normal;overflow-wrap:anywhere;border-radius:9px;box-shadow:0 8px 24px rgba(23,33,43,.22);"
+  };
   const tooltip = {
+    ...tooltipSurface,
     trigger: "item" as const,
     formatter: (params: any) => {
       const item = ordered[params.dataIndex];
@@ -61,56 +106,64 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
   };
 
   if (chart === "radar") {
+    const radarLabel = (label: string, viewport: LabelViewport) => viewport === "export"
+      ? wrapChartLabel(label, 28, 1)
+      : wrapChartLabel(label, viewport === "mobile" ? 15 : 23, 2);
     return {
       ...motion,
       color: [palette[0]],
       tooltip: {
-        trigger: "item",
-        formatter: () => `Normalized mean score · n=${analysis.validResponses}`
+        show: false,
+        triggerOn: "none"
       },
       radar: {
         radius: "62%",
         triggerEvent: true,
-        indicator: analysis.matrix.map((item) => { const compactLabel = item.label.length > 28 ? `${item.label.slice(0, 26)}…` : item.label; return { name: exportMode ? `${compactLabel} ${(item.normalized ?? 0).toFixed(1)}%` : item.label.length > 25 ? `${item.label.slice(0, 23)}…` : item.label, max: 100 }; }),
+        indicator: analysis.matrix.map((item) => ({ name: exportMode ? `${radarLabel(item.label, "export")} ${(item.normalized ?? 0).toFixed(1)}%` : radarLabel(item.label, "desktop"), max: 100 })),
         axisName: { color: "#33424d", fontSize: exportMode ? 13 : 11 },
         splitArea: { areaStyle: { color: ["#fafaf6", "#f0f2ec"] } },
         splitLine: { lineStyle: { color: "#dde2dc" } }
       },
       series: [{ type: "radar", symbolSize: 6, areaStyle: { opacity: 0.2 }, data: [{ value: analysis.matrix.map((item) => item.normalized ?? 0) }] }],
-      media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { radar: { radius: "45%", center: ["50%", "48%"], axisName: { fontSize: 9, formatter: (name: string) => name.length > 18 ? `${name.slice(0, 16)}…` : name } } } }]
+      media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { radar: { radius: "43%", center: ["50%", "48%"], axisName: { fontSize: 9, lineHeight: 11 }, indicator: analysis.matrix.map((item) => ({ name: radarLabel(item.label, "mobile"), max: 100 })) } } }]
     };
   }
 
   if (chart === "heatmap" || chart === "diverging_stacked") {
     const distributionLabels = [...new Set(analysis.matrix.flatMap((item) => Object.keys(item.distribution)))];
+    const matrixDesktopLabels = chartLabelLayout(analysis.matrix.length, "desktop");
+    const matrixMobileLabels = chartLabelLayout(analysis.matrix.length, "mobile");
     return {
       ...motion,
-      tooltip: chart === "diverging_stacked" ? { trigger: "axis", axisPointer: { type: "shadow" } } : { position: "top" },
-      grid: { top: 20, left: 190, right: 30, bottom: 80 },
+      tooltip: chart === "diverging_stacked" ? { ...tooltipSurface, trigger: "axis", axisPointer: { type: "shadow" } } : { ...tooltipSurface, trigger: "item" },
+      grid: { top: 20, left: matrixDesktopLabels.gridLeft, right: 30, bottom: 80 },
       xAxis: { type: "category", data: distributionLabels, axisLabel: { rotate: 25 } },
-      yAxis: { type: "category", triggerEvent: chart === "diverging_stacked", data: analysis.matrix.map((item) => item.label), axisLabel: { width: 175, overflow: "truncate" } },
+      yAxis: { type: "category", triggerEvent: chart === "diverging_stacked", data: analysis.matrix.map((item) => item.label), axisLabel: { width: matrixDesktopLabels.axisWidth, fontSize: matrixDesktopLabels.fontSize, lineHeight: matrixDesktopLabels.lineHeight, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, matrixDesktopLabels.maxCharacters, matrixDesktopLabels.maxLines) } },
       visualMap: chart === "heatmap" ? { min: 0, max: Math.max(1, ...analysis.matrix.flatMap((item) => Object.values(item.distribution))), calculable: true, orient: "horizontal", bottom: 5, left: "center", inRange: { color: ["#f4f4ee", palette[0]] } } : undefined,
       series:
         chart === "heatmap"
           ? [{ type: "heatmap", data: analysis.matrix.flatMap((item, y) => distributionLabels.map((label, x) => [x, y, item.distribution[label] ?? 0])), label: { show: true } }]
           : distributionLabels.map((label, index) => ({ name: label, type: "bar", stack: "total", data: analysis.matrix.map((item) => item.distribution[label] ?? 0), itemStyle: { color: palette[index % palette.length] }, label: exportMode ? { show: true, formatter: (params: any) => params.value ? String(params.value) : "" } : undefined })),
-      media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { grid: { top: 22, left: 118, right: 12, bottom: 96 }, xAxis: { axisLabel: { rotate: 35, fontSize: 9 } }, yAxis: { axisLabel: { width: 106, fontSize: 9, overflow: "truncate" } }, visualMap: chart === "heatmap" ? { itemWidth: 12, itemHeight: 100, textStyle: { fontSize: 9 } } : undefined } }]
+      media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { grid: { top: 22, left: matrixMobileLabels.gridLeft, right: 12, bottom: 96 }, xAxis: { axisLabel: { rotate: 35, fontSize: 9 } }, yAxis: { axisLabel: { width: matrixMobileLabels.axisWidth, fontSize: matrixMobileLabels.fontSize, lineHeight: matrixMobileLabels.lineHeight, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, matrixMobileLabels.maxCharacters, matrixMobileLabels.maxLines) } }, visualMap: chart === "heatmap" ? { itemWidth: 12, itemHeight: 100, textStyle: { fontSize: 9 } } : undefined } }]
     };
   }
 
   if (chart === "donut") {
+    const donutLabel = (name: string, mobile: boolean) => wrapChartLabel(name, mobile ? 15 : 22, ordered.length <= 6 ? 2 : 1);
     return {
       ...motion,
       color: palette,
       tooltip,
-      legend: { type: "plain", orient: "horizontal", left: 24, right: 24, bottom: 8, itemWidth: 13, itemHeight: 13, itemGap: 16 },
-      series: [{ type: "pie", animationType: "scale", animationTypeUpdate: "transition", radius: ["44%", "68%"], center: ["50%", "40%"], label: { formatter: exportMode ? "{b}: {c} ({d}%)" : "{b}\n{d}%" }, data: ordered.map((item) => ({ name: item.label, value: item.count })) }],
-      media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { legend: { left: 10, right: 10, bottom: 8, itemWidth: 10, itemHeight: 10, itemGap: 9, textStyle: { fontSize: 10 } }, series: [{ radius: ["34%", "56%"], center: ["50%", "34%"], label: { fontSize: 10 } }] } }]
+      legend: { type: "plain", orient: "horizontal", left: 24, right: 24, bottom: 8, itemWidth: 13, itemHeight: 13, itemGap: 16, formatter: exportMode ? undefined : (name: string) => donutLabel(name, false) },
+      series: [{ type: "pie", animationType: "scale", animationTypeUpdate: "transition", radius: ["44%", "68%"], center: ["50%", "40%"], label: { lineHeight: 15, formatter: exportMode ? "{b}: {c} ({d}%)" : (params: any) => `${donutLabel(params.name, false)}\n${params.percent}%` }, data: ordered.map((item) => ({ name: item.label, value: item.count })) }],
+      media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { legend: { left: 10, right: 10, bottom: 8, itemWidth: 10, itemHeight: 10, itemGap: 9, formatter: (name: string) => donutLabel(name, true), textStyle: { fontSize: 10, lineHeight: 12 } }, series: [{ radius: ["34%", "54%"], center: ["50%", "33%"], label: { fontSize: 10, lineHeight: 12, formatter: (params: any) => `${donutLabel(params.name, true)}\n${params.percent}%` } }] } }]
     };
   }
 
   if (chart === "treemap") {
-    const treemapLabel = { show: true, color: "#ffffff", fontSize: exportMode ? 14 : 12, fontWeight: 700, textBorderColor: "rgba(0,0,0,.42)", textBorderWidth: 2, overflow: exportMode ? "truncate" as const : "break" as const, formatter: "{b}" };
+    const treemapFormatter = (mobile: boolean) => (params: any) => wrapChartLabel(params.data?.surveyLabel ?? params.name ?? "", mobile ? 14 : 20, ordered.length <= 8 ? 3 : 2);
+    const treemapLabel = { show: true, color: "#ffffff", fontSize: exportMode ? 14 : 12, lineHeight: exportMode ? 17 : 15, fontWeight: 700, textBorderColor: "rgba(0,0,0,.42)", textBorderWidth: 2, overflow: "truncate" as const, formatter: exportMode ? "{b}" : treemapFormatter(false) };
+    const treemapMobileLabel = { ...treemapLabel, fontSize: 10, lineHeight: 12, formatter: treemapFormatter(true) };
     const treemapData = ordered.map((item) => ({
       name: exportMode ? `${item.label} - ${item.count}` : item.label,
       value: item.count,
@@ -120,6 +173,7 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
       responseBase: analysis.validResponses
     }));
     const treemapTooltip = {
+      ...tooltipSurface,
       trigger: "item" as const,
       formatter: (params: any) => {
         const node = params.data as typeof treemapData[number] | undefined;
@@ -127,7 +181,7 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
         return `<strong>${node.surveyLabel}</strong><br/>${node.responseCount} of ${node.responseBase} responses · ${node.responsePercent.toFixed(1)}%`;
       }
     };
-    return { ...motion, color: palette, tooltip: treemapTooltip, series: [{ type: "treemap", roam: false, breadcrumb: { show: false }, label: treemapLabel, upperLabel: treemapLabel, levels: [{ label: treemapLabel, upperLabel: treemapLabel }, { label: treemapLabel, upperLabel: treemapLabel }], data: treemapData }] };
+    return { ...motion, color: palette, tooltip: treemapTooltip, series: [{ type: "treemap", roam: false, breadcrumb: { show: false }, label: treemapLabel, upperLabel: treemapLabel, levels: [{ label: treemapLabel, upperLabel: treemapLabel }, { label: treemapLabel, upperLabel: treemapLabel }], data: treemapData }], media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { series: [{ label: treemapMobileLabel, upperLabel: treemapMobileLabel, levels: [{ label: treemapMobileLabel, upperLabel: treemapMobileLabel }, { label: treemapMobileLabel, upperLabel: treemapMobileLabel }] }] } }] };
   }
 
   const matrixBars = analysis.matrix.length
@@ -135,10 +189,11 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
     : null;
   const barLabels = matrixBars?.map((item) => item.label) ?? labels;
   const barValues = matrixBars?.map((item) => Number((item.normalized ?? 0).toFixed(1))) ?? values;
-  const desktopLabelLines = barLabels.length <= 7 ? 3 : barLabels.length <= 12 ? 2 : 1;
-  const mobileLabelLines = barLabels.length <= 6 ? 3 : barLabels.length <= 10 ? 2 : 1;
+  const desktopLabels = chartLabelLayout(barLabels.length, exportMode ? "export" : "desktop");
+  const mobileLabels = chartLabelLayout(barLabels.length, "mobile");
   const isDot = chart === "lollipop" || chart === "dot_plot";
   const barTooltip = {
+    ...tooltipSurface,
     trigger: "item" as const,
     formatter: (params: any) => {
       if (matrixBars) {
@@ -153,11 +208,11 @@ export function makeChartOption(question: Question, analysis: Analysis, chart: C
     ...motion,
     color: [palette[0]],
     tooltip: barTooltip,
-    grid: { top: 12, right: 65, bottom: 35, left: exportMode ? 360 : 220, containLabel: false },
+    grid: { top: 12, right: 65, bottom: 35, left: desktopLabels.gridLeft, containLabel: false },
     xAxis: { type: "value", max: 100, axisLabel: { formatter: "{value}%" }, splitLine: { lineStyle: { color: "#e5e8e1" } } },
-    yAxis: { type: "category", inverse: true, triggerEvent: true, data: barLabels, axisLabel: { color: "#33424d", width: exportMode ? 340 : 205, fontSize: exportMode ? 13 : undefined, lineHeight: 14, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, exportMode ? 46 : 30, exportMode ? 1 : desktopLabelLines) } },
+    yAxis: { type: "category", inverse: true, triggerEvent: true, data: barLabels, axisLabel: { color: "#33424d", width: desktopLabels.axisWidth, fontSize: desktopLabels.fontSize, lineHeight: desktopLabels.lineHeight, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, desktopLabels.maxCharacters, desktopLabels.maxLines) } },
     series: [{ type: "bar", data: barValues, barMaxWidth: isDot ? 5 : 26, showBackground: !isDot, backgroundStyle: { color: "#eeefe9" }, itemStyle: { borderRadius: 5 }, label: { show: true, position: "right", formatter: exportMode && !matrixBars ? (params: any) => { const item = ordered[params.dataIndex]; return item ? `${item.count} (${item.percent.toFixed(1)}%)` : ""; } : "{c}%" } }],
-    media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { grid: { top: 16, right: 46, bottom: 34, left: 116 }, xAxis: { axisLabel: { fontSize: 9 } }, yAxis: { axisLabel: { width: 104, fontSize: 9.5, lineHeight: 12, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, 17, mobileLabelLines) } }, series: [{ label: { fontSize: 9 } }] } }]
+    media: exportMode ? undefined : [{ query: { maxWidth: 520 }, option: { grid: { top: 16, right: 46, bottom: 34, left: mobileLabels.gridLeft }, xAxis: { axisLabel: { fontSize: 9 } }, yAxis: { axisLabel: { width: mobileLabels.axisWidth, fontSize: mobileLabels.fontSize, lineHeight: mobileLabels.lineHeight, overflow: "truncate", formatter: (value: string) => wrapChartLabel(value, mobileLabels.maxCharacters, mobileLabels.maxLines) } }, series: [{ label: { fontSize: 9 } }] } }]
   };
 }
 
@@ -173,7 +228,7 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
   const introTimer = useRef(0);
   const [readyChart, setReadyChart] = useState<ChartType | null>(null);
   const [introPlaying, setIntroPlaying] = useState(false);
-  const [radarTooltip, setRadarTooltip] = useState<{ x: number; y: number; label: string; normalized: number | null; mean: number | null; count: number } | null>(null);
+  const [radarTooltip, setRadarTooltip] = useState<{ x: number; y: number; label: string; value: number | null } | null>(null);
   const option = useMemo(() => makeChartOption(question, analysis, chart, groupKey, sectionIndex), [question, analysis, chart, groupKey, sectionIndex]);
 
   useEffect(() => {
@@ -227,7 +282,7 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
         const rect = host.current.getBoundingClientRect();
         const pointerX = Number(params.offsetX ?? rect.width / 2);
         const pointerY = Number(params.offsetY ?? rect.height / 2);
-        setRadarTooltip({ x: Math.min(pointerX + 14, rect.width - 270), y: Math.max(8, Math.min(pointerY + 14, rect.height - 105)), label: item.label, normalized: item.normalized, mean: item.mean, count: item.count });
+        setRadarTooltip({ x: Math.max(8, Math.min(pointerX + 14, rect.width - 270)), y: Math.max(8, Math.min(pointerY + 14, rect.height - 105)), label: item.label, value: item.normalized });
       };
       chartInstance.on("mouseover", showAxisLabelTooltip);
       chartInstance.on("mouseout", hideAxisLabelTooltip);
@@ -316,15 +371,13 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
     }
     const item = hovered as Analysis["matrix"][number];
     setRadarTooltip({
-      x: Math.min(pointerX + 14, rect.width - 270),
+      x: Math.max(8, Math.min(pointerX + 14, rect.width - 270)),
       y: Math.max(8, Math.min(pointerY + 14, rect.height - 105)),
       label: item.label,
-      normalized: item.normalized,
-      mean: item.mean,
-      count: item.count,
+      value: item.normalized,
     });
   };
 
   const ready = readyChart === chart;
-  return <div className={`chart-shell${introPlaying ? ` chart-intro chart-intro--${chart}` : ""}`} data-intro={introPlaying ? "playing" : "complete"} aria-busy={!ready} onPointerMove={handleRadarPointerMove} onPointerLeave={() => { radarLabelHover.current = false; setRadarTooltip(null); }}><div className="chart" ref={host} role="img" aria-label={`${question.prompt}. ${analysis.validResponses} valid responses shown as ${chart.replaceAll("_", " ")}.`} />{chart === "radar" && radarTooltip && <div className="radar-hover-tooltip" role="tooltip" style={{ left: radarTooltip.x, top: radarTooltip.y }}><strong>{radarTooltip.label}</strong>{radarTooltip.normalized === null ? <span>No scored responses</span> : <><span>Normalized score: {radarTooltip.normalized.toFixed(1)}%</span><span>Mean: {radarTooltip.mean?.toFixed(2)} · {radarTooltip.count} scored responses</span></>}</div>}<div className="chart-loading" hidden={ready}><span />Updating visualization…</div></div>;
+  return <div className={`chart-shell${introPlaying ? ` chart-intro chart-intro--${chart}` : ""}`} data-intro={introPlaying ? "playing" : "complete"} aria-busy={!ready} onPointerMove={handleRadarPointerMove} onPointerLeave={() => { radarLabelHover.current = false; setRadarTooltip(null); }}><div className="chart" ref={host} role="img" aria-label={`${question.prompt}. ${analysis.validResponses} valid responses shown as ${chart.replaceAll("_", " ")}.`} />{chart === "radar" && radarTooltip && <div className="radar-hover-tooltip" role="tooltip" style={{ left: radarTooltip.x, top: radarTooltip.y }}><strong>{radarTooltip.label}</strong><span className="radar-tooltip-value">{radarTooltip.value === null ? "—" : `${radarTooltip.value.toFixed(1)}%`}</span></div>}<div className="chart-loading" hidden={ready}><span />Updating visualization…</div></div>;
 }

@@ -94,6 +94,18 @@ test("aligns the main stakeholder title to the page rather than the question rai
   expect(titleLeft).toBeLessThan(railRight);
 });
 
+test("fades the bottom navigation rail with the active section accent", async ({ page }) => {
+  await page.goto("/country-teams/q2");
+  const rail = page.getByRole("navigation", { name: "Sequential question navigation" });
+  await expect(rail).toHaveCSS("background-color", "rgb(63, 126, 68)");
+  await expect(rail).toHaveCSS("transition-duration", /0\.52s/);
+
+  await page.evaluate(() => window.dispatchEvent(new Event("touchstart")));
+  await page.locator("#question-9").scrollIntoViewIfNeeded();
+  await expect(page).toHaveURL(/country-teams\/q9/);
+  await expect(rail).toHaveCSS("background-color", "rgb(38, 189, 226)");
+});
+
 test("uses a distinct accessible accent for each stakeholder type", async ({ page }) => {
   const routes = ["country-teams/q2", "grantee-partners/q30", "implementing-agencies/q64", "steering-committees/q72"];
   const accents: string[] = [];
@@ -215,6 +227,7 @@ test("publishes approved qualitative responses with local search", async ({ page
   await expect(question.getByRole("searchbox", { name: "Search responses" })).toHaveAttribute("placeholder", "Search responses");
   await expect(question.getByRole("button", { name: "Download responses as CSV" })).toHaveAttribute("data-tooltip", "Download CSV responses");
   await expect(question.getByText("Sort", { exact: true })).toHaveCount(0);
+  await expect(question.locator(".response-meta")).toHaveCount(0);
   const displayMode = question.getByRole("switch", { name: "Response display mode" });
   await expect(displayMode).toBeChecked();
   const fullPadding = await question.locator(".response-card").first().evaluate((element) => getComputedStyle(element).padding);

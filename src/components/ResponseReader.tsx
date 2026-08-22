@@ -4,7 +4,7 @@ import { csvCell, downloadText } from "../lib/export";
 import { isEligible } from "../lib/analysis";
 import { DownloadIcon } from "./DownloadIcon";
 
-function ResponseCard({ label, text, compact, expanded, onToggle }: { label: string; text: string; compact: boolean; expanded: boolean; onToggle: () => void }) {
+function ResponseCard({ label, text, compact, expanded, onToggle }: { label?: string; text: string; compact: boolean; expanded: boolean; onToggle: () => void }) {
   const paragraph = useRef<HTMLParagraphElement>(null);
   const [canExpand, setCanExpand] = useState(false);
 
@@ -26,7 +26,7 @@ function ResponseCard({ label, text, compact, expanded, onToggle }: { label: str
     };
   }, [compact, expanded, text]);
 
-  return <article className={expanded ? "response-card expanded" : "response-card"}><div className="response-meta">{label}</div><p ref={paragraph}>{text}</p>{compact && canExpand && <div className="response-actions"><button aria-expanded={expanded} onClick={onToggle}>{expanded ? "Collapse" : "Expand"}</button></div>}</article>;
+  return <article className={expanded ? "response-card expanded" : "response-card"}>{label && <div className="response-meta">{label}</div>}<p ref={paragraph}>{text}</p>{compact && canExpand && <div className="response-actions"><button aria-expanded={expanded} onClick={onToggle}>{expanded ? "Collapse" : "Expand"}</button></div>}</article>;
 }
 
 export function ResponseReader({ question, respondents, mode }: { question: Question; respondents: Respondent[]; mode: "public" | "internal" }) {
@@ -63,7 +63,7 @@ export function ResponseReader({ question, respondents, mode }: { question: Ques
       </div>
       <p className="reader-count">{results.length} responses · {blank} blank answers</p>
       <div className="response-scroll" role="region" aria-label={`Scrollable responses for question ${question.number}`} tabIndex={0}>
-        <div className="response-list">{visible.map(({ respondent, answer }, index) => { const isExpanded = expanded.has(respondent.id); return <ResponseCard key={respondent.id} label={`Response ${(page - 1) * pageSize + index + 1}${mode === "internal" ? ` · ${respondent.dimensions.response_language ?? "Unknown language"}` : ""}`} text={answer.kind === "text" ? answer.value ?? "" : ""} compact={compact} expanded={isExpanded} onToggle={() => toggleExpanded(respondent.id)} />; })}</div>
+        <div className="response-list">{visible.map(({ respondent, answer }) => { const isExpanded = expanded.has(respondent.id); return <ResponseCard key={respondent.id} label={mode === "internal" ? String(respondent.dimensions.response_language ?? "Unknown language") : undefined} text={answer.kind === "text" ? answer.value ?? "" : ""} compact={compact} expanded={isExpanded} onToggle={() => toggleExpanded(respondent.id)} />; })}</div>
       </div>
       <nav className="pagination" aria-label="Response pages"><button disabled={page <= 1} onClick={() => setPage(page - 1)}>Previous</button><span>Page {page} of {pageCount}</span><button disabled={page >= pageCount} onClick={() => setPage(page + 1)}>Next</button></nav>
     </section>

@@ -366,6 +366,8 @@ function Explorer() {
     }
   };
   const sectionNames = [...new Set(group.questions.map((item) => item.section))];
+  const visibleSection = group.questions.find((item) => item.number === visibleQuestion)?.section ?? question.section;
+  const visibleSectionIndex = Math.max(0, sectionNames.indexOf(visibleSection));
   return <div className="app-shell" data-stakeholder={group.key}>
     <header className="site-header">
       <div className="site-logo"><img src={`${import.meta.env.BASE_URL}branding/sgp-logo.png`} alt="GEF Small Grants Programme" /></div>
@@ -389,7 +391,7 @@ function Explorer() {
         </div>
       </main>
     </div>
-    <nav className="sticky-nav" aria-label="Sequential question navigation"><div>{index > 0 ? <Link aria-label="Previous question" title="Previous question" onClick={() => prepareQuestionNavigation(group.questions[index - 1].number)} to={`/${groupSlug}/q${group.questions[index - 1].number}${preservedQuery}`}>←</Link> : <span />}</div><span><strong>{index + 1}</strong> of {group.questions.length}</span><div>{index < group.questions.length - 1 ? <Link aria-label="Next question" title="Next question" onClick={() => prepareQuestionNavigation(group.questions[index + 1].number)} to={`/${groupSlug}/q${group.questions[index + 1].number}${preservedQuery}`}>→</Link> : <span />}</div></nav>
+    <nav className="sticky-nav" aria-label="Sequential question navigation" style={sectionAccentStyle(group.key, visibleSectionIndex)}><div>{index > 0 ? <Link aria-label="Previous question" title="Previous question" onClick={() => prepareQuestionNavigation(group.questions[index - 1].number)} to={`/${groupSlug}/q${group.questions[index - 1].number}${preservedQuery}`}>←</Link> : <span />}</div><span><strong>{index + 1}</strong> of {group.questions.length}</span><div>{index < group.questions.length - 1 ? <Link aria-label="Next question" title="Next question" onClick={() => prepareQuestionNavigation(group.questions[index + 1].number)} to={`/${groupSlug}/q${group.questions[index + 1].number}${preservedQuery}`}>→</Link> : <span />}</div></nav>
     {filtersOpen && <Filters group={group} respondents={activeBundle.respondents} filters={filters} onChange={updateFilters} onClose={() => setFiltersOpen(false)} />}
     {exportingPdf && <div className="pdf-export-status" role="status"><span /><strong>Preparing complete PDF</strong><small>{exportProgress}</small></div>}
     <div className="sr-only" aria-live="polite">{liveMessage}</div>

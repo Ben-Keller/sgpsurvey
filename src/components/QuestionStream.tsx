@@ -86,7 +86,6 @@ function QuestionContent({
         <Heading tabIndex={-1} data-question-heading>
           <span>Q{question.number}</span>{question.prompt}
         </Heading>
-        {(question.kind === "multi_select" || question.kind === "language_need") && <p className="question-note">Respondents could select more than one option; percentages may total more than 100%.</p>}
       </header>
 
       {analysis.suppressed ? (

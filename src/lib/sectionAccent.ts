@@ -52,12 +52,22 @@ const sectionPalettes: Record<string, Accent[]> = {
 
 const fallbackPalette = sectionPalettes.country_team;
 
+function contrastColor(hex: string) {
+  const value = hex.replace("#", "");
+  const channels = [0, 2, 4].map((offset) => Number.parseInt(value.slice(offset, offset + 2), 16) / 255);
+  const [red, green, blue] = channels.map((channel) => channel <= .03928 ? channel / 12.92 : ((channel + .055) / 1.055) ** 2.4);
+  const luminance = .2126 * red + .7152 * green + .0722 * blue;
+  return luminance > .38 ? "#12343b" : "#ffffff";
+}
+
 export function sectionAccentStyle(groupKey: string, sectionIndex: number): CSSProperties {
   const palette = sectionPalettes[groupKey] ?? fallbackPalette;
   const accent = palette[sectionIndex % palette.length];
   return {
     "--section-color": accent.color,
     "--section-rgb": accent.rgb,
+    "--section-fill-color": accent.chartColor,
+    "--section-contrast-color": contrastColor(accent.chartColor),
   } as CSSProperties;
 }
 
