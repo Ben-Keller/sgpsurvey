@@ -124,6 +124,15 @@ test("anchors bar and radar tooltips to their actual rendered marks", async ({ p
   expect(radarTipBox).not.toBeNull();
   expect(radarTipBox!.x).toBeGreaterThanOrEqual(radarBox!.x - 1);
   expect(radarTipBox!.x + radarTipBox!.width).toBeLessThanOrEqual(radarBox!.x + radarBox!.width + 1);
+
+  const wrappedLabelIndex = 11;
+  const wrappedLabelAngle = (90 + wrappedLabelIndex * 360 / 14) * Math.PI / 180;
+  const wrappedLabelX = radarBox!.x + radarBox!.width / 2 + (radarRadius + 15) * Math.cos(wrappedLabelAngle) + 30;
+  const wrappedLabelY = radarBox!.y + radarCenterY - (radarRadius + 15) * Math.sin(wrappedLabelAngle) + (mobile ? 5 : 7);
+  if (mobile) await page.touchscreen.tap(wrappedLabelX, wrappedLabelY);
+  else await page.mouse.move(wrappedLabelX, wrappedLabelY);
+  await expect(radarTooltip).toBeVisible();
+  await expect(radarTooltip).toContainText("Workshops, exchanges, or peer networks");
 });
 
 test("keeps stakeholder tabs inside the sticky header without an About link", async ({ page }, testInfo) => {

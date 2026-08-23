@@ -93,6 +93,22 @@ export function nearestRadarPoint(
   return nearest;
 }
 
+export type RadarLabelHitArea = { index: number; x: number; y: number; width: number; height: number };
+
+export function radarLabelIndexAtPoint(
+  pointer: [number, number],
+  areas: RadarLabelHitArea[],
+  padding = 7
+) {
+  const match = areas.find((area) => (
+    pointer[0] >= area.x - padding
+    && pointer[0] <= area.x + area.width + padding
+    && pointer[1] >= area.y - padding
+    && pointer[1] <= area.y + area.height + padding
+  ));
+  return match?.index ?? null;
+}
+
 export function categoryIndexAtPoint(pointerY: number, grid: { y: number; height: number }, itemCount: number) {
   if (!itemCount || pointerY < grid.y || pointerY > grid.y + grid.height) return null;
   return Math.min(itemCount - 1, Math.max(0, Math.floor((pointerY - grid.y) / grid.height * itemCount)));
@@ -302,33 +318,38 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
         if (params.componentType === "yAxis" && params.targetType === "axisLabel") chartInstance.dispatchAction({ type: "hideTip" });
       };
       const showRadarLabelTooltip = (params: any) => {
-        const name = String(params.target?.style?.text ?? params.target?.parent?.style?.text ?? "");
+        if (chartRef.current !== "radar" || params.componentType !== "radar" || params.targetType !== "axisName" || !host.current) return;
         const normalizeLabel = (value: string) => value.replace(/…/g, "").replace(/\s+/g, " ").trim().toLocaleLowerCase();
-        const renderedName = normalizeLabel(name);
+        const renderedName = normalizeLabel(String(params.name ?? ""));
         const item = analysisRef.current.matrix.find((candidate) => {
           const full = normalizeLabel(candidate.label);
           const desktop = normalizeLabel(wrapChartLabel(candidate.label, 23, 2));
           const mobile = normalizeLabel(wrapChartLabel(candidate.label, 15, 2));
           return renderedName === full || renderedName === desktop || renderedName === mobile || (renderedName.length >= 5 && full.startsWith(renderedName));
         });
-        if (!item || chartRef.current !== "radar" || !host.current) {
-          if (radarLabelHover.current) {
-            radarLabelHover.current = false;
-            setRadarTooltip(null);
-          }
-          return;
-        }
+        if (!item) return;
         radarLabelHover.current = true;
         const rect = host.current.getBoundingClientRect();
-        const pointerX = Number(params.offsetX ?? rect.width / 2);
-        const pointerY = Number(params.offsetY ?? rect.height / 2);
-        setRadarTooltip({ x: Math.max(8, Math.min(pointerX + 14, rect.width - 270)), y: Math.max(8, Math.min(pointerY + 14, rect.height - 105)), label: item.label, value: item.normalized });
+        const pointerX = Number(params.event?.offsetX ?? rect.width / 2);
+        const pointerY = Number(params.event?.offsetY ?? rect.height / 2);
+        setRadarTooltip({
+          x: Math.max(8, Math.min(pointerX + 14, rect.width - Math.min(263, rect.width - 8))),
+          y: Math.max(8, Math.min(pointerY + 14, rect.height - 82)),
+          label: item.label,
+          value: item.normalized
+        });
+      };
+      const hideRadarLabelTooltip = (params: any) => {
+        if (params.componentType !== "radar" || params.targetType !== "axisName") return;
+        radarLabelHover.current = false;
+        setRadarTooltip(null);
       };
       chartInstance.on("mouseover", showAxisLabelTooltip);
       chartInstance.on("click", showAxisLabelTooltip);
       chartInstance.on("mouseout", hideAxisLabelTooltip);
-      chartInstance.getZr().on("mousemove", showRadarLabelTooltip);
-      chartInstance.getZr().on("click", showRadarLabelTooltip);
+      chartInstance.on("mouseover", showRadarLabelTooltip);
+      chartInstance.on("click", showRadarLabelTooltip);
+      chartInstance.on("mouseout", hideRadarLabelTooltip);
       onReadyRef.current?.(chartInstance);
       readyFrame.current = requestAnimationFrame(() => {
         readyFrame.current = requestAnimationFrame(() => setReadyChart(chartRef.current));
@@ -400,14 +421,45 @@ export function SurveyChart({ question, analysis, chart, groupKey, sectionIndex,
       return Number.isFinite(point?.[0]) && Number.isFinite(point?.[1]) ? [{ index, point }] : [];
     });
     const pointerType = event.pointerType ?? "mouse";
-    const hit = nearestRadarPoint([pointerX, pointerY], plottedPoints, pointerType === "touch" ? 30 : 22);
-    if (!hit) {
+    const pointHit = nearestRadarPoint([pointerX, pointerY], plottedPoints, pointerType === "touch" ? 30 : 22);
+    const normalizeLabel = (value: string) => value.replace(/…/g, "").replace(/\s+/g, " ").trim().toLocaleLowerCase();
+    const labelAreas: RadarLabelHitArea[] = [];
+    const seenLabels = new Set<object>();
+    const displayList = (chartInstance.getZr() as any).storage?.getDisplayList?.() ?? [];
+    for (const displayElement of displayList) {
+      const textElement = displayElement?.parent?.__fullText
+        ? displayElement.parent
+        : displayElement?.__hostTarget?.__fullText
+          ? displayElement.__hostTarget
+          : displayElement;
+      if (!textElement?.__fullText || seenLabels.has(textElement)) continue;
+      const renderedName = normalizeLabel(String(textElement.__fullText));
+      const index = analysis.matrix.findIndex((candidate) => {
+        const full = normalizeLabel(candidate.label);
+        const desktop = normalizeLabel(wrapChartLabel(candidate.label, 23, 2));
+        const mobile = normalizeLabel(wrapChartLabel(candidate.label, 15, 2));
+        return renderedName === full || renderedName === desktop || renderedName === mobile || (renderedName.length >= 5 && full.startsWith(renderedName));
+      });
+      if (index < 0) continue;
+      const labelRect = textElement.getBoundingRect?.().clone?.();
+      if (!labelRect) continue;
+      const transform = textElement.getComputedTransform?.();
+      if (transform) labelRect.applyTransform(transform);
+      if (![labelRect.x, labelRect.y, labelRect.width, labelRect.height].every(Number.isFinite)) continue;
+      seenLabels.add(textElement);
+      labelAreas.push({ index, x: labelRect.x, y: labelRect.y, width: labelRect.width, height: labelRect.height });
+    }
+    const labelIndex = radarLabelIndexAtPoint([pointerX, pointerY], labelAreas, pointerType === "touch" ? 11 : 7);
+    const hitIndex = pointHit?.index ?? labelIndex;
+    if (hitIndex === null) {
       setRadarTooltip((current) => current ? null : current);
       return;
     }
-    const item = analysis.matrix[hit.index];
+    const item = analysis.matrix[hitIndex];
     if (!item) return;
-    const anchor = plottedPoints.find((candidate) => candidate.index === hit.index)?.point ?? [pointerX, pointerY];
+    const anchor = pointHit
+      ? plottedPoints.find((candidate) => candidate.index === pointHit.index)?.point ?? [pointerX, pointerY]
+      : [pointerX, pointerY];
     setRadarTooltip({
       x: Math.max(8, Math.min(anchor[0] + 14, rect.width - Math.min(263, rect.width - 8))),
       y: Math.max(8, Math.min(anchor[1] + 14, rect.height - 82)),

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { categoryIndexAtPoint, makeChartOption, nearestRadarPoint, positionChartTooltip } from "../src/components/SurveyChart";
+import { categoryIndexAtPoint, makeChartOption, nearestRadarPoint, positionChartTooltip, radarLabelIndexAtPoint } from "../src/components/SurveyChart";
 import type { Analysis, Question } from "../src/types";
 
 const question: Question = {
@@ -76,6 +76,14 @@ describe("radar point hit testing", () => {
     expect(nearestRadarPoint([104, 83], points, 12)?.index).toBe(0);
     expect(nearestRadarPoint([130, 103], points, 20)?.index).toBe(1);
     expect(nearestRadarPoint([200, 200], points, 20)).toBeNull();
+  });
+
+  it("treats every line of a wrapped radar label as one padded hit area", () => {
+    const areas = [{ index: 2, x: 180, y: 42, width: 112, height: 34 }];
+    expect(radarLabelIndexAtPoint([214, 49], areas)).toBe(2);
+    expect(radarLabelIndexAtPoint([214, 69], areas)).toBe(2);
+    expect(radarLabelIndexAtPoint([176, 73], areas)).toBe(2);
+    expect(radarLabelIndexAtPoint([150, 90], areas)).toBeNull();
   });
 });
 
