@@ -55,6 +55,30 @@ const matrixCompositeExclusions = new Map<string, number>();
 const categories = new Map<string, Map<string, number>>();
 const optionValidation: Record<string, { base: number; other: number; categoryCounts: Record<string, number> }> = {};
 const publicModeK = Number(process.env.PUBLIC_K ?? 5);
+const questionTypeLabels: Record<string, string> = {
+  dimension: "Dimension",
+  single_choice: "Single choice",
+  ordinal_choice: "Ordinal choice",
+  language_need: "Language need",
+  multi_select: "Multi-select",
+  matrix_frequency: "Matrix frequency",
+  matrix_rating: "Matrix rating",
+  qualitative: "Qualitative"
+};
+
+function expectedQuestionTypeRow(group: ManifestGroup, columnCount: number): string[] {
+  const expected = Array<string>(columnCount).fill("");
+  expected[0] = "Timestamp";
+  expected[1] = "Response language";
+  for (const question of group.questions) {
+    const label = questionTypeLabels[question.kind];
+    if (!label) throw new Error(`${question.id}: unsupported question kind ${question.kind}.`);
+    for (const source of question.sourceColumns) expected[source.index] = label;
+  }
+  const missing = expected.flatMap((label, index) => label ? [] : [index]);
+  if (missing.length) throw new Error(`${group.sourceSheet}: question type mapping is missing columns ${missing.join(", ")}.`);
+  return expected;
+}
 
 function choiceKey(value: unknown, preserveDelimiters = false): string {
   const cleaned = cleanText(value);
@@ -260,6 +284,8 @@ for (const group of manifest.groups) {
   if (!sheetRows.length) throw new Error(`Missing or empty worksheet: ${group.sourceSheet}`);
   const headers = sheetRows[0].map((v) => cleanText(v));
   const headerErrors: string[] = [];
+  if (headers[0] !== "Timestamp") headerErrors.push("metadata column 0");
+  if (headers[1] !== "Original response language") headerErrors.push("metadata column 1");
   for (const question of group.questions) {
     for (const source of question.sourceColumns) {
       if (headers[source.index] !== cleanText(source.header)) headerErrors.push(`${question.id} column ${source.index}`);
@@ -267,7 +293,12 @@ for (const group of manifest.groups) {
   }
   if (headerErrors.length) throw new Error(`Header mismatch: ${headerErrors.join(", ")}`);
 
-  const dataRows = sheetRows.slice(1).filter((row) => row.some((value) => cleanText(value)));
+  const expectedTypes = expectedQuestionTypeRow(group, headers.length);
+  const actualTypes = (sheetRows[1] ?? []).map((value) => cleanText(value));
+  const typeErrors = expectedTypes.flatMap((expected, index) => actualTypes[index] === expected ? [] : [`column ${index} (${actualTypes[index] || "blank"} ≠ ${expected})`]);
+  if (typeErrors.length) throw new Error(`${group.sourceSheet}: question type row mismatch: ${typeErrors.join(", ")}`);
+
+  const dataRows = sheetRows.slice(2).filter((row) => row.some((value) => cleanText(value)));
   const answersByQuestion = new Map<string, Answer[]>();
   group.questions.forEach((question) => {
     const spec = questionOptions[question.id];
@@ -280,7 +311,7 @@ for (const group of manifest.groups) {
     const answers: Record<string, Answer> = {};
     group.questions.forEach((question) => {
       const answer = answersByQuestion.get(question.id)?.[index];
-      if (!answer) throw new Error(`${question.id}: missing parsed answer for row ${index + 2}.`);
+      if (!answer) throw new Error(`${question.id}: missing parsed answer for row ${index + 3}.`);
       answers[question.id] = answer;
     });
     const base: PublicRespondent = {
@@ -313,6 +344,12 @@ writeJson("question-manifest.json", manifest);
 writeJson("data/qa/normalization-report.json", {
   generatedAt: new Date().toISOString(),
   sourceWorkbook: path.basename(workbookPath),
+  sourceWorkbookMetadata: {
+    headerRow: 1,
+    questionTypeRow: 2,
+    responseStartRow: 3,
+    questionTypeLabels
+  },
   schemaVersion: manifest.schemaVersion,
   respondentReconciliation: summaries,
   questionCount: manifest.groups.flatMap((g) => g.questions).length,

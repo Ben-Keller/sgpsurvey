@@ -8,6 +8,10 @@ const optionSpecs = readJson<Record<string, { base: number; expectedCounts: Reco
 const errors: string[] = [];
 const questions = manifest.groups.flatMap((group) => group.questions);
 
+if (report.sourceWorkbookMetadata?.questionTypeRow !== 2 || report.sourceWorkbookMetadata?.responseStartRow !== 3) {
+  errors.push("The normalized source workbook metadata row was not validated at row 2.");
+}
+
 if (questions.length !== 96 || manifest.totalQuestions !== 96) errors.push(`Expected 96 questions; found ${questions.length}.`);
 if (new Set(questions.map((q) => q.id)).size !== 96) errors.push("Question IDs are not unique.");
 

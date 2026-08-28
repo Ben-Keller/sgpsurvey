@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-08-28T21:47:42.001Z",
+  "generatedAt": "2026-08-28T22:23:03.717Z",
   "sourceWorkbook": "GEF_SGP_Survey_Responses_English.xlsx",
+  "sourceWorkbookMetadata": {
+    "headerRow": 1,
+    "questionTypeRow": 2,
+    "responseStartRow": 3,
+    "questionTypeLabels": {
+      "dimension": "Dimension",
+      "single_choice": "Single choice",
+      "ordinal_choice": "Ordinal choice",
+      "language_need": "Language need",
+      "multi_select": "Multi-select",
+      "matrix_frequency": "Matrix frequency",
+      "matrix_rating": "Matrix rating",
+      "qualitative": "Qualitative"
+    }
+  },
   "schemaVersion": "1.1.0",
   "respondentReconciliation": [
     {
