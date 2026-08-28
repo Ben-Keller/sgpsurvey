@@ -12,7 +12,9 @@
         "country": "Sri Lanka",
         "role": "National Coordinator",
         "tenure": "Less than one year (recently started)",
-        "agency": "Conservation International",
+        "agency": [
+          "Conservation International"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -30,8 +32,10 @@
           "value": "Less than one year (recently started)"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "Conservation International"
+          "kind": "multi",
+          "values": [
+            "Conservation International"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -226,7 +230,9 @@
         "country": "Botswana",
         "role": "National Coordinator",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -244,8 +250,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -438,7 +446,9 @@
         "country": "Zimbabwe",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -456,8 +466,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -667,7 +679,9 @@
         "country": "Cambodia",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -685,8 +699,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -886,7 +902,9 @@
         "country": "Ethiopia",
         "role": "National Coordinator",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -904,8 +922,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -1087,7 +1107,9 @@
         "country": "Botswana",
         "role": "Other (free text)",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Mobile telephone"
       },
@@ -1105,8 +1127,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -1276,7 +1300,9 @@
         "country": "Kyrgyzstan",
         "role": "National Coordinator",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -1294,8 +1320,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -1478,7 +1506,9 @@
         "country": "Saint Kitts and Nevis",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -1496,8 +1526,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -1690,7 +1722,9 @@
         "country": "Argentina",
         "role": "Program Assistant",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -1708,8 +1742,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -1891,7 +1927,9 @@
         "country": "Panama",
         "role": "Program Assistant",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -1909,8 +1947,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -2089,7 +2129,9 @@
         "country": "Cameroon",
         "role": "National Coordinator",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -2107,8 +2149,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -2297,7 +2341,9 @@
         "country": "Mali",
         "role": "National Coordinator",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -2315,8 +2361,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -2507,7 +2555,9 @@
         "country": "Jamaica",
         "role": "National Coordinator",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -2525,8 +2575,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -2726,7 +2778,9 @@
         "country": "Algeria",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -2744,8 +2798,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -2925,7 +2981,9 @@
         "country": "China",
         "role": "Program Assistant",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -2943,8 +3001,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -3126,7 +3186,9 @@
         "country": "Togo",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -3144,8 +3206,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -3304,7 +3368,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Step-by-step written instructions, Templates/checklists, Short video, Live webinar, Peer exchange, Structured e-learning, Practical field-based demonstration of learning, National, regional, and international workshops"
+            "Step-by-step written guidance, Templates/checklists, Short video, Live webinar, Peer exchange, Structured e-learning, Learning-by-doing field demonstration, National, regional, and international workshops"
           ]
         },
         "country_team.q23": {
@@ -3324,7 +3388,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Integrated into the annual monitoring report or country data submission, Used to develop a good-practice case study or similar product, Shared informally with colleagues from the Global Coordination Team / SGP CPMT or GEF Agency, Presented at a national or regional knowledge fair or exchange event, Captured in a short video and shared on NGO/CBO, UNDP, and other platforms and networks"
+            "Incorporated into the annual monitoring report or country data submission, Used to develop a good practice case study (or similar), Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues, Shared at a national or regional knowledge fair or exchange event, Captured in a short video and shared on NGO/CBO, UNDP, and other platforms and networks"
           ]
         },
         "country_team.q25": {
@@ -3360,7 +3424,9 @@
         "country": "Ethiopia",
         "role": "Other (free text)",
         "tenure": "6-10 years",
-        "agency": "Conservation International",
+        "agency": [
+          "Conservation International"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -3378,8 +3444,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "Conservation International"
+          "kind": "multi",
+          "values": [
+            "Conservation International"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -3562,7 +3630,9 @@
         "country": "Mauritius",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -3580,8 +3650,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -3773,7 +3845,9 @@
         "country": "Uruguay",
         "role": "National Coordinator",
         "tenure": "Less than one year (recently started)",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -3791,8 +3865,10 @@
           "value": "Less than one year (recently started)"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -3992,7 +4068,9 @@
         "country": "Botswana",
         "role": "Program Assistant",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -4010,8 +4088,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -4211,7 +4291,9 @@
         "country": "Botswana",
         "role": "Other (free text)",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -4229,8 +4311,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -4411,7 +4495,9 @@
         "country": "Benin",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -4429,8 +4515,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -4614,7 +4702,9 @@
         "country": "Eritrea",
         "role": "National Coordinator",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -4632,8 +4722,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -4819,7 +4911,9 @@
         "country": "Philippines",
         "role": "National Coordinator",
         "tenure": "Less than one year (recently started)",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -4837,8 +4931,10 @@
           "value": "Less than one year (recently started)"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -5021,7 +5117,9 @@
         "country": "Timor-Leste",
         "role": "Program Assistant",
         "tenure": "Less than one year (recently started)",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -5039,8 +5137,10 @@
           "value": "Less than one year (recently started)"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -5226,7 +5326,9 @@
         "country": "Viet Nam",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -5244,8 +5346,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -5426,7 +5530,9 @@
         "country": "Burundi",
         "role": "Program Assistant",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -5444,8 +5550,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -5637,7 +5745,9 @@
         "country": "Colombia",
         "role": "Program Assistant",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -5655,8 +5765,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -5837,7 +5949,9 @@
         "country": "Colombia",
         "role": "National Coordinator",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -5855,8 +5969,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -6046,7 +6162,9 @@
         "country": "Fiji",
         "role": "Program Assistant",
         "tenure": ">10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -6064,8 +6182,10 @@
           "value": ">10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -6249,7 +6369,9 @@
         "country": "Fiji",
         "role": "National Coordinator",
         "tenure": "6-10 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -6267,8 +6389,10 @@
           "value": "6-10 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -6455,7 +6579,9 @@
         "country": "Viet Nam",
         "role": "Program Assistant",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Mobile telephone"
       },
@@ -6473,8 +6599,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -6659,7 +6787,9 @@
         "country": "Ghana",
         "role": "National Coordinator",
         "tenure": "Less than one year (recently started)",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -6677,8 +6807,10 @@
           "value": "Less than one year (recently started)"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -6859,7 +6991,9 @@
         "country": "Bhutan",
         "role": "National Coordinator",
         "tenure": "Less than one year (recently started)",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -6877,8 +7011,10 @@
           "value": "Less than one year (recently started)"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -7096,7 +7232,9 @@
         "country": "Bhutan",
         "role": "Other (free text)",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -7114,8 +7252,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -7327,7 +7467,9 @@
         "country": "Bhutan",
         "role": "Program Assistant",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -7345,8 +7487,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -7527,7 +7671,9 @@
         "country": "Botswana",
         "role": "Other (free text)",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -7545,8 +7691,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -7753,7 +7901,9 @@
         "country": "Tunisia",
         "role": "National Coordinator",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -7771,8 +7921,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -7952,7 +8104,9 @@
         "country": "Venezuela",
         "role": "Program Assistant",
         "tenure": "1-5 years",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
         "device": "Laptop or desktop computer"
       },
@@ -7970,8 +8124,10 @@
           "value": "1-5 years"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -8160,7 +8316,9 @@
         "country": "Rwanda",
         "role": "National Coordinator",
         "tenure": "Less than one year (recently started)",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -8178,8 +8336,10 @@
           "value": "Less than one year (recently started)"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",
@@ -8371,7 +8531,9 @@
         "country": "Philippines",
         "role": "Program Assistant",
         "tenure": "Less than one year (recently started)",
-        "agency": "UNDP",
+        "agency": [
+          "UNDP"
+        ],
         "internet": "Reliable, with no problems downloading/uploading large files",
         "device": "Laptop or desktop computer"
       },
@@ -8389,8 +8551,10 @@
           "value": "Less than one year (recently started)"
         },
         "country_team.q5": {
-          "kind": "single",
-          "value": "UNDP"
+          "kind": "multi",
+          "values": [
+            "UNDP"
+          ]
         },
         "country_team.q6": {
           "kind": "multi",

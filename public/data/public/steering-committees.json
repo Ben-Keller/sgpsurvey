@@ -343,7 +343,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Time constraints (the NSC is a voluntary or part-time role), Incentive payments should be provided to recognize members' engagement during committee meetings and strengthen their capacity to work enthusiastically"
+            "Time constraints (NSC is a voluntary or part-time role), Incentive payments should be provided to recognize members' engagement during committee meetings and strengthen their capacity to work enthusiastically"
           ]
         },
         "steering_committee.q93": {
@@ -865,7 +865,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Assessing community participation and consultation approaches, Ensuring geographic or thematic balance across the portfolio, Community participation issues, especially communities' influence, are often not sufficiently visible"
+            "Assessing community engagement and consultation approaches, Ensuring geographic or thematic balance across the portfolio, Community participation issues, especially communities' influence, are often not sufficiently visible"
           ]
         },
         "steering_committee.q83": {
@@ -1286,12 +1286,7 @@
         },
         "steering_committee.q87": {
           "kind": "multi",
-          "values": [
-            "Other (free text)"
-          ],
-          "rawUnclassified": [
-            "."
-          ]
+          "values": []
         },
         "steering_committee.q88": {
           "kind": "single",
@@ -1327,7 +1322,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Time constraints (the NSC is a voluntary or part-time position), Insufficient technical expertise among NSC members to assess every type of proposal, Insufficient budget for experienced technical specialists to monitor projects and support proposal development"
+            "Time constraints (NSC is a voluntary or part-time role), Insufficient technical expertise across NSC membership to assess all proposal types, Insufficient budget for experienced technical specialists to monitor projects and support proposal development"
           ]
         },
         "steering_committee.q93": {
@@ -6603,11 +6598,12 @@
         "steering_committee.q76": {
           "kind": "multi",
           "values": [
+            "Portuguese",
             "English",
             "Tetum"
           ],
           "rawUnclassified": [
-            "bahasa indonesia  portugues"
+            "bahasa indonesia"
           ]
         },
         "steering_committee.q77": {
@@ -7182,9 +7178,9 @@
         },
         "steering_committee.q76": {
           "kind": "multi",
-          "values": [],
-          "rawUnclassified": [
-            "englis ans portugues"
+          "values": [
+            "Portuguese",
+            "English"
           ]
         },
         "steering_committee.q77": {
@@ -9690,9 +9686,8 @@
         },
         "steering_committee.q76": {
           "kind": "multi",
-          "values": [],
-          "rawUnclassified": [
-            "englisj"
+          "values": [
+            "English"
           ]
         },
         "steering_committee.q77": {

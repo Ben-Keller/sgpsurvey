@@ -1360,7 +1360,7 @@
         "proposal_count": "1",
         "proposal_status": "Proposal was approved and funded",
         "implementation_experience": "Yes (we have experience with SGP project implementation)",
-        "project_status": "Other (free text)"
+        "project_status": "Ongoing"
       },
       "answers": {
         "grantee_partners.q30": {
@@ -1453,7 +1453,7 @@
         },
         "grantee_partners.q48": {
           "kind": "single",
-          "value": "Other (free text)"
+          "value": "Ongoing"
         },
         "grantee_partners.q49": {
           "kind": "single",
@@ -1763,11 +1763,7 @@
         "grantee_partners.q39": {
           "kind": "multi",
           "values": [
-            "Support from a peer NGO, CSO, or CBO",
-            "Other (free text)"
-          ],
-          "rawUnclassified": [
-            "Support from peer NGOs, CSOs, or CBOs"
+            "Support from a peer NGO, CSO, or CBO"
           ]
         },
         "grantee_partners.q40": {
@@ -4346,10 +4342,11 @@
         "grantee_partners.q31": {
           "kind": "multi",
           "values": [
-            "English"
+            "English",
+            "Tetum"
           ],
           "rawUnclassified": [
-            "languages   tetun  indonesia languages"
+            "indonesian"
           ]
         },
         "grantee_partners.q32": {
@@ -5315,10 +5312,9 @@
         "grantee_partners.q31": {
           "kind": "multi",
           "values": [
-            "English"
-          ],
-          "rawUnclassified": [
-            "tetun   portugues"
+            "Portuguese",
+            "English",
+            "Tetum"
           ]
         },
         "grantee_partners.q32": {
@@ -5519,7 +5515,7 @@
             "Tetum"
           ],
           "rawUnclassified": [
-            "indonesia"
+            "indonesian"
           ]
         },
         "grantee_partners.q32": {
@@ -13292,10 +13288,9 @@
         "grantee_partners.q31": {
           "kind": "multi",
           "values": [
-            "English"
-          ],
-          "rawUnclassified": [
-            "portuques   tetun"
+            "Portuguese",
+            "English",
+            "Tetum"
           ]
         },
         "grantee_partners.q32": {
@@ -15296,7 +15291,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Funding or disbursement delays, Involvement of beneficiaries who hold fixed views about development projects"
+            "Delays in funding or disbursement, Involvement of beneficiaries who hold fixed views about development projects"
           ]
         },
         "grantee_partners.q51": {
@@ -19893,10 +19888,12 @@
         "grantee_partners.q31": {
           "kind": "multi",
           "values": [
-            "English"
+            "Portuguese",
+            "English",
+            "Tetum"
           ],
           "rawUnclassified": [
-            "tetun (local language)  portugues"
+            "(local language)"
           ]
         },
         "grantee_partners.q32": {
@@ -22624,7 +22621,7 @@
             "English"
           ],
           "rawUnclassified": [
-            "1: oromiifaa 2: 3:ahaharic"
+            "1: oromiifaa  2:   3: amharic"
           ]
         },
         "grantee_partners.q32": {
@@ -23760,7 +23757,7 @@
         "proposal_count": "2-3",
         "proposal_status": "Proposal was approved and funded",
         "implementation_experience": "Yes (we have experience with SGP project implementation)",
-        "project_status": "Other (free text)"
+        "project_status": "Delayed"
       },
       "answers": {
         "grantee_partners.q30": {
@@ -23859,7 +23856,7 @@
         },
         "grantee_partners.q48": {
           "kind": "single",
-          "value": "Other (free text)"
+          "value": "Delayed"
         },
         "grantee_partners.q49": {
           "kind": "single",
@@ -27154,7 +27151,7 @@
             "English"
           ],
           "rawUnclassified": [
-            "mongolia"
+            "mongolian"
           ]
         },
         "grantee_partners.q32": {
@@ -27815,7 +27812,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Guidance from the SGP Country Team, National Steering Committee monitoring, oversight, and guidance, Guidance from SGP GEF Agency advisers, Technical experts, Community support, Reporting templates or guidance, Online knowledge and expertise exchange"
+            "Guidance from the SGP country team, Monitoring oversight and guidance from National Steering Committee, Guidance from SGP GEF agency advisors, Technical experts, Community support, Templates or reporting guidance, Online knowledge and expertise exchange"
           ]
         },
         "grantee_partners.q52": {
@@ -27850,7 +27847,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Project examples, Reporting templates, Workshops or exchanges, Guidance from the SGP Country Team, Technical guidance (manuals, case studies, etc.), National Steering Committee monitoring, oversight, and guidance, Guidance from SGP GEF Agency colleagues, We did not use formal SGP resources, We also learned a great deal from peer CSOs and private consultants and experts who had already managed GEF Small Grants Programme projects"
+            "Project examples, Reporting templates, Workshops or exchanges, Guidance from SGP country team, Technical guidance (manuals, case studies, etc.), Monitoring oversight and guidance from National Steering Committee, Guidance from GEF SGP agency colleagues, We did not use formal SGP resources, We also learned a great deal from peer CSOs and private consultants and experts who had already managed GEF Small Grants Programme projects"
           ]
         },
         "grantee_partners.q56": {
@@ -29438,7 +29435,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Proposal templates or guidance documents, National Steering Committee (NSC) member or adviser, Inter-party preparation meetings for Mauritius"
+            "Proposal templates or guidance documents, National Steering Committee (NSC) member or advisor, Inter-party preparation meetings for Mauritius"
           ]
         },
         "grantee_partners.q39": {
@@ -30347,7 +30344,7 @@
         "response_language": "English",
         "country": "Viet Nam",
         "internet": "Reliable, with no problems downloading/uploading large files",
-        "proposal_count": null,
+        "proposal_count": "Other (free text)",
         "proposal_status": "Proposal idea was discussed internally, but not submitted",
         "implementation_experience": "Yes (we have experience with SGP project implementation)",
         "project_status": "Completed"
@@ -30377,7 +30374,7 @@
         },
         "grantee_partners.q35": {
           "kind": "single",
-          "value": null
+          "value": "Other (free text)"
         },
         "grantee_partners.q36": {
           "kind": "single",
@@ -30745,7 +30742,7 @@
             "English"
           ],
           "rawUnclassified": [
-            "vietnam"
+            "vietnamese"
           ]
         },
         "grantee_partners.q32": {
@@ -31569,7 +31566,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Examples from similar projects, Technical guidance or expertise, Technical or scientific information, Information on permits, approvals, or legal requirements, Budget or cost information, Community consultation support, Proposal-writing guidance, Access to previous project evaluations or lessons learned, Environmental or climate information, Guidance on social and environmental safeguard requirements, Land tenure or ownership information, Any other documentation related to the programme"
+            "Examples from similar projects, Technical guidance or expertise, Engineering or scientific information, Information about permits, approvals, or legal requirements, Budgeting or cost information, Community consultation support, Proposal writing guidance, Access to previous project reviews or lessons learned, Environmental or climate information, Guidance on social and environmental safeguards requirements, Land tenure or ownership information, Any other documentation related to the programme"
           ]
         },
         "grantee_partners.q44": {
@@ -31780,7 +31777,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Social and environmental safeguard requirements, Conflict management"
+            "Social and environmental safeguards requirements, Conflict management"
           ]
         },
         "grantee_partners.q51": {
@@ -31791,7 +31788,7 @@
             "Other (free text)"
           ],
           "rawUnclassified": [
-            "Guidance from the SGP Country Team, National Steering Committee monitoring, oversight, and guidance, Regional and prefectural focal points"
+            "Guidance from the SGP country team, Monitoring oversight and guidance from National Steering Committee, Regional and prefectural focal points"
           ]
         },
         "grantee_partners.q52": {

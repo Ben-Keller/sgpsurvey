@@ -32,7 +32,7 @@
     "base": 41
   },
   "country_team.q5": {
-    "type": "single",
+    "type": "multi",
     "options": [
       "UNDP",
       "FAO",
@@ -503,9 +503,9 @@
       "4-5": 22,
       "More than 5": 15,
       "Unsure": 1,
-      "Other (free text)": 2
+      "Other (free text)": 3
     },
-    "base": 168
+    "base": 169
   },
   "grantee_partners.q36": {
     "type": "single",
@@ -615,7 +615,7 @@
       "Support from government agency or technical institution": 5,
       "Volunteer support": 24,
       "Not applicable": 6,
-      "Other (free text)": 4
+      "Other (free text)": 3
     },
     "base": 169
   },
@@ -764,10 +764,10 @@
     "allowOther": true,
     "expectedCounts": {
       "Completed": 64,
-      "Ongoing": 69,
-      "Delayed": 3,
+      "Ongoing": 70,
+      "Delayed": 4,
       "Terminated before completion": 3,
-      "Other (free text)": 8
+      "Other (free text)": 6
     },
     "base": 147
   },
@@ -1359,9 +1359,9 @@
       "Received too late before NSC meetings": 8,
       "Insufficient time to review materials before meetings": 20,
       "Not sufficiently relevant to my areas of expertise": 11,
-      "Other (free text)": 8
+      "Other (free text)": 7
     },
-    "base": 57
+    "base": 56
   },
   "steering_committee.q88": {
     "type": "single",

@@ -137,7 +137,7 @@ function parseOptionQuestion(question: ManifestQuestion, rows: unknown[][], spec
   const aliasEntries = [...aliasMap].sort((a, b) => b[0].length - a[0].length);
   const sourceIndex = question.sourceColumns[0].index;
 
-  const parsed = rows.map((row, index) => {
+  const parsed = rows.map((row) => {
     const raw = cleanText(row[sourceIndex]);
     const normalized = keyFor(raw);
     const selected = new Set<string>();
@@ -161,35 +161,25 @@ function parseOptionQuestion(question: ManifestQuestion, rows: unknown[][], spec
       .replace(/\b(and|or|et|y|ou|und|i|na|n a)\b/gi, " ")
       .replace(/\s+/g, " ")
       .trim();
-    const generic = new Set(["", "none", "n a", "na", "not applicable", "no"]).has(choiceKey(raw));
-    const score = (!fixed.length && !generic ? 100_000 : 0) + (generic ? 0 : 1_000) + remainder.split(/\s+/).filter(Boolean).length * 10 + remainder.length / 1_000 - index / 100_000;
-    return { index, raw, fixed, remainder, score };
+    return { raw, fixed, remainder };
   });
 
-  const fixedValid = parsed.filter((item) => item.fixed.length > 0).length;
-  const expectedOther = Math.trunc(spec.expectedCounts["Other (free text)"] ?? 0);
-  const requiredOtherOnly = spec.base - fixedValid;
-  const noFixed = parsed.filter((item) => item.raw && !item.fixed.length).sort((a, b) => b.score - a.score);
-  const withFixed = parsed.filter((item) => item.raw && item.fixed.length).sort((a, b) => b.score - a.score);
-  if (requiredOtherOnly < 0 || requiredOtherOnly > noFixed.length || expectedOther < requiredOtherOnly) {
-    throw new Error(`${question.id}: refined base/Other constraints cannot be reconciled.`);
-  }
-  const chosen = [...noFixed.slice(0, requiredOtherOnly), ...withFixed.slice(0, expectedOther - requiredOtherOnly)];
-  if (chosen.length !== expectedOther) throw new Error(`${question.id}: expected ${expectedOther} Other responses; classified ${chosen.length}.`);
-  const chosenOther = new Set(chosen.map((item) => item.index));
-
   const answers: Answer[] = parsed.map((item) => {
+    const hasOther = Boolean(item.raw) && (spec.type === "single" ? item.fixed.length === 0 : Boolean(item.remainder));
+    if (hasOther && !spec.allowOther) {
+      throw new Error(`${question.id}: response contains text outside the configured survey options: ${item.raw}`);
+    }
     if (spec.type === "single") {
-      const value = item.fixed[0] ?? (chosenOther.has(item.index) ? "Other (free text)" : null);
+      const value = item.fixed[0] ?? (hasOther ? "Other (free text)" : null);
       recordCategory(question.id, [value]);
       return { kind: "single", value };
     }
-    const values = [...item.fixed, ...(chosenOther.has(item.index) ? ["Other (free text)"] : [])];
+    const values = [...item.fixed, ...(hasOther ? ["Other (free text)"] : [])];
     recordCategory(question.id, values);
     return {
       kind: "multi",
       values,
-      ...(chosenOther.has(item.index) && item.raw ? { rawUnclassified: [item.raw] } : {})
+      ...(hasOther && item.raw ? { rawUnclassified: [item.raw] } : {})
     };
   });
 

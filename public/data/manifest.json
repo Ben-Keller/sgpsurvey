@@ -152,7 +152,7 @@
           "number": 5,
           "section": "Profile and access",
           "prompt": "Please indicate the GEF agency supporting your country program.",
-          "kind": "single_choice",
+          "kind": "multi_select",
           "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
@@ -1226,7 +1226,7 @@
           "sourceColumns": [
             {
               "index": 4,
-              "header": "Q32.  What is your typical Internet reliability, and your ability to download/upload large files  ?"
+              "header": "Q32. What is your typical Internet reliability, and your ability to download/upload large files?"
             }
           ],
           "matrixItems": [],
@@ -1309,7 +1309,7 @@
           "section": "Profile and proposal experience",
           "prompt": "How many SGP proposals has your organization submitted since SGP has existed in your country?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1358,7 +1358,7 @@
           "sourceColumns": [
             {
               "index": 8,
-              "header": "Q36. What is the status of your organization's most recent SGP proposal ?"
+              "header": "Q36. What is the status of your organization's most recent SGP proposal?"
             }
           ],
           "matrixItems": [],
@@ -2823,7 +2823,7 @@
           "section": "Profile and working arrangements",
           "prompt": "In which language(s) do you most need knowledge and learning materials?",
           "kind": "language_need",
-          "responseCountUnfiltered": 55,
+          "responseCountUnfiltered": 57,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -3227,7 +3227,7 @@
           "section": "Proposal review and country strategy",
           "prompt": "What factors most limit your access to or use of information for NSC review and oversight work?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 57,
+          "responseCountUnfiltered": 56,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },

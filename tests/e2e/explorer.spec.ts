@@ -113,13 +113,13 @@ test("anchors bar and radar tooltips to their actual rendered marks", async ({ p
   const radarRadius = Math.min(radarBox!.width, radarBox!.height) * (mobile ? .43 : .62) / 2;
   const radarCenterY = radarBox!.height * (mobile ? .48 : .5);
   const radarX = radarBox!.x + radarBox!.width / 2;
-  const radarY = radarBox!.y + radarCenterY - radarRadius * .748;
+  const radarY = radarBox!.y + radarCenterY - radarRadius * .742;
   if (mobile) await page.touchscreen.tap(radarX, radarY);
   else await page.mouse.move(radarX, radarY);
   const radarTooltip = page.locator("#question-14 .radar-hover-tooltip");
   await expect(radarTooltip).toBeVisible();
   await expect(radarTooltip).toContainText("SGP database");
-  await expect(radarTooltip).toContainText("74.8%");
+  await expect(radarTooltip).toContainText("74.2%");
   const radarTipBox = await radarTooltip.boundingBox();
   expect(radarTipBox).not.toBeNull();
   expect(radarTipBox!.x).toBeGreaterThanOrEqual(radarBox!.x - 1);
@@ -317,7 +317,7 @@ test("publishes approved qualitative responses with local search", async ({ page
 test("shows all implementing-agency responses for Q68", async ({ page }) => {
   await page.goto("/implementing-agencies/q68");
   const question = page.locator("#question-68");
-  await expect(question.locator(".reader-count")).toContainText("17 responses · 0 blank answers");
+  await expect(question.locator(".reader-count")).toContainText("18 responses · 0 blank answers");
   await expect(question.locator(".response-card").first()).toBeVisible();
   await expect(question).not.toContainText("No qualitative responses");
 });

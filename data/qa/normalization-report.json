@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T17:45:06.979Z",
+  "generatedAt": "2026-08-28T21:47:42.001Z",
   "sourceWorkbook": "GEF_SGP_Survey_Responses_English.xlsx",
   "schemaVersion": "1.1.0",
   "respondentReconciliation": [
@@ -26,12 +26,7 @@
   ],
   "questionCount": 96,
   "aliasUsage": {
-    "Extremely valuable → Highly valuable": 9,
-    "I don't know → I do not know": 12,
-    "I'm not sure → Not sure": 4,
-    "Inaccessible / unavailable → Inaccessible/unavailable": 63,
-    "Often → Frequently": 14,
-    "Unsure → Not sure": 2
+    "Inaccessible / unavailable → Inaccessible/unavailable": 63
   },
   "unmatchedMatrixValues": {},
   "excludedCompositeMatrixValues": {
@@ -329,15 +324,15 @@
       }
     },
     "grantee_partners.q35": {
-      "base": 168,
-      "other": 2,
+      "base": 169,
+      "other": 3,
       "categoryCounts": {
         "1": 49,
         "2-3": 79,
         "4-5": 22,
         "More than 5": 15,
         "Unsure": 1,
-        "Other (free text)": 2
+        "Other (free text)": 3
       }
     },
     "grantee_partners.q36": {
@@ -391,7 +386,7 @@
     },
     "grantee_partners.q39": {
       "base": 169,
-      "other": 4,
+      "other": 3,
       "categoryCounts": {
         "No - proposal developed internally": 113,
         "Support from SGP country team": 21,
@@ -401,7 +396,7 @@
         "Support from government agency or technical institution": 5,
         "Volunteer support": 24,
         "Not applicable": 6,
-        "Other (free text)": 4
+        "Other (free text)": 3
       }
     },
     "grantee_partners.q40": {
@@ -485,13 +480,13 @@
     },
     "grantee_partners.q48": {
       "base": 147,
-      "other": 8,
+      "other": 6,
       "categoryCounts": {
         "Completed": 64,
-        "Ongoing": 69,
-        "Delayed": 3,
+        "Ongoing": 70,
+        "Delayed": 4,
         "Terminated before completion": 3,
-        "Other (free text)": 8
+        "Other (free text)": 6
       }
     },
     "grantee_partners.q49": {
@@ -833,8 +828,8 @@
       }
     },
     "steering_committee.q87": {
-      "base": 57,
-      "other": 8,
+      "base": 56,
+      "other": 7,
       "categoryCounts": {
         "Difficult to find or locate": 17,
         "Outdated or not updated regularly": 9,
@@ -843,7 +838,7 @@
         "Received too late before NSC meetings": 8,
         "Insufficient time to review materials before meetings": 20,
         "Not sufficiently relevant to my areas of expertise": 11,
-        "Other (free text)": 8
+        "Other (free text)": 7
       }
     },
     "steering_committee.q88": {
@@ -1170,10 +1165,10 @@
     "grantee_partners.q31": {
       "French": 82,
       "English": 68,
-      "Tetum": 10,
+      "Tetum": 14,
       "Russian": 9,
       "Spanish": 8,
-      "Portuguese": 3,
+      "Portuguese": 6,
       "Arabic": 3,
       "Setswana": 1
     },
@@ -1208,7 +1203,7 @@
       "2-3": 79,
       "4-5": 22,
       "More than 5": 15,
-      "Other (free text)": 2,
+      "Other (free text)": 3,
       "Unsure": 1
     },
     "grantee_partners.q36": {
@@ -1256,8 +1251,8 @@
       "Hired a consultant or proposal writer": 12,
       "Not applicable": 6,
       "Support from government agency or technical institution": 5,
-      "Other (free text)": 4,
-      "Support from an academic or research institute": 4
+      "Support from an academic or research institute": 4,
+      "Other (free text)": 3
     },
     "grantee_partners.q40": {
       "Yes - minor revisions were requested": 81,
@@ -1312,11 +1307,11 @@
       "Unsure": 4
     },
     "grantee_partners.q48": {
-      "Ongoing": 69,
+      "Ongoing": 70,
       "Completed": 64,
-      "Other (free text)": 8,
-      "Terminated before completion": 3,
-      "Delayed": 3
+      "Other (free text)": 6,
+      "Delayed": 4,
+      "Terminated before completion": 3
     },
     "grantee_partners.q49": {
       "Yes - expectations were clear": 100,
@@ -1497,13 +1492,13 @@
       "FAO": 2
     },
     "steering_committee.q76": {
-      "English": 40,
+      "English": 42,
       "French": 14,
+      "Portuguese": 3,
       "Spanish": 3,
       "Russian": 3,
       "Setswana": 2,
       "Tetum": 2,
-      "Portuguese": 1,
       "Arabic": 1,
       "Thimbukushu": 1
     },
@@ -1591,7 +1586,7 @@
       "Not sufficiently relevant to my areas of expertise": 11,
       "Outdated or not updated regularly": 9,
       "Received too late before NSC meetings": 8,
-      "Other (free text)": 8,
+      "Other (free text)": 7,
       "Wrong language": 4
     },
     "steering_committee.q88": {
