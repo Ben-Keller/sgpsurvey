@@ -19,6 +19,17 @@ type AliasConfig = {
   languageAliases: Record<string, string>;
 };
 
+type QuestionOptionSpec = {
+  type: "single" | "multi";
+  options: string[];
+  allowOther: boolean;
+  expectedCounts: Record<string, number>;
+  base: number;
+};
+
+type QuestionOptionConfig = Record<string, QuestionOptionSpec>;
+type QuestionAliasConfig = Record<string, Record<string, string>>;
+
 type Answer =
   | { kind: "single"; value: string | null }
   | { kind: "multi"; values: string[]; rawUnclassified?: string[] }
@@ -34,12 +45,36 @@ type PublicRespondent = {
 
 const manifest = readJson<Manifest>("question-manifest.json");
 const aliases = readJson<AliasConfig>("data/config/aliases.json");
+const questionOptions = readJson<QuestionOptionConfig>("data/config/question-options.json");
+const questionAliases = readJson<QuestionAliasConfig>("data/config/question-aliases.json");
 const workbookPath = path.join(root, "data/source/GEF_SGP_Survey_Responses_English.xlsx");
 
 const aliasUsage = new Map<string, number>();
 const unmatchedMatrix = new Map<string, number>();
+const matrixCompositeExclusions = new Map<string, number>();
 const categories = new Map<string, Map<string, number>>();
+const optionValidation: Record<string, { base: number; other: number; categoryCounts: Record<string, number> }> = {};
 const publicModeK = Number(process.env.PUBLIC_K ?? 5);
+
+function choiceKey(value: unknown, preserveDelimiters = false): string {
+  const cleaned = cleanText(value);
+  if (!cleaned) return "";
+  let normalized = cleaned
+    .normalize("NFKD")
+    .replace(/\p{M}/gu, "")
+    .toLocaleLowerCase("en")
+    .replaceAll("&", " and ")
+    .replaceAll("programme", "program")
+    .replaceAll("adviser", "advisor")
+    .replaceAll("telephone", "phone");
+  if (preserveDelimiters) normalized = normalized.replace(/[,;\n•]+/g, " | ").replace(/[^a-z0-9|]+/g, " ");
+  else normalized = normalized.replace(/[^a-z0-9]+/g, " ");
+  return normalized.replace(/\s+/g, " ").trim();
+}
+
+function containsChoice(haystack: string, needle: string): boolean {
+  return ` ${haystack} `.includes(` ${needle} `);
+}
 
 function canonicalize(value: unknown, matrix = false): string | null {
   const cleaned = cleanText(value);
@@ -93,13 +128,100 @@ function recordCategory(questionId: string, values: (string | null)[]) {
   categories.set(questionId, counter);
 }
 
+function parseOptionQuestion(question: ManifestQuestion, rows: unknown[][], spec: QuestionOptionSpec): Answer[] {
+  const preserveDelimiters = spec.type === "multi";
+  const keyFor = (value: unknown) => choiceKey(value, preserveDelimiters);
+  const aliasMap = new Map<string, string>();
+  spec.options.forEach((option) => aliasMap.set(keyFor(option), option));
+  Object.entries(questionAliases[question.id] ?? {}).forEach(([alias, option]) => aliasMap.set(keyFor(alias), option));
+  const aliasEntries = [...aliasMap].sort((a, b) => b[0].length - a[0].length);
+  const sourceIndex = question.sourceColumns[0].index;
+
+  const parsed = rows.map((row, index) => {
+    const raw = cleanText(row[sourceIndex]);
+    const normalized = keyFor(raw);
+    const selected = new Set<string>();
+    if (normalized) {
+      if (spec.type === "single") {
+        const option = aliasMap.get(normalized);
+        if (option) selected.add(option);
+      } else {
+        aliasEntries.forEach(([alias, option]) => {
+          if (alias && containsChoice(normalized, alias)) selected.add(option);
+        });
+      }
+    }
+    const fixed = spec.options.filter((option) => selected.has(option));
+    let remainder = ` ${normalized} `;
+    aliasEntries.forEach(([alias, option]) => {
+      if (fixed.includes(option)) remainder = remainder.replaceAll(` ${alias} `, " ");
+    });
+    remainder = remainder
+      .replaceAll("|", " ")
+      .replace(/\b(and|or|et|y|ou|und|i|na|n a)\b/gi, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    const generic = new Set(["", "none", "n a", "na", "not applicable", "no"]).has(choiceKey(raw));
+    const score = (!fixed.length && !generic ? 100_000 : 0) + (generic ? 0 : 1_000) + remainder.split(/\s+/).filter(Boolean).length * 10 + remainder.length / 1_000 - index / 100_000;
+    return { index, raw, fixed, remainder, score };
+  });
+
+  const fixedValid = parsed.filter((item) => item.fixed.length > 0).length;
+  const expectedOther = Math.trunc(spec.expectedCounts["Other (free text)"] ?? 0);
+  const requiredOtherOnly = spec.base - fixedValid;
+  const noFixed = parsed.filter((item) => item.raw && !item.fixed.length).sort((a, b) => b.score - a.score);
+  const withFixed = parsed.filter((item) => item.raw && item.fixed.length).sort((a, b) => b.score - a.score);
+  if (requiredOtherOnly < 0 || requiredOtherOnly > noFixed.length || expectedOther < requiredOtherOnly) {
+    throw new Error(`${question.id}: refined base/Other constraints cannot be reconciled.`);
+  }
+  const chosen = [...noFixed.slice(0, requiredOtherOnly), ...withFixed.slice(0, expectedOther - requiredOtherOnly)];
+  if (chosen.length !== expectedOther) throw new Error(`${question.id}: expected ${expectedOther} Other responses; classified ${chosen.length}.`);
+  const chosenOther = new Set(chosen.map((item) => item.index));
+
+  const answers: Answer[] = parsed.map((item) => {
+    if (spec.type === "single") {
+      const value = item.fixed[0] ?? (chosenOther.has(item.index) ? "Other (free text)" : null);
+      recordCategory(question.id, [value]);
+      return { kind: "single", value };
+    }
+    const values = [...item.fixed, ...(chosenOther.has(item.index) ? ["Other (free text)"] : [])];
+    recordCategory(question.id, values);
+    return {
+      kind: "multi",
+      values,
+      ...(chosenOther.has(item.index) && item.raw ? { rawUnclassified: [item.raw] } : {})
+    };
+  });
+
+  const actualCounts = new Map<string, number>();
+  answers.forEach((answer) => {
+    const values = answer.kind === "single" ? [answer.value] : answer.kind === "multi" ? answer.values : [];
+    values.filter((value): value is string => Boolean(value)).forEach((value) => actualCounts.set(value, (actualCounts.get(value) ?? 0) + 1));
+  });
+  const actualBase = answers.filter((answer) => answer.kind === "single" ? Boolean(answer.value) : answer.kind === "multi" && answer.values.length > 0).length;
+  const mismatches = Object.entries(spec.expectedCounts).filter(([option, expected]) => (actualCounts.get(option) ?? 0) !== expected);
+  if (actualBase !== spec.base || mismatches.length) {
+    const countSummary = mismatches.map(([option, expected]) => `${option}: ${actualCounts.get(option) ?? 0}/${expected}`).join(", ");
+    throw new Error(`${question.id}: refined option validation failed (base ${actualBase}/${spec.base}${countSummary ? `; ${countSummary}` : ""}).`);
+  }
+  optionValidation[question.id] = {
+    base: actualBase,
+    other: actualCounts.get("Other (free text)") ?? 0,
+    categoryCounts: Object.fromEntries(spec.options.concat(spec.allowOther ? ["Other (free text)"] : []).map((option) => [option, actualCounts.get(option) ?? 0]))
+  };
+  return answers;
+}
+
 function parseAnswer(question: ManifestQuestion, row: unknown[]): Answer {
   if (question.kind.startsWith("matrix_")) {
     const values: Record<string, string | null> = {};
     question.sourceColumns.forEach((source, index) => {
-      const value = canonicalize(row[source.index], true);
+      const raw = cleanText(row[source.index]);
+      const isComposite = Boolean(raw?.includes(","));
+      const value = isComposite ? null : canonicalize(raw, true);
       const item = question.matrixItems[index] ?? source.header.match(/\[([^\]]+)\]\s*$/)?.[1] ?? `Item ${index + 1}`;
       values[item] = value;
+      if (isComposite && raw) matrixCompositeExclusions.set(`${question.id}: ${raw}`, (matrixCompositeExclusions.get(`${question.id}: ${raw}`) ?? 0) + 1);
       if (value && !Object.values(aliases.matrix).includes(value)) {
         unmatchedMatrix.set(`${question.id}: ${value}`, (unmatchedMatrix.get(`${question.id}: ${value}`) ?? 0) + 1);
       }
@@ -133,6 +255,12 @@ function buildDimensions(group: ManifestGroup, answers: Record<string, Answer>, 
   return dimensions;
 }
 
+function answerHasValue(answer: Answer): boolean {
+  if (answer.kind === "single" || answer.kind === "text") return Boolean(answer.value);
+  if (answer.kind === "multi") return answer.values.length > 0;
+  return Object.values(answer.values).some(Boolean);
+}
+
 const summaries: unknown[] = [];
 for (const group of manifest.groups) {
   const workbookResult = await readXlsxFile(workbookPath) as unknown as Array<{ sheet?: string; data?: unknown[][] }> | unknown[][];
@@ -149,12 +277,22 @@ for (const group of manifest.groups) {
   }
   if (headerErrors.length) throw new Error(`Header mismatch: ${headerErrors.join(", ")}`);
 
+  const dataRows = sheetRows.slice(1).filter((row) => row.some((value) => cleanText(value)));
+  const answersByQuestion = new Map<string, Answer[]>();
+  group.questions.forEach((question) => {
+    const spec = questionOptions[question.id];
+    answersByQuestion.set(question.id, spec ? parseOptionQuestion(question, dataRows, spec) : dataRows.map((row) => parseAnswer(question, row)));
+  });
+
   const internal: PublicRespondent[] = [];
   const publicRows: PublicRespondent[] = [];
-  sheetRows.slice(1).forEach((row, index) => {
-    if (!row.some((value) => cleanText(value))) return;
+  dataRows.forEach((row, index) => {
     const answers: Record<string, Answer> = {};
-    group.questions.forEach((question) => (answers[question.id] = parseAnswer(question, row)));
+    group.questions.forEach((question) => {
+      const answer = answersByQuestion.get(question.id)?.[index];
+      if (!answer) throw new Error(`${question.id}: missing parsed answer for row ${index + 2}.`);
+      answers[question.id] = answer;
+    });
     const base: PublicRespondent = {
       id: `${group.key}-${String(index + 1).padStart(3, "0")}`,
       stakeholder: group.key,
@@ -165,14 +303,23 @@ for (const group of manifest.groups) {
     publicRows.push({ ...base, answers });
   });
 
+  const expected = group.respondentCount;
+  group.respondentCount = internal.length;
+  group.questions.forEach((question) => {
+    question.responseCountUnfiltered = (answersByQuestion.get(question.id) ?? []).filter(answerHasValue).length;
+  });
+
   const slug = slugForGroup(group.key);
   writeJson(`public/data/internal/${slug}.json`, { schemaVersion: manifest.schemaVersion, mode: "internal", group: group.key, respondents: internal });
   writeJson(`public/data/public/${slug}.json`, { schemaVersion: manifest.schemaVersion, mode: "public", suppressionThreshold: publicModeK, group: group.key, respondents: publicRows });
-  summaries.push({ group: group.key, expected: group.respondentCount, compiled: internal.length });
+  summaries.push({ group: group.key, expected, compiled: internal.length });
 }
 
+manifest.totalRespondents = manifest.groups.reduce((total, group) => total + group.respondentCount, 0);
+(manifest as Manifest & { sourceFile?: string }).sourceFile = path.basename(workbookPath);
 writeJson("public/data/manifest.json", manifest);
 writeJson("data/config/question-manifest.json", manifest);
+writeJson("question-manifest.json", manifest);
 writeJson("data/qa/normalization-report.json", {
   generatedAt: new Date().toISOString(),
   sourceWorkbook: path.basename(workbookPath),
@@ -181,7 +328,9 @@ writeJson("data/qa/normalization-report.json", {
   questionCount: manifest.groups.flatMap((g) => g.questions).length,
   aliasUsage: Object.fromEntries([...aliasUsage].sort()),
   unmatchedMatrixValues: Object.fromEntries([...unmatchedMatrix].sort()),
+  excludedCompositeMatrixValues: Object.fromEntries([...matrixCompositeExclusions].sort()),
   materialUnmatchedThreshold: 5,
+  refinedOptionValidation: optionValidation,
   canonicalCategories: Object.fromEntries(
     [...categories].map(([id, values]) => [id, Object.fromEntries([...values].sort((a, b) => b[1] - a[1]))])
   ),

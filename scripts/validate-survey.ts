@@ -4,6 +4,7 @@ import { Manifest, readJson, root, slugForGroup } from "./lib";
 
 const manifest = readJson<Manifest>("question-manifest.json");
 const report = readJson<any>("data/qa/normalization-report.json");
+const optionSpecs = readJson<Record<string, { base: number; expectedCounts: Record<string, number> }>>("data/config/question-options.json");
 const errors: string[] = [];
 const questions = manifest.groups.flatMap((group) => group.questions);
 
@@ -44,8 +45,20 @@ for (const [value, count] of Object.entries(report.unmatchedMatrixValues) as [st
   if (count >= report.materialUnmatchedThreshold) errors.push(`Material unmatched matrix value (${count}): ${value}`);
 }
 
+for (const [questionId, spec] of Object.entries(optionSpecs)) {
+  const actual = report.refinedOptionValidation?.[questionId];
+  if (!actual) {
+    errors.push(`${questionId}: missing refined option validation.`);
+    continue;
+  }
+  if (actual.base !== spec.base) errors.push(`${questionId}: expected refined base ${spec.base}; found ${actual.base}.`);
+  for (const [option, expected] of Object.entries(spec.expectedCounts)) {
+    if ((actual.categoryCounts?.[option] ?? 0) !== expected) errors.push(`${questionId} / ${option}: expected ${expected}; found ${actual.categoryCounts?.[option] ?? 0}.`);
+  }
+}
+
 if (errors.length) {
   console.error(errors.map((error) => `• ${error}`).join("\n"));
   process.exit(1);
 }
-console.log(`Validated 96 questions, 280 responses, seven matrices, and approved public qualitative responses.`);
+console.log(`Validated 96 questions, ${manifest.totalRespondents} responses, ${Object.keys(optionSpecs).length} refined option sets, seven matrices, and approved public qualitative responses.`);

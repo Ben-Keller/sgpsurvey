@@ -1,15 +1,15 @@
 {
   "schemaVersion": "1.1.0",
-  "sourceFile": "GEF_SGP_Survey_Responses_English (3).xlsx",
+  "sourceFile": "GEF_SGP_Survey_Responses_English.xlsx",
   "generatedAt": "2026-08-21T16:17:00.509Z",
-  "totalRespondents": 280,
+  "totalRespondents": 285,
   "totalQuestions": 96,
   "groups": [
     {
       "key": "country_team",
       "label": "Country Teams",
       "sourceSheet": "Country Team",
-      "respondentCount": 38,
+      "respondentCount": 41,
       "questionRange": "Q2–Q29",
       "filters": [
         {
@@ -55,7 +55,7 @@
           "section": "Profile and access",
           "prompt": "Please indicate your country.",
           "kind": "dimension",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -87,7 +87,7 @@
           "section": "Profile and access",
           "prompt": "Please indicate your role.",
           "kind": "single_choice",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -120,7 +120,7 @@
           "section": "Profile and access",
           "prompt": "Please indicate the number of years you have worked for the SGP in your country.",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -153,7 +153,7 @@
           "section": "Profile and access",
           "prompt": "Please indicate the GEF agency supporting your country program.",
           "kind": "single_choice",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -186,7 +186,7 @@
           "section": "Profile and access",
           "prompt": "In which language(s) do you most need knowledge and learning materials?",
           "kind": "language_need",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 40,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -219,7 +219,7 @@
           "section": "Profile and access",
           "prompt": "What is your typical Internet reliability, and your ability to download/upload large files?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -252,7 +252,7 @@
           "section": "Profile and access",
           "prompt": "What main device would you use to access the platform?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -285,7 +285,7 @@
           "section": "Proposal development and review",
           "prompt": "Which stages of the SGP project lifecycle typically require the greatest amount of country team time and support effort?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -318,7 +318,7 @@
           "section": "Proposal development and review",
           "prompt": "What tasks are the most repetitive across incoming proposals?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -351,7 +351,7 @@
           "section": "Proposal development and review",
           "prompt": "What proposal weaknesses or misunderstandings occur most frequently?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -384,7 +384,7 @@
           "section": "Proposal development and review",
           "prompt": "Where does your expertise add the most value during proposal development?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -417,7 +417,7 @@
           "section": "Proposal development and review",
           "prompt": "Where are proposal materials for proposals that were not approved or did not move forward typically stored?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -450,7 +450,7 @@
           "section": "Proposal development and review",
           "prompt": "How often do the following information sources inform your proposal review or guidance work?",
           "kind": "matrix_frequency",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -549,7 +549,7 @@
           "section": "Proposal development and review",
           "prompt": "If other information sources inform your proposal review or guidance work, please specify.",
           "kind": "qualitative",
-          "responseCountUnfiltered": 22,
+          "responseCountUnfiltered": 23,
           "eligibility": {
             "mode": "branch",
             "basedOn": "country_team.q14",
@@ -581,7 +581,7 @@
           "section": "Proposal development and review",
           "prompt": "What factors are limiting your use of tools and information sources listed in the previous question?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 40,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -614,7 +614,7 @@
           "section": "Implementation support and knowledge sources",
           "prompt": "How often do the following information sources inform your project implementation support activities?",
           "kind": "matrix_frequency",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -713,7 +713,7 @@
           "section": "Implementation support and knowledge sources",
           "prompt": "If other information sources inform your project implementation support activities, please specify.",
           "kind": "qualitative",
-          "responseCountUnfiltered": 18,
+          "responseCountUnfiltered": 19,
           "eligibility": {
             "mode": "branch",
             "basedOn": "country_team.q17",
@@ -745,7 +745,7 @@
           "section": "Implementation support and knowledge sources",
           "prompt": "How clear and manageable are changes in SGP and/or GEF agency priorities, requirements, or review expectations over time?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -778,7 +778,7 @@
           "section": "Implementation support and knowledge sources",
           "prompt": "During project implementation,  which types of expertise or support do you most commonly need to source or refer grantee partners to?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -811,7 +811,7 @@
           "section": "Implementation support and knowledge sources",
           "prompt": "Based on your experience, what factors most commonly create challenges for project success?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -844,7 +844,7 @@
           "section": "Learning and knowledge sharing",
           "prompt": "Which learning formats are most useful to you?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -877,7 +877,7 @@
           "section": "Learning and knowledge sharing",
           "prompt": "Would you share lessons, examples, or templates on the platform, and what would make that realistic?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -910,7 +910,7 @@
           "section": "Learning and knowledge sharing",
           "prompt": "When a project closes, how is the lessons learned content from the grantee's final report typically handled in your country program?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -943,7 +943,7 @@
           "section": "Learning and knowledge sharing",
           "prompt": "If your country program has produced case studies, good practice case studies, or similar knowledge products from project experience, how easy is this process?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -976,7 +976,7 @@
           "section": "Learning and knowledge sharing",
           "prompt": "Please describe your experience in uploading knowledge management products to the SGP Innovation Library?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1009,7 +1009,7 @@
           "section": "Learning and knowledge sharing",
           "prompt": "In your experience, where is hands-on guidance or local experience most important across the entire project cycle, and why?",
           "kind": "qualitative",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1039,7 +1039,7 @@
           "section": "Learning and knowledge sharing",
           "prompt": "What are the main barriers to learning from other country teams, and what would make a peer network worth using? Please briefly explain.",
           "kind": "qualitative",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1069,7 +1069,7 @@
           "section": "Learning and knowledge sharing",
           "prompt": "If there were one type of information or support that would have been most useful at the right time, what would it have been, and why?",
           "kind": "qualitative",
-          "responseCountUnfiltered": 38,
+          "responseCountUnfiltered": 41,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1099,7 +1099,7 @@
       "key": "grantee_partners",
       "label": "Grantee Partners",
       "sourceSheet": "Grantee Partners",
-      "respondentCount": 168,
+      "respondentCount": 169,
       "questionRange": "Q30–Q63",
       "filters": [
         {
@@ -1145,7 +1145,7 @@
           "section": "Profile and proposal experience",
           "prompt": "Please indicate your country.",
           "kind": "dimension",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1177,7 +1177,7 @@
           "section": "Profile and proposal experience",
           "prompt": "In which language(s) do you most need knowledge and learning materials?",
           "kind": "language_need",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 163,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1210,7 +1210,7 @@
           "section": "Profile and proposal experience",
           "prompt": "What is your typical Internet reliability, and your ability to download/upload large files  ?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1243,7 +1243,7 @@
           "section": "Profile and proposal experience",
           "prompt": "How did you first learn about SGP funding opportunities?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1276,7 +1276,7 @@
           "section": "Profile and proposal experience",
           "prompt": "Are you aware that project preparation grant support is available?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1342,7 +1342,7 @@
           "section": "Profile and proposal experience",
           "prompt": "What is the status of your organization's most recent SGP proposal ?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1375,7 +1375,7 @@
           "section": "Proposal development",
           "prompt": "What parts of proposal development were most difficult?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1408,7 +1408,7 @@
           "section": "Proposal development",
           "prompt": "What types of support were most helpful during proposal development?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1441,7 +1441,7 @@
           "section": "Proposal development",
           "prompt": "Did your organization receive outside support in preparing your most recent SGP proposal?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1474,7 +1474,7 @@
           "section": "Proposal development",
           "prompt": "For your organization's most recent SGP proposal, were you asked to revise the proposal?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1507,7 +1507,7 @@
           "section": "Proposal development",
           "prompt": "If revisions were requested, what were the most common reasons for those revisions",
           "kind": "qualitative",
-          "responseCountUnfiltered": 110,
+          "responseCountUnfiltered": 111,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q40",
@@ -1539,7 +1539,7 @@
           "section": "Proposal development",
           "prompt": "Which SGP knowledge resources or support materials did you use during proposal development?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1572,7 +1572,7 @@
           "section": "Proposal development",
           "prompt": "Which types of information support might have helped you better prepare or refine your proposal more easily?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1605,7 +1605,7 @@
           "section": "Proposal development",
           "prompt": "At the proposal stage, did your organization expect that project activities or benefits would continue beyond the SGP funding period?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1638,7 +1638,7 @@
           "section": "Proposal development",
           "prompt": "What lessons did you learn about GEF grant project proposal development that you would apply to future proposal applications?",
           "kind": "qualitative",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1668,7 +1668,7 @@
           "section": "Project implementation",
           "prompt": "Has your organization implemented approved SGP projects, or is an approved project currently under implementation?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 168,
+          "responseCountUnfiltered": 169,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -1701,7 +1701,7 @@
           "section": "Project implementation",
           "prompt": "How many GEF-funded grant projects has your organization implemented (including the most recent one)?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -1736,7 +1736,7 @@
           "section": "Project implementation",
           "prompt": "What best describes the current status of your most recent GEF-funded grant project?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -1771,7 +1771,7 @@
           "section": "Project implementation",
           "prompt": "Were the expectations and requirements for implementing your most recent GEF-funded grant project clear at the beginning of the project?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -1806,7 +1806,7 @@
           "section": "Project implementation",
           "prompt": "What types of challenges created the most difficulty during implementation?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -1841,7 +1841,7 @@
           "section": "Project implementation",
           "prompt": "What types of support were useful during implementation?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -1876,7 +1876,7 @@
           "section": "Project implementation",
           "prompt": "During implementation, did the project approach or activities change?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -1911,7 +1911,7 @@
           "section": "Project implementation",
           "prompt": "If changes were made, what were the main reasons for those changes",
           "kind": "qualitative",
-          "responseCountUnfiltered": 92,
+          "responseCountUnfiltered": 93,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q52",
@@ -1978,7 +1978,7 @@
           "section": "Project implementation",
           "prompt": "Which knowledge resources or support mechanisms did you use during implementation?",
           "kind": "multi_select",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2013,7 +2013,7 @@
           "section": "Project implementation",
           "prompt": "What do you wish you had known before implementation began?",
           "kind": "qualitative",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2045,7 +2045,7 @@
           "section": "Project implementation",
           "prompt": "What knowledge or learning resources contributed most to your project's success or progress?",
           "kind": "qualitative",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2077,7 +2077,7 @@
           "section": "Project implementation",
           "prompt": "How confident are you that project activities or benefits will continue after the GEF grant funding ends?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2112,7 +2112,7 @@
           "section": "Project implementation",
           "prompt": "Did your project consider whether the approach could also be useful in other communities or locations?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2147,7 +2147,7 @@
           "section": "Closure and learning",
           "prompt": "When completing the final report for your most recent GEF-funded grant project, how clear and useful was the section asking about lessons learned and what worked or did not work?",
           "kind": "ordinal_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2182,7 +2182,7 @@
           "section": "Closure and learning",
           "prompt": "Were you asked to complete any separate form, questionnaire, or template specifically about lessons learned or project results — separate from the main final report?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2217,7 +2217,7 @@
           "section": "Closure and learning",
           "prompt": "Are you aware of whether your project was used as a case study or good practice example by the national SGP team or SGP Global?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2252,7 +2252,7 @@
           "section": "Closure and learning",
           "prompt": "What would you most want other grantee partners to know before starting implementation?",
           "kind": "qualitative",
-          "responseCountUnfiltered": 146,
+          "responseCountUnfiltered": 147,
           "eligibility": {
             "mode": "branch",
             "basedOn": "grantee_partners.q46",
@@ -2284,7 +2284,7 @@
       "key": "implementing_agencies",
       "label": "Implementing Agencies",
       "sourceSheet": "Implementing Agencies",
-      "respondentCount": 17,
+      "respondentCount": 18,
       "questionRange": "Q64–Q71",
       "filters": [
         {
@@ -2305,7 +2305,7 @@
           "section": "Profile",
           "prompt": "Please indicate your agency.",
           "kind": "dimension",
-          "responseCountUnfiltered": 17,
+          "responseCountUnfiltered": 18,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -2338,7 +2338,7 @@
           "section": "Content, processes and platform features",
           "prompt": "What types of content would be most valuable for inclusion in the SGP Knowledge and Learning Platform? (rate each of the line items)",
           "kind": "matrix_rating",
-          "responseCountUnfiltered": 17,
+          "responseCountUnfiltered": 18,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -2417,7 +2417,7 @@
           "section": "Content, processes and platform features",
           "prompt": "Which of the following best describes the current process for turning country program project experience into published knowledge products (e.g. case studies, innovation notes)?",
           "kind": "single_choice",
-          "responseCountUnfiltered": 17,
+          "responseCountUnfiltered": 18,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -2450,7 +2450,7 @@
           "section": "Content, processes and platform features",
           "prompt": "Which platform features would provide the greatest value to your agency? (rate each of the line items)",
           "kind": "matrix_rating",
-          "responseCountUnfiltered": 17,
+          "responseCountUnfiltered": 18,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -2524,7 +2524,7 @@
           "section": "Resources, adoption and sustainability",
           "prompt": "What information, knowledge resources, or data systems within your organization could be useful to the broader SGP community (SGP country teams, CSO/CBO grantee partners, or other SGP stakeholders)?",
           "kind": "qualitative",
-          "responseCountUnfiltered": 17,
+          "responseCountUnfiltered": 18,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
@@ -2553,15 +2553,16 @@
           "number": 69,
           "section": "Resources, adoption and sustainability",
           "prompt": "What barriers may limit the successful adoption and use of an SGP-wide Knowledge and Learning Platform supporting knowledge sharing, grant preparation, project implementation, and learning across the SGP?",
-          "kind": "qualitative",
-          "responseCountUnfiltered": 17,
+          "kind": "multi_select",
+          "responseCountUnfiltered": 18,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
           "chart": {
-            "default": "response_reader",
+            "default": "ranked_bar",
             "alternatives": [
-              "response_table"
+              "treemap",
+              "data_table"
             ]
           },
           "sourceColumns": [
@@ -2572,9 +2573,9 @@
           ],
           "matrixItems": [],
           "display": {
-            "showCountAndPercent": false,
+            "showCountAndPercent": true,
             "denominator": "valid_or_eligible_responses",
-            "allowChartCycling": false,
+            "allowChartCycling": true,
             "allowCsvExport": true
           }
         },
@@ -2583,15 +2584,16 @@
           "number": 70,
           "section": "Resources, adoption and sustainability",
           "prompt": "What measures would be important to ensure the long-term sustainability of the platform?",
-          "kind": "qualitative",
-          "responseCountUnfiltered": 17,
+          "kind": "multi_select",
+          "responseCountUnfiltered": 18,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },
           "chart": {
-            "default": "response_reader",
+            "default": "ranked_bar",
             "alternatives": [
-              "response_table"
+              "treemap",
+              "data_table"
             ]
           },
           "sourceColumns": [
@@ -2602,9 +2604,9 @@
           ],
           "matrixItems": [],
           "display": {
-            "showCountAndPercent": false,
+            "showCountAndPercent": true,
             "denominator": "valid_or_eligible_responses",
-            "allowChartCycling": false,
+            "allowChartCycling": true,
             "allowCsvExport": true
           }
         },
@@ -2787,7 +2789,7 @@
           "number": 75,
           "section": "Profile and working arrangements",
           "prompt": "Please indicate the GEF agency supporting your country program.",
-          "kind": "single_choice",
+          "kind": "multi_select",
           "responseCountUnfiltered": 57,
           "eligibility": {
             "mode": "all_respondents_in_tab"
@@ -2821,7 +2823,7 @@
           "section": "Profile and working arrangements",
           "prompt": "In which language(s) do you most need knowledge and learning materials?",
           "kind": "language_need",
-          "responseCountUnfiltered": 57,
+          "responseCountUnfiltered": 55,
           "eligibility": {
             "mode": "all_respondents_in_tab"
           },

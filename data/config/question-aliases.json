@@ -1,0 +1,376 @@
+{
+  "country_team.q3": {},
+  "country_team.q4": {},
+  "country_team.q5": {},
+  "country_team.q7": {},
+  "country_team.q8": {
+    "Computer": "Laptop or desktop computer"
+  },
+  "country_team.q9": {},
+  "country_team.q10": {
+    "Stakeholder coordination problems": "Stakeholder coordination issues"
+  },
+  "country_team.q11": {
+    "Lack of medium- and long-term sustainability in the proposal": "Weak sustainability",
+    "Unrealistic workplan and timeline": "Unrealistic work plan, timeframe",
+    "Unrealistic project workplan and timelines": "Unrealistic work plan, timeframe",
+    "Grantee partner capacity limitations": "Capacity limitations of grantee partner",
+    "Limitations in the grantee partner's implementation capacity": "Capacity limitations of grantee partner",
+    "Lack of alignment with the national programme strategy": "Lack of alignment with country program strategy",
+    "Lack of alignment with the country programme strategy": "Lack of alignment with country program strategy"
+  },
+  "country_team.q12": {
+    "Implementation budgeting and planning": "Budget and implementation planning",
+    "Supporting NSC coordination and governance": "NSC coordination and governance support",
+    "Support for NSC coordination and governance": "NSC coordination and governance support",
+    "Support for monitoring and reporting plans": "Supporting monitoring and reporting plans",
+    "Connecting applicants with relevant knowledge or partners": "Connecting applicants to relevant knowledge or partners",
+    "Community participation": "Community engagement",
+    "Assessing social and environmental risks": "Screening social and environmental risks"
+  },
+  "country_team.q13": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure"
+  },
+  "country_team.q16": {
+    "Not applicable": "Not relevant",
+    "Connectivity/access constraints": "Login / access constraints"
+  },
+  "country_team.q19": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure",
+    "They are generally manageable, with some occasional challenges": "Mostly clear, with occasional challenges",
+    "Generally clear, with some occasional difficulties": "Mostly clear, with occasional challenges"
+  },
+  "country_team.q20": {
+    "Livelihoods or business-development expertise": "Livelihood or business development expertise",
+    "Business or livelihoods development expertise": "Livelihood or business development expertise",
+    "Community participation or conflict resolution": "Community engagement or conflict resolution"
+  },
+  "country_team.q21": {
+    "Funding or disbursement delays": "Delays in funding or disbursement",
+    "Safeguard requirements": "Safeguards-related requirements"
+  },
+  "country_team.q22": {
+    "Practical field-based demonstration of learning": "Learning-by-doing field demonstration",
+    "Demonstration of how learning is integrated through practice": "Learning-by-doing field demonstration",
+    "Step-by-step written instructions": "Step-by-step written guidance"
+  },
+  "country_team.q23": {
+    "Templates available to complete with the required information": "Readily available templates",
+    "Sufficient time or dedicated support for knowledge capture": "Adequate time or dedicated support for knowledge capture",
+    "Having sufficient time or support for knowledge capture": "Adequate time or dedicated support for knowledge capture"
+  },
+  "country_team.q24": {
+    "Integrated into the annual monitoring report or country data submission": "Incorporated into the annual monitoring report or country data submission",
+    "By incorporating them into the annual monitoring report or country data submission": "Incorporated into the annual monitoring report or country data submission",
+    "Presented at a national or regional knowledge fair or exchange event": "Shared at a national or regional knowledge fair or exchange event",
+    "Sharing them at a national or regional knowledge fair or exchange event": "Shared at a national or regional knowledge fair or exchange event",
+    "Shared informally with colleagues from the Global Coordination Team / SGP CPMT or GEF Agency": "Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues",
+    "It rarely goes beyond the final report": "Rarely goes further than the final report itself",
+    "It rarely goes beyond the final report itself": "Rarely goes further than the final report itself"
+  },
+  "country_team.q25": {
+    "It is possible, but time-consuming and competes with operational priorities": "Possible but time-consuming – it competes with operational priorities",
+    "It requires a great deal of time and competes with operational priorities": "Possible but time-consuming – it competes with operational priorities",
+    "Difficult - we lack templates, guidance, and dedicated time": "Difficult – we lack templates, guidance, or dedicated time",
+    "We have not produced knowledge products of this kind": "We have not produced knowledge products of this type"
+  },
+  "country_team.q26": {
+    "No, we are not sure how to submit it": "No – we are not sure how to submit",
+    "No, we do not know how to submit": "No – we are not sure how to submit",
+    "Rarely - the process is unclear or complex": "Rarely – the process is unclear or cumbersome",
+    "Yes - occasionally, at the request of the Global Coordination Team / SGP CPMT": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it",
+    "I don't know": "I do not know"
+  },
+  "grantee_partners.q32": {
+    "Unreliable, with constant difficulty downloading/uploading large files": "Unreliable, consistently experiencing difficulties downloading/uploading large files",
+    "Frequently unreliable, with inconsistent ability to download/upload large files": "Often unreliable, with inconsistent ability to download/upload large files"
+  },
+  "grantee_partners.q33": {
+    "National Team / National Programme": "Country Team / Country Program",
+    "SGP Innovation Library or another online resource": "SGP Innovation Library or other online resource"
+  },
+  "grantee_partners.q34": {
+    "No, I was not aware": "No, I was unaware",
+    "Yes, but I did not apply for project preparation support": "Yes, but I have not applied for project preparation support",
+    "Yes, and I received project preparation support": "Yes, and I have received project preparation support"
+  },
+  "grantee_partners.q35": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure"
+  },
+  "grantee_partners.q36": {
+    "The proposal was approved and funded": "Proposal was approved and funded",
+    "The proposal was submitted but not approved": "Proposal was submitted, but not approved",
+    "The proposal was approved after major revisions": "Proposal was approved after major revisions",
+    "The proposal is still under review": "Proposal is still under review",
+    "The proposal idea was discussed internally but was not submitted": "Proposal idea was discussed internally, but not submitted",
+    "The proposal was withdrawn or abandoned": "Proposal was withdrawn or abandoned"
+  },
+  "grantee_partners.q37": {
+    "Alignment with SGP priorities and GEF focal areas": "Aligning with SGP priorities and GEF focal areas",
+    "Screening social and environmental risks": "Screening for social and environmental risks",
+    "Identifying social and environmental risks": "Screening for social and environmental risks",
+    "Technical or scientific expertise": "Technical or scientific knowledge"
+  },
+  "grantee_partners.q38": {
+    "Support from the SGP Country Team": "SGP country team support",
+    "or outreach events": "Workshops, trainings, or outreach events",
+    "Peer NGOs/CSOs or previous grantee partners": "Peer NGO/CSO organizations or previous grantee partners",
+    "Similar NGO/CSO grantee organizations or previous grantee partners": "Peer NGO/CSO organizations or previous grantee partners",
+    "Examples of previous projects or proposals": "Examples from previous projects or proposals",
+    "Support from government agencies or technical institutes (local": "Government agencies or technical institutes (local, national, regional)",
+    "Community participation or consultations": "Community input or consultations",
+    "Workshops": "Workshops, trainings, or outreach events",
+    "or regional)": "Government agencies or technical institutes (local, national, regional)"
+  },
+  "grantee_partners.q39": {
+    "the proposal was developed internally": "No - proposal developed internally",
+    "Support from the SGP Country Team": "Support from SGP country team",
+    "Support from peer NGOs": "Support from a peer NGO, CSO, or CBO",
+    "Support from a government agency or technical institute": "Support from government agency or technical institution",
+    "Support from an academic or research institution": "Support from an academic or research institute",
+    "No - the proposal was developed internally": "No - proposal developed internally",
+    "No": "No - proposal developed internally",
+    "The CSO network received support from the SGP team": "Support from SGP country team"
+  },
+  "grantee_partners.q40": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure",
+    "The proposal did not advance through the review process": "The proposal did not move forward in the review process"
+  },
+  "grantee_partners.q42": {
+    "Previous proposals or project examples": "Previous project proposals or examples",
+    "Workshops": "Workshops, trainings, webinars",
+    "SGP publications/reports/articles/stories": "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories",
+    "Guidance from the SGP Country Team": "Guidance from SGP country team",
+    "SGP Country Team guidance": "Guidance from SGP country team",
+    "Evaluations of similar previous projects": "Evaluations of similar past projects",
+    "Evaluations of similar projects implemented previously": "Evaluations of similar past projects",
+    "SGP website": "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories",
+    "webinars": "Workshops, trainings, webinars",
+    "SGP Innovation Library website": "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories",
+    "SGP Innovation Library": "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories"
+  },
+  "grantee_partners.q43": {
+    "Budget or cost information": "Budgeting or cost information",
+    "Access to previous project evaluations or lessons learned": "Access to previous project reviews or lessons learned",
+    "Technical or scientific information": "Engineering or scientific information",
+    "Guidance on social and environmental safeguard requirements": "Guidance on social and environmental safeguards requirements",
+    "or legal requirements": "Information about permits, approvals, or legal requirements",
+    "Examples of similar projects": "Examples from similar projects",
+    "Technical guidance or expert support": "Technical guidance or expertise",
+    "Support for community consultation": "Community consultation support",
+    "approvals": "Information about permits, approvals, or legal requirements",
+    "Information on permits": "Information about permits, approvals, or legal requirements"
+  },
+  "grantee_partners.q44": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure",
+    "Yes, but only to a certain extent": "Yes - but only to a limited extent",
+    "Yes, this was an important part of the design": "Yes - this was an important part of the project design",
+    "Yes, this was an important part of the project": "Yes - this was an important part of the project design",
+    "No, the main focus was on short-term project activities": "No - the focus was mainly on short-term project activities"
+  },
+  "grantee_partners.q46": {
+    "No (we have no experience implementing an SGP project)": "No (we do not have experience with SGP project implementation)",
+    "Yes (we have experience implementing an SGP project)": "Yes (we have experience with SGP project implementation)"
+  },
+  "grantee_partners.q47": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure"
+  },
+  "grantee_partners.q48": {},
+  "grantee_partners.q49": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure",
+    "Overall clear, with some unexpected challenges": "Mostly clear, with some unexpected challenges",
+    "Overall it was clear, with some unexpected challenges": "Mostly clear, with some unexpected challenges",
+    "Mostly clear, but with some unexpected challenges": "Mostly clear, with some unexpected challenges"
+  },
+  "grantee_partners.q50": {
+    "Stakeholder partnerships or coordination": "Partnerships or stakeholder coordination",
+    "Stakeholder partnership or coordination": "Partnerships or stakeholder coordination",
+    "Funding or disbursement delays": "Delays in funding or disbursement",
+    "Social and environmental safeguard requirements": "Social and environmental safeguards requirements",
+    "Technical problems": "Technical challenges",
+    "Equipment procurement": "Procurement or equipment",
+    "Inadequate project-launch or orientation process at the start of implementation": "Inadequate project inception or orientation process at the start of implementation"
+  },
+  "grantee_partners.q51": {
+    "National Steering Committee monitoring": "Monitoring oversight and guidance from National Steering Committee",
+    "National Steering Committee oversight and guidance": "Monitoring oversight and guidance from National Steering Committee",
+    "Reporting templates or guidance": "Templates or reporting guidance",
+    "Partner organizations": "Peer organizations",
+    "oversight": "Monitoring oversight and guidance from National Steering Committee",
+    "and guidance": "Monitoring oversight and guidance from National Steering Committee"
+  },
+  "grantee_partners.q52": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure",
+    "No significant changes were made": "No significant changes",
+    "Yes, minor adjustments were made": "Yes - minor adjustments"
+  },
+  "grantee_partners.q54": {
+    "Access to lessons learned from previous projects": "Access to previous project lessons learned",
+    "Social and environmental safeguard guidance": "Social and environmental safeguards guidance",
+    "Examples of similar projects": "Examples from similar projects"
+  },
+  "grantee_partners.q55": {
+    "Guidance from the SGP Country Team": "Guidance from SGP country team",
+    "SGP Country Team guidance": "Guidance from SGP country team",
+    "National Steering Committee monitoring": "Monitoring oversight and guidance from National Steering Committee",
+    "National Steering Committee oversight and guidance": "Monitoring oversight and guidance from National Steering Committee",
+    "SGP publications/reports/articles/stories": "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories",
+    "Guidance from SGP GEF Agency colleagues": "Guidance from GEF SGP agency colleagues",
+    "Guidance from SGP GEF Agency staff": "Guidance from GEF SGP agency colleagues",
+    "SGP website": "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories",
+    "oversight": "Monitoring oversight and guidance from National Steering Committee",
+    "and guidance": "Monitoring oversight and guidance from National Steering Committee",
+    "SGP Innovation Library website": "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories",
+    "SGP Innovation Library": "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories"
+  },
+  "grantee_partners.q58": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure",
+    "I'm not sure": "Unsure"
+  },
+  "grantee_partners.q59": {
+    "I don't know": "Unsure",
+    "I do not know": "Unsure",
+    "Yes, but only to a certain extent": "Yes - but only to a limited extent",
+    "No, the main focus was on the local context": "No - the focus was mainly local"
+  },
+  "grantee_partners.q60": {
+    "Fairly clear - I understood the question but had difficulty expressing my response": "Somewhat clear – I understood what was asked but found it hard to articulate",
+    "Fairly clear - I understood what was being asked, but found it difficult to formulate my response": "Somewhat clear – I understood what was asked but found it hard to articulate",
+    "More or less clear: I understood what was being asked, but found it difficult to put into words": "Somewhat clear – I understood what was asked but found it hard to articulate",
+    "I did not write a final report": "I did not complete a final report",
+    "The questions were very clear - they were specific and easy to answer": "Very clear – the questions were specific and easy to answer"
+  },
+  "grantee_partners.q61": {
+    "Yes - I completed a specific lessons-learned questionnaire or a case study template": "Yes – I completed a specific lessons learned questionnaire or case study template",
+    "I'm not sure": "I am not sure",
+    "No, only the final report was required": "No – the final report was the only document required",
+    "Yes, I was interviewed or invited to contribute to a case study after the project ended": "Yes – I was interviewed or asked to contribute to a case study after the project ended",
+    "Yes, after the project ended, I was invited to an interview or asked to participate in a study": "Yes – I was interviewed or asked to contribute to a case study after the project ended"
+  },
+  "grantee_partners.q62": {
+    "I don't know whether this happened": "I am not aware of whether this happened",
+    "I am not aware whether this happened": "I am not aware of whether this happened",
+    "No - I do not think my project was used in that way": "No – I do not think my project was used in this way",
+    "Yes, I participated in preparing the case study or example": "Yes – I was involved in producing the case study or example",
+    "Yes, I participated in preparing this case study or example": "Yes – I was involved in producing the case study or example",
+    "Yes, I was informed about it, but I did not participate in producing it": "Yes – I was informed, but not involved in producing it",
+    "Yes, I was informed about it, but I did not participate in creating it": "Yes – I was informed, but not involved in producing it"
+  },
+  "implementing_agencies.q64": {},
+  "implementing_agencies.q66": {
+    "We do not currently have a defined process for this": "We do not have a defined process for this at present",
+    "A defined process exists: National Coordinators submit; the agency's GC team reviews and publishes": "There is a defined process: National Coordinators submit; agency KM team reviews and publishes",
+    "A defined process exists: National Coordinators submit the materials; the agency's GC team reviews and publishes them": "There is a defined process: National Coordinators submit; agency KM team reviews and publishes"
+  },
+  "implementing_agencies.q69": {},
+  "implementing_agencies.q70": {
+    "Formal governance arrangements": "Formal governance agreements"
+  },
+  "steering_committee.q73": {
+    "National or subnational government": "National or sub-national government",
+    "United Nations agency or other international organization": "UN agency or other international organization"
+  },
+  "steering_committee.q74": {
+    "1 to 2 years": "1-2 years",
+    "3 to 5 years": "3-5 years"
+  },
+  "steering_committee.q75": {},
+  "steering_committee.q77": {
+    "My internet access is good": "Reliable"
+  },
+  "steering_committee.q78": {
+    "Computer": "Laptop or desktop computer"
+  },
+  "steering_committee.q79": {},
+  "steering_committee.q80": {
+    "Online portal or shared databases (e.g": "Online portal or shared databases (e.g. SGP database)",
+    "Shared cloud storage (e.g., Google Drive, OneDrive, etc.)": "Shared cloud storage (e.g. Google Drive, OneDrive, etc.)",
+    "Hard copies or printed documents": "Physical or printed copies",
+    "SGP database)": "Online portal or shared databases (e.g. SGP database)",
+    "Online portal or shared databases (e.g., the SGP database)": "Online portal or shared databases (e.g. SGP database)"
+  },
+  "steering_committee.q81": {},
+  "steering_committee.q82": {
+    "Assessing whether the budget is reasonable and cost-effective": "Assessing budget reasonableness and cost-effectiveness",
+    "Assessing social and environmental risk screening": "Evaluating social and environmental risk screening",
+    "Checking alignment with the country programme strategy": "Verifying alignment with the Country Program Strategy",
+    "Assessing community participation and consultation approaches": "Assessing community engagement and consultation approaches",
+    "Review of monitoring and reporting plans": "Reviewing monitoring and reporting plans",
+    "Assessing social and environmental risk-screening approaches": "Evaluating social and environmental risk screening"
+  },
+  "steering_committee.q83": {
+    "Yes - I actively participated in the CPS development process": "Yes – I was actively involved in the CPS development process",
+    "Yes, I participated in consultations, but my influence on final priorities was limited": "Yes – I participated in consultations but had limited input on final priorities",
+    "Yes, I participated in consultations, but my input into the final priorities was limited": "Yes – I participated in consultations but had limited input on final priorities",
+    "No - the CPS was developed or revised before I joined the NSC team": "No – the CPS was developed or revised before I joined the NSC",
+    "No - the CPS was developed or revised before I joined the team working with the NSC": "No – the CPS was developed or revised before I joined the NSC"
+  },
+  "steering_committee.q84": {
+    "Lessons learned from projects completed in the previous phase": "Lessons learned from completed projects in the previous phase",
+    "National environmental policy priorities and commitments under multilateral environmental agreements": "National environmental policy priorities and MEA commitments",
+    "Portfolio performance data (results compared with indicators and targets)": "Portfolio performance data (results against indicators and targets)",
+    "Examples of comparable country programme strategies": "Examples of Country Program Strategies from comparable countries",
+    "Examples of country programme strategies from countries at a similar level of development": "Examples of Country Program Strategies from comparable countries",
+    "Examples of national programme strategies from comparable countries": "Examples of Country Program Strategies from comparable countries",
+    "National environmental policy priorities and commitments under Multilateral Environmental Agreements (MEAs)": "National environmental policy priorities and MEA commitments"
+  },
+  "steering_committee.q85": {
+    "Access to better data on the results of the programme's previous phase": "Access to better data on results from the previous programme phase",
+    "A platform tool or template dedicated to the CPS development process": "A dedicated platform tool or template for the CPS development process",
+    "A platform tool or template specifically for the CPS development process": "A dedicated platform tool or template for the CPS development process",
+    "More time for consultation with civil society and local communities": "More time for participatory consultation with civil society and communities"
+  },
+  "steering_committee.q87": {
+    "Connectivity or access constraints": "Login or access constraints",
+    "Login or access restrictions": "Login or access constraints",
+    "Outdated or not regularly updated": "Outdated or not updated regularly"
+  },
+  "steering_committee.q88": {
+    "Yes - sometimes": "Yes – occasionally",
+    "No, this is not part of our NSC's current practice": "No – not part of our NSC's current practice"
+  },
+  "steering_committee.q89": {
+    "Disbursement and financial expenditure records": "Financial disbursement and expenditure records",
+    "Information on project sustainability plans": "Information about project sustainability plans",
+    "Community consultation or feedback documents": "Community feedback or consultation records"
+  },
+  "steering_committee.q90": {
+    "Environmental and social safeguard training": "Environmental and social safeguards training"
+  },
+  "steering_committee.q91": {
+    "Step-by-step written instructions (guides, manuals)": "Step-by-step written guidance (guides, manuals)",
+    "Short explainer videos (5-10 minutes)": "Short explanatory videos (5–10 minutes)",
+    "Online webinar or virtual meeting": "Live webinar or virtual meeting",
+    "manuals)": "Step-by-step written guidance (guides, manuals)"
+  },
+  "steering_committee.q92": {
+    "Time constraints (the NSC is a voluntary or part-time role)": "Time constraints (NSC is a voluntary or part-time role)",
+    "Time constraints (the NSC is a voluntary or part-time position)": "Time constraints (NSC is a voluntary or part-time role)",
+    "Infrequent meetings limit adaptive governance and monitoring": "Infrequent meetings limiting adaptive governance and monitoring",
+    "Infrequent meetings limit opportunities for adaptive management and monitoring": "Infrequent meetings limiting adaptive governance and monitoring",
+    "Unclear governance roles": "Unclear roles, mandate, or governance procedures",
+    "Insufficient technical expertise among NSC members to assess all types of proposals": "Insufficient technical expertise across NSC membership to assess all proposal types",
+    "Insufficient technical expertise among NSC members to assess every type of proposal": "Insufficient technical expertise across NSC membership to assess all proposal types",
+    "Limited communication or information support from the National Coordinator / Country Team": "Limited communication or briefing support from the National Coordinator / country team",
+    "mandate": "Unclear roles, mandate, or governance procedures",
+    "or procedures": "Unclear roles, mandate, or governance procedures"
+  },
+  "steering_committee.q96": {
+    "Limited time, given that the NSC role is part-time or voluntary": "Limited time, given the part-time or voluntary nature of the NSC role",
+    "given that the NSC position is part-time or voluntary": "Limited time, given the part-time or voluntary nature of the NSC role",
+    "It is unclear how the platform would specifically support NSC governance functions": "Unclear how the platform would support NSC governance functions specifically",
+    "Connectivity problems in my region": "Connectivity constraints in my location",
+    "Platform not designed for periodic or meeting-based access patterns": "Platform not designed for periodic or meeting-driven access patterns",
+    "Insufficient digital skills or confidence using online platforms": "Insufficient digital literacy or confidence with online platforms",
+    "Limited time": "Limited time, given the part-time or voluntary nature of the NSC role"
+  }
+}

@@ -1,0 +1,1502 @@
+{
+  "country_team.q3": {
+    "type": "single",
+    "options": [
+      "National Coordinator",
+      "Program Assistant"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "National Coordinator": 24,
+      "Program Assistant": 12,
+      "Other (free text)": 5
+    },
+    "base": 41
+  },
+  "country_team.q4": {
+    "type": "single",
+    "options": [
+      "Less than one year (recently started)",
+      "1-5 years",
+      "6-10 years",
+      ">10 years"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Less than one year (recently started)": 8,
+      "1-5 years": 12,
+      "6-10 years": 10,
+      ">10 years": 11,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "country_team.q5": {
+    "type": "single",
+    "options": [
+      "UNDP",
+      "FAO",
+      "Conservation International"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "UNDP": 39,
+      "FAO": 0,
+      "Conservation International": 2,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "country_team.q7": {
+    "type": "single",
+    "options": [
+      "Reliable, with no problems downloading/uploading large files",
+      "Sometimes unreliable, but generally able to download/upload large files",
+      "Often unreliable, with inconsistent ability to download/upload large files",
+      "Unreliable, consistently experiencing difficulties downloading/uploading large files"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Reliable, with no problems downloading/uploading large files": 26,
+      "Sometimes unreliable, but generally able to download/upload large files": 15,
+      "Often unreliable, with inconsistent ability to download/upload large files": 0,
+      "Unreliable, consistently experiencing difficulties downloading/uploading large files": 0,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "country_team.q8": {
+    "type": "single",
+    "options": [
+      "Laptop or desktop computer",
+      "Mobile telephone"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Laptop or desktop computer": 39,
+      "Mobile telephone": 2,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "country_team.q9": {
+    "type": "multi",
+    "options": [
+      "Early concept discussions",
+      "Proposal development",
+      "Proposal review/refinement",
+      "NSC coordination",
+      "Project implementation support",
+      "Monitoring and reporting",
+      "Midterm and final reviews",
+      "Knowledge sharing and lessons learned"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Early concept discussions": 8,
+      "Proposal development": 18,
+      "Proposal review/refinement": 30,
+      "NSC coordination": 5,
+      "Project implementation support": 23,
+      "Monitoring and reporting": 28,
+      "Midterm and final reviews": 13,
+      "Knowledge sharing and lessons learned": 16,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "country_team.q10": {
+    "type": "multi",
+    "options": [
+      "Explaining SGP priorities or requirements",
+      "Revising project activities or objectives",
+      "Budget corrections or revisions",
+      "Monitoring indicators or reporting requirements",
+      "Aligning proposals with GEF focal areas or strategic priorities",
+      "Stakeholder coordination issues",
+      "Technical feasibility concerns",
+      "Missing information or supporting documentation",
+      "Guiding applicants on NSC review criteria or the grant approval process"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Explaining SGP priorities or requirements": 17,
+      "Revising project activities or objectives": 23,
+      "Budget corrections or revisions": 27,
+      "Monitoring indicators or reporting requirements": 21,
+      "Aligning proposals with GEF focal areas or strategic priorities": 18,
+      "Stakeholder coordination issues": 6,
+      "Technical feasibility concerns": 12,
+      "Missing information or supporting documentation": 11,
+      "Guiding applicants on NSC review criteria or the grant approval process": 6,
+      "Other (free text)": 2
+    },
+    "base": 41
+  },
+  "country_team.q11": {
+    "type": "multi",
+    "options": [
+      "Unclear objectives",
+      "Lack of alignment with country program strategy",
+      "Unacceptable social or environmental risks",
+      "Capacity limitations of grantee partner",
+      "Unrealistic work plan, timeframe",
+      "Weak sustainability",
+      "Weak monitoring and evaluation framework"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Unclear objectives": 17,
+      "Lack of alignment with country program strategy": 8,
+      "Unacceptable social or environmental risks": 2,
+      "Capacity limitations of grantee partner": 27,
+      "Unrealistic work plan, timeframe": 16,
+      "Weak sustainability": 19,
+      "Weak monitoring and evaluation framework": 13,
+      "Other (free text)": 1
+    },
+    "base": 41
+  },
+  "country_team.q12": {
+    "type": "multi",
+    "options": [
+      "Helping shape project ideas",
+      "Aligning proposals with SGP priorities",
+      "Improving technical or operational quality",
+      "Budget and implementation planning",
+      "NSC coordination and governance support",
+      "Community engagement",
+      "Addressing unrealistic expectations",
+      "Supporting monitoring and reporting plans",
+      "Screening social and environmental risks",
+      "Connecting applicants to relevant knowledge or partners"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Helping shape project ideas": 14,
+      "Aligning proposals with SGP priorities": 26,
+      "Improving technical or operational quality": 21,
+      "Budget and implementation planning": 24,
+      "NSC coordination and governance support": 16,
+      "Community engagement": 10,
+      "Addressing unrealistic expectations": 10,
+      "Supporting monitoring and reporting plans": 15,
+      "Screening social and environmental risks": 12,
+      "Connecting applicants to relevant knowledge or partners": 11,
+      "Other (free text)": 1
+    },
+    "base": 41
+  },
+  "country_team.q13": {
+    "type": "multi",
+    "options": [
+      "These materials are generally not retained",
+      "Local office computer or hard drive",
+      "Shared cloud storage (Google Drive, OneDrive, etc.)",
+      "Email records",
+      "Printed files",
+      "SGP database",
+      "Country team personal records",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "These materials are generally not retained": 2,
+      "Local office computer or hard drive": 28,
+      "Shared cloud storage (Google Drive, OneDrive, etc.)": 16,
+      "Email records": 16,
+      "Printed files": 3,
+      "SGP database": 5,
+      "Country team personal records": 6,
+      "Unsure": 1,
+      "Other (free text)": 2
+    },
+    "base": 41
+  },
+  "country_team.q16": {
+    "type": "multi",
+    "options": [
+      "Difficult to find",
+      "Outdated",
+      "Login / access constraints",
+      "Wrong language",
+      "Not relevant"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Difficult to find": 21,
+      "Outdated": 10,
+      "Login / access constraints": 13,
+      "Wrong language": 4,
+      "Not relevant": 10,
+      "Other (free text)": 4
+    },
+    "base": 40
+  },
+  "country_team.q19": {
+    "type": "single",
+    "options": [
+      "Clear and manageable",
+      "Mostly clear, with occasional challenges",
+      "Sometimes difficult to interpret or apply consistently",
+      "Frequently difficult to interpret or apply consistently",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Clear and manageable": 5,
+      "Mostly clear, with occasional challenges": 24,
+      "Sometimes difficult to interpret or apply consistently": 10,
+      "Frequently difficult to interpret or apply consistently": 1,
+      "Unsure": 1,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "country_team.q20": {
+    "type": "multi",
+    "options": [
+      "Technical or engineering expertise",
+      "Financial or disbursement support",
+      "Procurement support",
+      "Government approvals or coordination",
+      "Legal or regulatory guidance",
+      "Monitoring and reporting support",
+      "Social and environmental safeguards",
+      "Community engagement or conflict resolution",
+      "Livelihood or business development expertise",
+      "External consultants or technical advisors",
+      "Support from agency country or regional teams",
+      "Support from agency headquarters"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Technical or engineering expertise": 24,
+      "Financial or disbursement support": 17,
+      "Procurement support": 10,
+      "Government approvals or coordination": 15,
+      "Legal or regulatory guidance": 9,
+      "Monitoring and reporting support": 22,
+      "Social and environmental safeguards": 15,
+      "Community engagement or conflict resolution": 13,
+      "Livelihood or business development expertise": 19,
+      "External consultants or technical advisors": 6,
+      "Support from agency country or regional teams": 10,
+      "Support from agency headquarters": 5,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "country_team.q21": {
+    "type": "multi",
+    "options": [
+      "Grantee partner capacity limitations",
+      "Delays in funding or disbursement",
+      "Unrealistic timelines or workplans",
+      "Logistical or transportation challenges",
+      "Procurement or equipment delays",
+      "Government approvals or coordination",
+      "Stakeholder or partner coordination",
+      "Community participation or engagement challenges",
+      "Monitoring or reporting requirements",
+      "Safeguards-related requirements",
+      "Disaster-related disruptions",
+      "Changes in priorities or external conditions"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Grantee partner capacity limitations": 32,
+      "Delays in funding or disbursement": 16,
+      "Unrealistic timelines or workplans": 18,
+      "Logistical or transportation challenges": 5,
+      "Procurement or equipment delays": 10,
+      "Government approvals or coordination": 16,
+      "Stakeholder or partner coordination": 15,
+      "Community participation or engagement challenges": 14,
+      "Monitoring or reporting requirements": 14,
+      "Safeguards-related requirements": 3,
+      "Disaster-related disruptions": 13,
+      "Changes in priorities or external conditions": 8,
+      "Other (free text)": 2
+    },
+    "base": 41
+  },
+  "country_team.q22": {
+    "type": "multi",
+    "options": [
+      "Step-by-step written guidance",
+      "Templates/checklists",
+      "Short video",
+      "Live webinar",
+      "Peer exchange",
+      "Structured e-learning",
+      "Learning-by-doing field demonstration"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Step-by-step written guidance": 28,
+      "Templates/checklists": 25,
+      "Short video": 20,
+      "Live webinar": 7,
+      "Peer exchange": 23,
+      "Structured e-learning": 11,
+      "Learning-by-doing field demonstration": 27,
+      "Other (free text)": 2
+    },
+    "base": 41
+  },
+  "country_team.q23": {
+    "type": "multi",
+    "options": [
+      "Adequate time or dedicated support for knowledge capture",
+      "Readily available templates",
+      "Recognition"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Adequate time or dedicated support for knowledge capture": 34,
+      "Readily available templates": 22,
+      "Recognition": 9,
+      "Other (free text)": 1
+    },
+    "base": 41
+  },
+  "country_team.q24": {
+    "type": "multi",
+    "options": [
+      "Incorporated into the annual monitoring report or country data submission",
+      "Used to develop a good practice case study (or similar)",
+      "Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues",
+      "Shared at a national or regional knowledge fair or exchange event",
+      "Rarely goes further than the final report itself"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Incorporated into the annual monitoring report or country data submission": 28,
+      "Used to develop a good practice case study (or similar)": 15,
+      "Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues": 13,
+      "Shared at a national or regional knowledge fair or exchange event": 23,
+      "Rarely goes further than the final report itself": 7,
+      "Other (free text)": 2
+    },
+    "base": 41
+  },
+  "country_team.q25": {
+    "type": "single",
+    "options": [
+      "Straightforward – we have a clear process and adequate time",
+      "Possible but time-consuming – it competes with operational priorities",
+      "Difficult – we lack templates, guidance, or dedicated time",
+      "We have not produced knowledge products of this type"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Straightforward – we have a clear process and adequate time": 6,
+      "Possible but time-consuming – it competes with operational priorities": 19,
+      "Difficult – we lack templates, guidance, or dedicated time": 10,
+      "We have not produced knowledge products of this type": 6,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "country_team.q26": {
+    "type": "single",
+    "options": [
+      "Yes – regularly",
+      "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it",
+      "Rarely – the process is unclear or cumbersome",
+      "No – we do not produce this type of content",
+      "No – we are not sure how to submit",
+      "I do not know"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes – regularly": 3,
+      "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it": 8,
+      "Rarely – the process is unclear or cumbersome": 7,
+      "No – we do not produce this type of content": 4,
+      "No – we are not sure how to submit": 13,
+      "I do not know": 6,
+      "Other (free text)": 0
+    },
+    "base": 41
+  },
+  "grantee_partners.q32": {
+    "type": "single",
+    "options": [
+      "Reliable, with no problems downloading/uploading large files",
+      "Sometimes unreliable, but generally able to download/upload large files",
+      "Often unreliable, with inconsistent ability to download/upload large files",
+      "Unreliable, consistently experiencing difficulties downloading/uploading large files"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Reliable, with no problems downloading/uploading large files": 66,
+      "Sometimes unreliable, but generally able to download/upload large files": 84,
+      "Often unreliable, with inconsistent ability to download/upload large files": 12,
+      "Unreliable, consistently experiencing difficulties downloading/uploading large files": 7,
+      "Other (free text)": 0
+    },
+    "base": 169
+  },
+  "grantee_partners.q33": {
+    "type": "single",
+    "options": [
+      "Country Team / Country Program",
+      "National Steering Committee",
+      "Government agency",
+      "GEF agency",
+      "NGO partner",
+      "Other community-based organization",
+      "Consultant or technical advisor",
+      "Workshop or training",
+      "Internet",
+      "SGP Innovation Library or other online resource",
+      "Social media"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Country Team / Country Program": 37,
+      "National Steering Committee": 6,
+      "Government agency": 8,
+      "GEF agency": 19,
+      "NGO partner": 43,
+      "Other community-based organization": 4,
+      "Consultant or technical advisor": 4,
+      "Workshop or training": 8,
+      "Internet": 16,
+      "SGP Innovation Library or other online resource": 3,
+      "Social media": 18,
+      "Other (free text)": 3
+    },
+    "base": 169
+  },
+  "grantee_partners.q34": {
+    "type": "single",
+    "options": [
+      "Yes, and I have received project preparation support",
+      "Yes, but I have not applied for project preparation support",
+      "No, I was unaware"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes, and I have received project preparation support": 56,
+      "Yes, but I have not applied for project preparation support": 38,
+      "No, I was unaware": 73,
+      "Other (free text)": 2
+    },
+    "base": 169
+  },
+  "grantee_partners.q35": {
+    "type": "single",
+    "options": [
+      "1",
+      "2-3",
+      "4-5",
+      "More than 5",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "1": 49,
+      "2-3": 79,
+      "4-5": 22,
+      "More than 5": 15,
+      "Unsure": 1,
+      "Other (free text)": 2
+    },
+    "base": 168
+  },
+  "grantee_partners.q36": {
+    "type": "single",
+    "options": [
+      "Proposal idea was discussed internally, but not submitted",
+      "Proposal was submitted, but not approved",
+      "Proposal is still under review",
+      "Proposal was approved and funded",
+      "Proposal was approved after major revisions",
+      "Proposal was withdrawn or abandoned",
+      "Not applicable"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Proposal idea was discussed internally, but not submitted": 5,
+      "Proposal was submitted, but not approved": 28,
+      "Proposal is still under review": 17,
+      "Proposal was approved and funded": 102,
+      "Proposal was approved after major revisions": 12,
+      "Proposal was withdrawn or abandoned": 1,
+      "Not applicable": 3,
+      "Other (free text)": 1
+    },
+    "base": 169
+  },
+  "grantee_partners.q37": {
+    "type": "multi",
+    "options": [
+      "Understanding SGP priorities and requirements",
+      "Defining project activities or objectives",
+      "Budget preparation",
+      "Monitoring indicators and reporting requirements",
+      "Screening for social and environmental risks",
+      "Aligning with SGP priorities and GEF focal areas",
+      "Writing or language",
+      "Technical or scientific knowledge",
+      "Finding examples of similar projects",
+      "Not applicable"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Understanding SGP priorities and requirements": 60,
+      "Defining project activities or objectives": 21,
+      "Budget preparation": 58,
+      "Monitoring indicators and reporting requirements": 60,
+      "Screening for social and environmental risks": 45,
+      "Aligning with SGP priorities and GEF focal areas": 51,
+      "Writing or language": 13,
+      "Technical or scientific knowledge": 32,
+      "Finding examples of similar projects": 19,
+      "Not applicable": 15,
+      "Other (free text)": 6
+    },
+    "base": 169
+  },
+  "grantee_partners.q38": {
+    "type": "multi",
+    "options": [
+      "SGP country team support",
+      "Government agencies or technical institutes (local, national, regional)",
+      "Proposal templates or guidance documents",
+      "Examples from previous projects or proposals",
+      "Workshops, trainings, or outreach events",
+      "Peer NGO/CSO organizations or previous grantee partners",
+      "Consultants",
+      "Online resources",
+      "Community input or consultations",
+      "National Steering Committee (NSC) member or advisor",
+      "Not applicable"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "SGP country team support": 85,
+      "Government agencies or technical institutes (local, national, regional)": 18,
+      "Proposal templates or guidance documents": 75,
+      "Examples from previous projects or proposals": 45,
+      "Workshops, trainings, or outreach events": 53,
+      "Peer NGO/CSO organizations or previous grantee partners": 30,
+      "Consultants": 20,
+      "Online resources": 31,
+      "Community input or consultations": 41,
+      "National Steering Committee (NSC) member or advisor": 18,
+      "Not applicable": 5,
+      "Other (free text)": 2
+    },
+    "base": 169
+  },
+  "grantee_partners.q39": {
+    "type": "multi",
+    "options": [
+      "No - proposal developed internally",
+      "Support from SGP country team",
+      "Support from a peer NGO, CSO, or CBO",
+      "Hired a consultant or proposal writer",
+      "Support from an academic or research institute",
+      "Support from government agency or technical institution",
+      "Volunteer support",
+      "Not applicable"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "No - proposal developed internally": 113,
+      "Support from SGP country team": 21,
+      "Support from a peer NGO, CSO, or CBO": 18,
+      "Hired a consultant or proposal writer": 12,
+      "Support from an academic or research institute": 4,
+      "Support from government agency or technical institution": 5,
+      "Volunteer support": 24,
+      "Not applicable": 6,
+      "Other (free text)": 4
+    },
+    "base": 169
+  },
+  "grantee_partners.q40": {
+    "type": "single",
+    "options": [
+      "Yes - minor revisions were requested",
+      "Yes - major revisions were requested",
+      "No revisions were requested",
+      "The proposal did not move forward in the review process",
+      "Not applicable",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes - minor revisions were requested": 81,
+      "Yes - major revisions were requested": 15,
+      "No revisions were requested": 43,
+      "The proposal did not move forward in the review process": 14,
+      "Not applicable": 13,
+      "Unsure": 3,
+      "Other (free text)": 0
+    },
+    "base": 169
+  },
+  "grantee_partners.q42": {
+    "type": "multi",
+    "options": [
+      "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories",
+      "Previous project proposals or examples",
+      "Previous proposal reviews or reviewer comments",
+      "Evaluations of similar past projects",
+      "Proposal templates or guidance documents",
+      "Workshops, trainings, webinars",
+      "Guidance from SGP country team",
+      "I did not use formal SGP resources",
+      "Not applicable"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories": 50,
+      "Previous project proposals or examples": 59,
+      "Previous proposal reviews or reviewer comments": 17,
+      "Evaluations of similar past projects": 19,
+      "Proposal templates or guidance documents": 79,
+      "Workshops, trainings, webinars": 45,
+      "Guidance from SGP country team": 56,
+      "I did not use formal SGP resources": 14,
+      "Not applicable": 5,
+      "Other (free text)": 3
+    },
+    "base": 169
+  },
+  "grantee_partners.q43": {
+    "type": "multi",
+    "options": [
+      "Examples from similar projects",
+      "Technical guidance or expertise",
+      "Engineering or scientific information",
+      "Information about permits, approvals, or legal requirements",
+      "Budgeting or cost information",
+      "Community consultation support",
+      "Proposal writing guidance",
+      "Access to previous project reviews or lessons learned",
+      "Environmental or climate information",
+      "Guidance on social and environmental safeguards requirements",
+      "Land tenure or ownership information"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Examples from similar projects": 71,
+      "Technical guidance or expertise": 80,
+      "Engineering or scientific information": 33,
+      "Information about permits, approvals, or legal requirements": 25,
+      "Budgeting or cost information": 65,
+      "Community consultation support": 46,
+      "Proposal writing guidance": 71,
+      "Access to previous project reviews or lessons learned": 59,
+      "Environmental or climate information": 50,
+      "Guidance on social and environmental safeguards requirements": 35,
+      "Land tenure or ownership information": 10,
+      "Other (free text)": 4
+    },
+    "base": 169
+  },
+  "grantee_partners.q44": {
+    "type": "single",
+    "options": [
+      "Yes - this was an important part of the project design",
+      "Yes - but only to a limited extent",
+      "No - the focus was mainly on short-term project activities",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes - this was an important part of the project design": 132,
+      "Yes - but only to a limited extent": 21,
+      "No - the focus was mainly on short-term project activities": 11,
+      "Unsure": 3,
+      "Other (free text)": 2
+    },
+    "base": 169
+  },
+  "grantee_partners.q46": {
+    "type": "single",
+    "options": [
+      "Yes (we have experience with SGP project implementation)",
+      "No (we do not have experience with SGP project implementation)"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes (we have experience with SGP project implementation)": 147,
+      "No (we do not have experience with SGP project implementation)": 22,
+      "Other (free text)": 0
+    },
+    "base": 169
+  },
+  "grantee_partners.q47": {
+    "type": "single",
+    "options": [
+      "1",
+      "2-3",
+      "4-5",
+      "More than 5",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "1": 66,
+      "2-3": 60,
+      "4-5": 10,
+      "More than 5": 7,
+      "Unsure": 4,
+      "Other (free text)": 0
+    },
+    "base": 147
+  },
+  "grantee_partners.q48": {
+    "type": "single",
+    "options": [
+      "Completed",
+      "Ongoing",
+      "Delayed",
+      "Terminated before completion"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Completed": 64,
+      "Ongoing": 69,
+      "Delayed": 3,
+      "Terminated before completion": 3,
+      "Other (free text)": 8
+    },
+    "base": 147
+  },
+  "grantee_partners.q49": {
+    "type": "single",
+    "options": [
+      "Yes - expectations were clear",
+      "Mostly clear, with some unexpected challenges",
+      "No - several requirements or expectations became clear only during implementation",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes - expectations were clear": 100,
+      "Mostly clear, with some unexpected challenges": 44,
+      "No - several requirements or expectations became clear only during implementation": 0,
+      "Unsure": 3,
+      "Other (free text)": 0
+    },
+    "base": 147
+  },
+  "grantee_partners.q50": {
+    "type": "multi",
+    "options": [
+      "Logistics or transportation",
+      "Delays in funding or disbursement",
+      "Procurement or equipment",
+      "Technical challenges",
+      "Social and environmental safeguards requirements",
+      "Environmental or climatic conditions",
+      "Staffing or organizational capacity",
+      "Government approvals or coordination",
+      "Partnerships or stakeholder coordination",
+      "Reporting requirements",
+      "Inadequate project inception or orientation process at the start of implementation"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Logistics or transportation": 50,
+      "Delays in funding or disbursement": 22,
+      "Procurement or equipment": 39,
+      "Technical challenges": 30,
+      "Social and environmental safeguards requirements": 23,
+      "Environmental or climatic conditions": 54,
+      "Staffing or organizational capacity": 15,
+      "Government approvals or coordination": 22,
+      "Partnerships or stakeholder coordination": 30,
+      "Reporting requirements": 14,
+      "Inadequate project inception or orientation process at the start of implementation": 6,
+      "Other (free text)": 15
+    },
+    "base": 147
+  },
+  "grantee_partners.q51": {
+    "type": "multi",
+    "options": [
+      "Guidance from the SGP country team",
+      "Monitoring oversight and guidance from National Steering Committee",
+      "Guidance from SGP GEF agency advisors",
+      "Technical experts",
+      "Peer organizations",
+      "Community support",
+      "Government support",
+      "Templates or reporting guidance",
+      "Workshops or exchanges"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Guidance from the SGP country team": 104,
+      "Monitoring oversight and guidance from National Steering Committee": 55,
+      "Guidance from SGP GEF agency advisors": 45,
+      "Technical experts": 36,
+      "Peer organizations": 17,
+      "Community support": 71,
+      "Government support": 30,
+      "Templates or reporting guidance": 47,
+      "Workshops or exchanges": 43,
+      "Other (free text)": 2
+    },
+    "base": 147
+  },
+  "grantee_partners.q52": {
+    "type": "single",
+    "options": [
+      "Yes - major changes",
+      "Yes - minor adjustments",
+      "No significant changes",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes - major changes": 12,
+      "Yes - minor adjustments": 55,
+      "No significant changes": 74,
+      "Unsure": 6,
+      "Other (free text)": 0
+    },
+    "base": 147
+  },
+  "grantee_partners.q54": {
+    "type": "multi",
+    "options": [
+      "Technical guidance",
+      "Social and environmental safeguards guidance",
+      "Examples from similar projects",
+      "Procurement or budgeting guidance",
+      "Government coordination support",
+      "Engineering or scientific expertise",
+      "Community engagement guidance",
+      "Monitoring and reporting support",
+      "Access to previous project lessons learned"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Technical guidance": 76,
+      "Social and environmental safeguards guidance": 47,
+      "Examples from similar projects": 37,
+      "Procurement or budgeting guidance": 38,
+      "Government coordination support": 44,
+      "Engineering or scientific expertise": 11,
+      "Community engagement guidance": 46,
+      "Monitoring and reporting support": 41,
+      "Access to previous project lessons learned": 55,
+      "Other (free text)": 10
+    },
+    "base": 146
+  },
+  "grantee_partners.q55": {
+    "type": "multi",
+    "options": [
+      "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories",
+      "Project examples",
+      "Reporting templates",
+      "Workshops or exchanges",
+      "Guidance from SGP country team",
+      "Monitoring oversight and guidance from National Steering Committee",
+      "Guidance from GEF SGP agency colleagues",
+      "Technical guidance (manuals, case studies, etc.)",
+      "We did not use formal SGP resources"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "SGP Innovation Library, SGP website, SGP publications/reports/articles/stories": 35,
+      "Project examples": 37,
+      "Reporting templates": 61,
+      "Workshops or exchanges": 63,
+      "Guidance from SGP country team": 97,
+      "Monitoring oversight and guidance from National Steering Committee": 43,
+      "Guidance from GEF SGP agency colleagues": 25,
+      "Technical guidance (manuals, case studies, etc.)": 33,
+      "We did not use formal SGP resources": 13,
+      "Other (free text)": 6
+    },
+    "base": 147
+  },
+  "grantee_partners.q58": {
+    "type": "single",
+    "options": [
+      "Very confident",
+      "Somewhat confident",
+      "Unsure",
+      "Not very confident",
+      "Not applicable / too early to assess"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Very confident": 85,
+      "Somewhat confident": 52,
+      "Unsure": 7,
+      "Not very confident": 1,
+      "Not applicable / too early to assess": 2,
+      "Other (free text)": 0
+    },
+    "base": 147
+  },
+  "grantee_partners.q59": {
+    "type": "single",
+    "options": [
+      "Yes - this was an important consideration",
+      "Yes - but only to a limited extent",
+      "No - the focus was mainly local",
+      "Unsure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes - this was an important consideration": 134,
+      "Yes - but only to a limited extent": 8,
+      "No - the focus was mainly local": 3,
+      "Unsure": 2,
+      "Other (free text)": 0
+    },
+    "base": 147
+  },
+  "grantee_partners.q60": {
+    "type": "single",
+    "options": [
+      "Very clear – the questions were specific and easy to answer",
+      "Somewhat clear – I understood what was asked but found it hard to articulate",
+      "Unclear – I was not sure what level of detail was expected",
+      "I did not complete a final report",
+      "Not applicable (project not yet completed)"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Very clear – the questions were specific and easy to answer": 93,
+      "Somewhat clear – I understood what was asked but found it hard to articulate": 33,
+      "Unclear – I was not sure what level of detail was expected": 2,
+      "I did not complete a final report": 5,
+      "Not applicable (project not yet completed)": 14,
+      "Other (free text)": 0
+    },
+    "base": 147
+  },
+  "grantee_partners.q61": {
+    "type": "single",
+    "options": [
+      "Yes – I completed a specific lessons learned questionnaire or case study template",
+      "Yes – I was interviewed or asked to contribute to a case study after the project ended",
+      "No – the final report was the only document required",
+      "I am not sure"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes – I completed a specific lessons learned questionnaire or case study template": 52,
+      "Yes – I was interviewed or asked to contribute to a case study after the project ended": 11,
+      "No – the final report was the only document required": 52,
+      "I am not sure": 32,
+      "Other (free text)": 0
+    },
+    "base": 147
+  },
+  "grantee_partners.q62": {
+    "type": "single",
+    "options": [
+      "Yes – I was involved in producing the case study or example",
+      "Yes – I was informed, but not involved in producing it",
+      "No – I do not think my project was used in this way",
+      "I am not aware of whether this happened"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes – I was involved in producing the case study or example": 24,
+      "Yes – I was informed, but not involved in producing it": 15,
+      "No – I do not think my project was used in this way": 15,
+      "I am not aware of whether this happened": 85,
+      "Other (free text)": 8
+    },
+    "base": 147
+  },
+  "implementing_agencies.q64": {
+    "type": "single",
+    "options": [
+      "UNDP",
+      "FAO",
+      "Conservation International"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "UNDP": 10,
+      "FAO": 3,
+      "Conservation International": 5,
+      "Other (free text)": 0
+    },
+    "base": 18
+  },
+  "implementing_agencies.q66": {
+    "type": "single",
+    "options": [
+      "There is a defined process: National Coordinators submit; agency KM team reviews and publishes",
+      "It is initiated by the agency but depends heavily on National Coordinator capacity and time",
+      "It is largely informal and varies by country program",
+      "We do not have a defined process for this at present"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "There is a defined process: National Coordinators submit; agency KM team reviews and publishes": 8,
+      "It is initiated by the agency but depends heavily on National Coordinator capacity and time": 2,
+      "It is largely informal and varies by country program": 2,
+      "We do not have a defined process for this at present": 6,
+      "Other (free text)": 0
+    },
+    "base": 18
+  },
+  "implementing_agencies.q69": {
+    "type": "multi",
+    "options": [
+      "Limited staff time",
+      "Limited technical capacity",
+      "Connectivity constraints",
+      "Language barriers",
+      "Unclear agency roles",
+      "Lack of incentives to contribute content",
+      "Data-sharing concerns",
+      "Insufficient funding"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Limited staff time": 14,
+      "Limited technical capacity": 7,
+      "Connectivity constraints": 12,
+      "Language barriers": 10,
+      "Unclear agency roles": 8,
+      "Lack of incentives to contribute content": 8,
+      "Data-sharing concerns": 8,
+      "Insufficient funding": 12,
+      "Other (free text)": 2
+    },
+    "base": 18
+  },
+  "implementing_agencies.q70": {
+    "type": "multi",
+    "options": [
+      "Dedicated GEF funding",
+      "Integration into agency systems",
+      "Dedicated staffing structure",
+      "Formal governance agreements",
+      "Partnerships with external institutions",
+      "Regular content updates and quality assurance"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Dedicated GEF funding": 16,
+      "Integration into agency systems": 12,
+      "Dedicated staffing structure": 11,
+      "Formal governance agreements": 9,
+      "Partnerships with external institutions": 6,
+      "Regular content updates and quality assurance": 13,
+      "Other (free text)": 0
+    },
+    "base": 18
+  },
+  "steering_committee.q73": {
+    "type": "single",
+    "options": [
+      "National or sub-national government",
+      "Civil society organization or NGO",
+      "Academic or research institution",
+      "Private sector",
+      "UN agency or other international organization",
+      "Community-based organization or grassroots group"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "National or sub-national government": 16,
+      "Civil society organization or NGO": 21,
+      "Academic or research institution": 6,
+      "Private sector": 4,
+      "UN agency or other international organization": 4,
+      "Community-based organization or grassroots group": 2,
+      "Other (free text)": 4
+    },
+    "base": 57
+  },
+  "steering_committee.q74": {
+    "type": "single",
+    "options": [
+      "Less than one year",
+      "1-2 years",
+      "3-5 years",
+      "More than 5 years"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Less than one year": 16,
+      "1-2 years": 9,
+      "3-5 years": 22,
+      "More than 5 years": 10,
+      "Other (free text)": 0
+    },
+    "base": 57
+  },
+  "steering_committee.q75": {
+    "type": "multi",
+    "options": [
+      "UNDP",
+      "FAO",
+      "Conservation International"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "UNDP": 56,
+      "FAO": 2,
+      "Conservation International": 3,
+      "Other (free text)": 0
+    },
+    "base": 57
+  },
+  "steering_committee.q77": {
+    "type": "single",
+    "options": [
+      "Reliable",
+      "Sometimes unreliable",
+      "Unreliable"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Reliable": 35,
+      "Sometimes unreliable": 21,
+      "Unreliable": 1,
+      "Other (free text)": 0
+    },
+    "base": 57
+  },
+  "steering_committee.q78": {
+    "type": "single",
+    "options": [
+      "Laptop or desktop computer",
+      "Mobile telephone"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Laptop or desktop computer": 44,
+      "Mobile telephone": 12,
+      "Other (free text)": 1
+    },
+    "base": 57
+  },
+  "steering_committee.q79": {
+    "type": "multi",
+    "options": [
+      "Monthly",
+      "Every two to three months",
+      "Quarterly",
+      "Every six months",
+      "Annually",
+      "Ad hoc / as needed"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Monthly": 8,
+      "Every two to three months": 8,
+      "Quarterly": 14,
+      "Every six months": 9,
+      "Annually": 4,
+      "Ad hoc / as needed": 33,
+      "Other (free text)": 0
+    },
+    "base": 57
+  },
+  "steering_committee.q80": {
+    "type": "multi",
+    "options": [
+      "Email from the National Coordinator / Country team",
+      "Physical or printed copies",
+      "Online portal or shared databases (e.g. SGP database)",
+      "Shared cloud storage (e.g. Google Drive, OneDrive, etc.)",
+      "SGP Intranet",
+      "I rarely or never receive materials in advance of meetings"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Email from the National Coordinator / Country team": 55,
+      "Physical or printed copies": 6,
+      "Online portal or shared databases (e.g. SGP database)": 6,
+      "Shared cloud storage (e.g. Google Drive, OneDrive, etc.)": 6,
+      "SGP Intranet": 0,
+      "I rarely or never receive materials in advance of meetings": 1,
+      "Other (free text)": 0
+    },
+    "base": 57
+  },
+  "steering_committee.q81": {
+    "type": "single",
+    "options": [
+      "Less than one week",
+      "1-2 weeks",
+      "2-4 weeks",
+      "More than a month",
+      "Insufficient time / highly variable"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Less than one week": 6,
+      "1-2 weeks": 31,
+      "2-4 weeks": 15,
+      "More than a month": 3,
+      "Insufficient time / highly variable": 1,
+      "Other (free text)": 1
+    },
+    "base": 57
+  },
+  "steering_committee.q82": {
+    "type": "multi",
+    "options": [
+      "Assessing technical or scientific feasibility",
+      "Verifying alignment with the Country Program Strategy",
+      "Evaluating social and environmental risk screening",
+      "Assessing community engagement and consultation approaches",
+      "Assessing budget reasonableness and cost-effectiveness",
+      "Reviewing monitoring and reporting plans",
+      "Understanding GEF requirements and eligibility criteria",
+      "Ensuring geographic or thematic balance across the portfolio"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Assessing technical or scientific feasibility": 24,
+      "Verifying alignment with the Country Program Strategy": 12,
+      "Evaluating social and environmental risk screening": 14,
+      "Assessing community engagement and consultation approaches": 17,
+      "Assessing budget reasonableness and cost-effectiveness": 33,
+      "Reviewing monitoring and reporting plans": 12,
+      "Understanding GEF requirements and eligibility criteria": 10,
+      "Ensuring geographic or thematic balance across the portfolio": 13,
+      "Other (free text)": 4
+    },
+    "base": 57
+  },
+  "steering_committee.q83": {
+    "type": "single",
+    "options": [
+      "Yes – I was actively involved in the CPS development process",
+      "Yes – I participated in consultations but had limited input on final priorities",
+      "No – the CPS was developed or revised before I joined the NSC",
+      "No – I am not aware of a formal CPS development process in my country"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes – I was actively involved in the CPS development process": 28,
+      "Yes – I participated in consultations but had limited input on final priorities": 8,
+      "No – the CPS was developed or revised before I joined the NSC": 16,
+      "No – I am not aware of a formal CPS development process in my country": 5,
+      "Other (free text)": 0
+    },
+    "base": 57
+  },
+  "steering_committee.q84": {
+    "type": "multi",
+    "options": [
+      "Lessons learned from completed projects in the previous phase",
+      "Portfolio performance data (results against indicators and targets)",
+      "Community and civil society consultations and needs assessments",
+      "Technical assessments of environmental conditions and opportunities in the country",
+      "National environmental policy priorities and MEA commitments",
+      "GEF global priorities and programming directions for the new phase",
+      "Examples of Country Program Strategies from comparable countries"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Lessons learned from completed projects in the previous phase": 45,
+      "Portfolio performance data (results against indicators and targets)": 27,
+      "Community and civil society consultations and needs assessments": 30,
+      "Technical assessments of environmental conditions and opportunities in the country": 21,
+      "National environmental policy priorities and MEA commitments": 23,
+      "GEF global priorities and programming directions for the new phase": 18,
+      "Examples of Country Program Strategies from comparable countries": 11,
+      "Other (free text)": 2
+    },
+    "base": 57
+  },
+  "steering_committee.q85": {
+    "type": "multi",
+    "options": [
+      "Access to better data on results from the previous programme phase",
+      "More time for participatory consultation with civil society and communities",
+      "Stronger technical support from the National Coordinator during CPS development",
+      "Clearer guidance from the Global Coordination Team / SGP CPMT on GEF priorities and requirements for the new phase",
+      "Examples or models from other SGP country programmes",
+      "A dedicated platform tool or template for the CPS development process"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Access to better data on results from the previous programme phase": 32,
+      "More time for participatory consultation with civil society and communities": 31,
+      "Stronger technical support from the National Coordinator during CPS development": 15,
+      "Clearer guidance from the Global Coordination Team / SGP CPMT on GEF priorities and requirements for the new phase": 19,
+      "Examples or models from other SGP country programmes": 14,
+      "A dedicated platform tool or template for the CPS development process": 13,
+      "Other (free text)": 1
+    },
+    "base": 57
+  },
+  "steering_committee.q87": {
+    "type": "multi",
+    "options": [
+      "Difficult to find or locate",
+      "Outdated or not updated regularly",
+      "Login or access constraints",
+      "Wrong language",
+      "Received too late before NSC meetings",
+      "Insufficient time to review materials before meetings",
+      "Not sufficiently relevant to my areas of expertise"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Difficult to find or locate": 17,
+      "Outdated or not updated regularly": 9,
+      "Login or access constraints": 17,
+      "Wrong language": 4,
+      "Received too late before NSC meetings": 8,
+      "Insufficient time to review materials before meetings": 20,
+      "Not sufficiently relevant to my areas of expertise": 11,
+      "Other (free text)": 8
+    },
+    "base": 57
+  },
+  "steering_committee.q88": {
+    "type": "single",
+    "options": [
+      "Yes – regularly (at least once per grant cycle)",
+      "Yes – occasionally",
+      "Rarely",
+      "No – not part of our NSC's current practice"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Yes – regularly (at least once per grant cycle)": 27,
+      "Yes – occasionally": 14,
+      "Rarely": 8,
+      "No – not part of our NSC's current practice": 8,
+      "Other (free text)": 0
+    },
+    "base": 57
+  },
+  "steering_committee.q89": {
+    "type": "multi",
+    "options": [
+      "Project implementation reports or progress updates",
+      "Community feedback or consultation records",
+      "Monitoring and evaluation data or results",
+      "Environmental and social safeguard compliance reports",
+      "Financial disbursement and expenditure records",
+      "Photographs or field documentation",
+      "Information about project sustainability plans"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Project implementation reports or progress updates": 45,
+      "Community feedback or consultation records": 24,
+      "Monitoring and evaluation data or results": 39,
+      "Environmental and social safeguard compliance reports": 19,
+      "Financial disbursement and expenditure records": 29,
+      "Photographs or field documentation": 19,
+      "Information about project sustainability plans": 17,
+      "Other (free text)": 3
+    },
+    "base": 57
+  },
+  "steering_committee.q90": {
+    "type": "multi",
+    "options": [
+      "Technical training",
+      "Environmental and social safeguards training",
+      "Site visit frameworks or monitoring checklists",
+      "Portfolio dashboards or visualization tools",
+      "Clearer guidance on NSC oversight roles and responsibilities",
+      "Peer learning with NSC members from other countries",
+      "Templates for site visit or monitoring reports"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Technical training": 30,
+      "Environmental and social safeguards training": 15,
+      "Site visit frameworks or monitoring checklists": 27,
+      "Portfolio dashboards or visualization tools": 17,
+      "Clearer guidance on NSC oversight roles and responsibilities": 21,
+      "Peer learning with NSC members from other countries": 28,
+      "Templates for site visit or monitoring reports": 26,
+      "Other (free text)": 2
+    },
+    "base": 57
+  },
+  "steering_committee.q91": {
+    "type": "multi",
+    "options": [
+      "Step-by-step written guidance (guides, manuals)",
+      "Templates or checklists for proposal review or site visits",
+      "Short explanatory videos (5–10 minutes)",
+      "Live webinar or virtual meeting",
+      "Peer exchange with NSC members from other countries",
+      "In-person training or workshop",
+      "E-learning modules"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Step-by-step written guidance (guides, manuals)": 32,
+      "Templates or checklists for proposal review or site visits": 33,
+      "Short explanatory videos (5–10 minutes)": 24,
+      "Live webinar or virtual meeting": 18,
+      "Peer exchange with NSC members from other countries": 32,
+      "In-person training or workshop": 29,
+      "E-learning modules": 14,
+      "Other (free text)": 1
+    },
+    "base": 57
+  },
+  "steering_committee.q92": {
+    "type": "multi",
+    "options": [
+      "Time constraints (NSC is a voluntary or part-time role)",
+      "Unclear roles, mandate, or governance procedures",
+      "Limited access to relevant information before meetings",
+      "Insufficient technical expertise across NSC membership to assess all proposal types",
+      "Language barriers in program documents or resources",
+      "Limited communication or briefing support from the National Coordinator / country team",
+      "Infrequent meetings limiting adaptive governance and monitoring"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Time constraints (NSC is a voluntary or part-time role)": 49,
+      "Unclear roles, mandate, or governance procedures": 10,
+      "Limited access to relevant information before meetings": 14,
+      "Insufficient technical expertise across NSC membership to assess all proposal types": 13,
+      "Language barriers in program documents or resources": 3,
+      "Limited communication or briefing support from the National Coordinator / country team": 4,
+      "Infrequent meetings limiting adaptive governance and monitoring": 21,
+      "Other (free text)": 7
+    },
+    "base": 57
+  },
+  "steering_committee.q96": {
+    "type": "multi",
+    "options": [
+      "Limited time, given the part-time or voluntary nature of the NSC role",
+      "Connectivity constraints in my location",
+      "Language barriers",
+      "Insufficient digital literacy or confidence with online platforms",
+      "Unclear how the platform would support NSC governance functions specifically",
+      "Platform not designed for periodic or meeting-driven access patterns"
+    ],
+    "allowOther": true,
+    "expectedCounts": {
+      "Limited time, given the part-time or voluntary nature of the NSC role": 36,
+      "Connectivity constraints in my location": 13,
+      "Language barriers": 10,
+      "Insufficient digital literacy or confidence with online platforms": 8,
+      "Unclear how the platform would support NSC governance functions specifically": 22,
+      "Platform not designed for periodic or meeting-driven access patterns": 12,
+      "Other (free text)": 2
+    },
+    "base": 57
+  }
+}

@@ -56,8 +56,10 @@
         "country_team.q10": {
           "kind": "multi",
           "values": [
-            "As we are still at a very early stage of project implementation support",
-            "it is too early to answer this question"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "As we are still at a very early stage of project implementation support, it is too early to answer this question."
           ]
         },
         "country_team.q11": {
@@ -72,15 +74,18 @@
           "values": [
             "Aligning proposals with SGP priorities",
             "Improving technical or operational quality",
-            "Screening social and environmental risks",
-            "NSC coordination and governance support"
+            "NSC coordination and governance support",
+            "Screening social and environmental risks"
           ]
         },
         "country_team.q13": {
           "kind": "multi",
           "values": [
             "SGP database",
-            "All proposal materials for proposals that were not approved or did not move forward will be securely retained in the Executing Agency's and National Coordinators databases"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "SGP database, All proposal materials for proposals that were not approved or did not move forward will be securely retained in the Executing Agency's and National Coordinators databases."
           ]
         },
         "country_team.q14": {
@@ -112,7 +117,10 @@
           "values": [
             "Difficult to find",
             "Outdated",
-            "Most of the information is generic and needs to be adapted to the national context to ensure its effective application"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Difficult to find, Outdated, Most of the information is generic and needs to be adapted to the national context to ensure its effective application."
           ]
         },
         "country_team.q17": {
@@ -155,9 +163,10 @@
           "kind": "multi",
           "values": [
             "Grantee partner capacity limitations",
-            "Lack of self-sustaining mechanisms and long-term ownership after project completion can create challenges for maintaining project outcomes. In some cases",
-            "continued implementation depends heavily on external funding",
-            "and insufficient planning for post-project sustainability may limit the long-term impact"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Grantee partner capacity limitations, Lack of self-sustaining mechanisms and long-term ownership after project completion can create challenges for maintaining project outcomes. In some cases, continued implementation depends heavily on external funding, and insufficient planning for post-project sustainability may limit the long-term impact."
           ]
         },
         "country_team.q22": {
@@ -165,9 +174,10 @@
           "values": [
             "Peer exchange",
             "Learning-by-doing field demonstration",
-            "Post-project evaluation and follow-up assessments to understand performance",
-            "management effectiveness",
-            "and maintenance of project outcomes after project completion"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Peer exchange, Learning-by-doing field demonstration, Post-project evaluation and follow-up assessments to understand performance, management effectiveness, and maintenance of project outcomes after project completion."
           ]
         },
         "country_team.q23": {
@@ -185,11 +195,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Straightforward - we have a clear process and adequate time"
+          "value": "Straightforward – we have a clear process and adequate time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - regularly"
+          "value": "Yes – regularly"
         },
         "country_team.q27": {
           "kind": "text",
@@ -285,9 +295,9 @@
             "Helping shape project ideas",
             "Aligning proposals with SGP priorities",
             "Budget and implementation planning",
+            "NSC coordination and governance support",
             "Addressing unrealistic expectations",
-            "Screening social and environmental risks",
-            "NSC coordination and governance support"
+            "Screening social and environmental risks"
           ]
         },
         "country_team.q13": {
@@ -397,11 +407,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Rarely - the process is unclear or cumbersome"
+          "value": "Rarely – the process is unclear or cumbersome"
         },
         "country_team.q27": {
           "kind": "text",
@@ -501,9 +511,9 @@
             "Aligning proposals with SGP priorities",
             "Improving technical or operational quality",
             "Budget and implementation planning",
+            "NSC coordination and governance support",
             "Supporting monitoring and reporting plans",
-            "Screening social and environmental risks",
-            "NSC coordination and governance support"
+            "Screening social and environmental risks"
           ]
         },
         "country_team.q13": {
@@ -626,11 +636,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Rarely - the process is unclear or cumbersome"
+          "value": "Rarely – the process is unclear or cumbersome"
         },
         "country_team.q27": {
           "kind": "text",
@@ -723,8 +733,8 @@
           "kind": "multi",
           "values": [
             "Helping shape project ideas",
-            "Screening social and environmental risks",
-            "NSC coordination and governance support"
+            "NSC coordination and governance support",
+            "Screening social and environmental risks"
           ]
         },
         "country_team.q13": {
@@ -845,11 +855,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, or dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - occasionally, when Global Coordination Team/SGP CPMT requests it"
+          "value": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it"
         },
         "country_team.q27": {
           "kind": "text",
@@ -1046,11 +1056,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, or dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we are not sure how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -1075,11 +1085,11 @@
       "dimensions": {
         "response_language": "English",
         "country": "Botswana",
-        "role": "National steering committee member",
+        "role": "Other (free text)",
         "tenure": "1-5 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
-        "device": "Mobile phone"
+        "device": "Mobile telephone"
       },
       "answers": {
         "country_team.q2": {
@@ -1088,7 +1098,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "National steering committee member"
+          "value": "Other (free text)"
         },
         "country_team.q4": {
           "kind": "single",
@@ -1110,7 +1120,7 @@
         },
         "country_team.q8": {
           "kind": "single",
-          "value": "Mobile phone"
+          "value": "Mobile telephone"
         },
         "country_team.q9": {
           "kind": "multi",
@@ -1221,8 +1231,10 @@
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "No",
-            "available template"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "No , available template"
           ]
         },
         "country_team.q24": {
@@ -1233,11 +1245,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, or dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we are not sure how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -1364,6 +1376,9 @@
         "country_team.q16": {
           "kind": "multi",
           "values": [
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
             "I am not aware about innovation library and about the possibility to get recommendations of external experts and consultants. There is no TAG in SGP Kyrgyzstan"
           ]
         },
@@ -1436,7 +1451,7 @@
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we do not produce this type of content"
+          "value": "No – we do not produce this type of content"
         },
         "country_team.q27": {
           "kind": "text",
@@ -1644,11 +1659,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we do not produce this type of content"
+          "value": "No – we do not produce this type of content"
         },
         "country_team.q27": {
           "kind": "text",
@@ -1673,7 +1688,7 @@
       "dimensions": {
         "response_language": "Spanish",
         "country": "Argentina",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": ">10 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
@@ -1686,7 +1701,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -1729,16 +1744,16 @@
         "country_team.q11": {
           "kind": "multi",
           "values": [
-            "Limitations in the grantee partner's implementation capacity",
-            "Unrealistic project workplan and timelines"
+            "Capacity limitations of grantee partner",
+            "Unrealistic work plan, timeframe"
           ]
         },
         "country_team.q12": {
           "kind": "multi",
           "values": [
             "Improving technical or operational quality",
-            "Implementation budgeting and planning",
-            "Support for monitoring and reporting plans"
+            "Budget and implementation planning",
+            "Supporting monitoring and reporting plans"
           ]
         },
         "country_team.q13": {
@@ -1775,7 +1790,7 @@
         "country_team.q16": {
           "kind": "multi",
           "values": [
-            "The information is difficult to find"
+            "Difficult to find"
           ]
         },
         "country_team.q17": {
@@ -1804,7 +1819,7 @@
         },
         "country_team.q19": {
           "kind": "single",
-          "value": "They are generally manageable, with some occasional challenges"
+          "value": "Mostly clear, with occasional challenges"
         },
         "country_team.q20": {
           "kind": "multi",
@@ -1825,7 +1840,7 @@
         "country_team.q22": {
           "kind": "multi",
           "values": [
-            "Step-by-step written instructions",
+            "Step-by-step written guidance",
             "Short video",
             "Peer exchange"
           ]
@@ -1833,23 +1848,23 @@
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Having sufficient time or support for knowledge capture"
+            "Adequate time or dedicated support for knowledge capture"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "By incorporating them into the annual monitoring report or country data submission",
-            "Sharing them at a national or regional knowledge fair or exchange event"
+            "Incorporated into the annual monitoring report or country data submission",
+            "Shared at a national or regional knowledge fair or exchange event"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult: we lack templates, guidance, or dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No, we are not sure how to submit it"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -1874,7 +1889,7 @@
       "dimensions": {
         "response_language": "Spanish",
         "country": "Panama",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": "6-10 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
@@ -1887,7 +1902,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -1930,21 +1945,21 @@
           "kind": "multi",
           "values": [
             "Unclear objectives",
-            "Lack of alignment with the national programme strategy"
+            "Lack of alignment with country program strategy"
           ]
         },
         "country_team.q12": {
           "kind": "multi",
           "values": [
             "Aligning proposals with SGP priorities",
-            "Implementation budgeting and planning",
+            "Budget and implementation planning",
             "Addressing unrealistic expectations"
           ]
         },
         "country_team.q13": {
           "kind": "multi",
           "values": [
-            "On a local office computer or hard drive"
+            "Local office computer or hard drive"
           ]
         },
         "country_team.q14": {
@@ -2003,7 +2018,7 @@
         },
         "country_team.q19": {
           "kind": "single",
-          "value": "They are generally manageable, with some occasional challenges"
+          "value": "Mostly clear, with occasional challenges"
         },
         "country_team.q20": {
           "kind": "multi",
@@ -2016,7 +2031,7 @@
         "country_team.q21": {
           "kind": "multi",
           "values": [
-            "Funding or disbursement delays",
+            "Delays in funding or disbursement",
             "Unrealistic timelines or workplans",
             "Stakeholder or partner coordination"
           ]
@@ -2024,7 +2039,7 @@
         "country_team.q22": {
           "kind": "multi",
           "values": [
-            "Step-by-step written instructions",
+            "Step-by-step written guidance",
             "Short video",
             "Peer exchange"
           ]
@@ -2032,22 +2047,22 @@
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Having sufficient time or support for knowledge capture"
+            "Adequate time or dedicated support for knowledge capture"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "It rarely goes beyond the final report"
+            "Rarely goes further than the final report itself"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "It requires a great deal of time and competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No, we are not sure how to submit it"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -2132,8 +2147,8 @@
         "country_team.q11": {
           "kind": "multi",
           "values": [
-            "Grantee partner capacity limitations",
-            "Unrealistic workplan and timeline",
+            "Capacity limitations of grantee partner",
+            "Unrealistic work plan, timeframe",
             "Weak monitoring and evaluation framework"
           ]
         },
@@ -2142,7 +2157,7 @@
           "values": [
             "Helping shape project ideas",
             "Aligning proposals with SGP priorities",
-            "Supporting NSC coordination and governance"
+            "NSC coordination and governance support"
           ]
         },
         "country_team.q13": {
@@ -2179,7 +2194,7 @@
           "kind": "multi",
           "values": [
             "Difficult to find",
-            "Connectivity/access constraints"
+            "Login / access constraints"
           ]
         },
         "country_team.q17": {
@@ -2221,7 +2236,7 @@
         "country_team.q21": {
           "kind": "multi",
           "values": [
-            "Funding or disbursement delays",
+            "Delays in funding or disbursement",
             "Stakeholder or partner coordination",
             "Changes in priorities or external conditions"
           ]
@@ -2231,7 +2246,7 @@
           "values": [
             "Short video",
             "Structured e-learning",
-            "Practical field-based demonstration of learning"
+            "Learning-by-doing field demonstration"
           ]
         },
         "country_team.q23": {
@@ -2244,18 +2259,18 @@
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "Integrated into the annual monitoring report or country data submission",
-            "Shared informally with colleagues from the Global Coordination Team / SGP CPMT or GEF Agency",
-            "Presented at a national or regional knowledge fair or exchange event"
+            "Incorporated into the annual monitoring report or country data submission",
+            "Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues",
+            "Shared at a national or regional knowledge fair or exchange event"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "It is possible, but time-consuming and competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - regularly"
+          "value": "Yes – regularly"
         },
         "country_team.q27": {
           "kind": "text",
@@ -2344,7 +2359,7 @@
           "values": [
             "Aligning proposals with SGP priorities",
             "Improving technical or operational quality",
-            "Implementation budgeting and planning"
+            "Budget and implementation planning"
           ]
         },
         "country_team.q13": {
@@ -2382,7 +2397,7 @@
         "country_team.q16": {
           "kind": "multi",
           "values": [
-            "Not applicable"
+            "Not relevant"
           ]
         },
         "country_team.q17": {
@@ -2411,7 +2426,7 @@
         },
         "country_team.q19": {
           "kind": "single",
-          "value": "Generally clear, with some occasional difficulties"
+          "value": "Mostly clear, with occasional challenges"
         },
         "country_team.q20": {
           "kind": "multi",
@@ -2420,7 +2435,7 @@
             "Financial or disbursement support",
             "Social and environmental safeguards",
             "Community engagement or conflict resolution",
-            "Livelihoods or business-development expertise",
+            "Livelihood or business development expertise",
             "Support from agency country or regional teams"
           ]
         },
@@ -2429,7 +2444,10 @@
           "values": [
             "Grantee partner capacity limitations",
             "Community participation or engagement challenges",
-            "Insecurity in project areas"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Grantee partner capacity limitations, Community participation or engagement challenges, Insecurity in project areas"
           ]
         },
         "country_team.q22": {
@@ -2438,31 +2456,31 @@
             "Templates/checklists",
             "Short video",
             "Peer exchange",
-            "Practical field-based demonstration of learning"
+            "Learning-by-doing field demonstration"
           ]
         },
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Sufficient time or dedicated support for knowledge capture",
+            "Adequate time or dedicated support for knowledge capture",
             "Readily available templates"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "Integrated into the annual monitoring report or country data submission",
-            "Shared informally with colleagues from the Global Coordination Team / SGP CPMT or GEF Agency",
-            "Presented at a national or regional knowledge fair or exchange event"
+            "Incorporated into the annual monitoring report or country data submission",
+            "Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues",
+            "Shared at a national or regional knowledge fair or exchange event"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "It is possible, but time-consuming and competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - occasionally, at the request of the Global Coordination Team / SGP CPMT"
+          "value": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it"
         },
         "country_team.q27": {
           "kind": "text",
@@ -2594,6 +2612,9 @@
         "country_team.q16": {
           "kind": "multi",
           "values": [
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
             "Financial resources"
           ]
         },
@@ -2674,11 +2695,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we are not sure how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -2760,7 +2781,7 @@
           "kind": "multi",
           "values": [
             "Unclear objectives",
-            "Unrealistic workplan and timeline",
+            "Unrealistic work plan, timeframe",
             "Weak sustainability"
           ]
         },
@@ -2769,8 +2790,8 @@
           "values": [
             "Aligning proposals with SGP priorities",
             "Improving technical or operational quality",
-            "Connecting applicants with relevant knowledge or partners",
-            "Supporting NSC coordination and governance"
+            "NSC coordination and governance support",
+            "Connecting applicants to relevant knowledge or partners"
           ]
         },
         "country_team.q13": {
@@ -2836,7 +2857,7 @@
         },
         "country_team.q19": {
           "kind": "single",
-          "value": "Generally clear, with some occasional difficulties"
+          "value": "Mostly clear, with occasional challenges"
         },
         "country_team.q20": {
           "kind": "multi",
@@ -2856,28 +2877,28 @@
           "values": [
             "Short video",
             "Peer exchange",
-            "Practical field-based demonstration of learning"
+            "Learning-by-doing field demonstration"
           ]
         },
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Sufficient time or dedicated support for knowledge capture"
+            "Adequate time or dedicated support for knowledge capture"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "Integrated into the annual monitoring report or country data submission"
+            "Incorporated into the annual monitoring report or country data submission"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, and dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Rarely - the process is unclear or complex"
+          "value": "Rarely – the process is unclear or cumbersome"
         },
         "country_team.q27": {
           "kind": "text",
@@ -2902,7 +2923,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "China",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": "6-10 years",
         "agency": "UNDP",
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
@@ -2915,7 +2936,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -2969,8 +2990,8 @@
           "kind": "multi",
           "values": [
             "Budget and implementation planning",
-            "Connecting applicants to relevant knowledge or partners",
-            "NSC coordination and governance support"
+            "NSC coordination and governance support",
+            "Connecting applicants to relevant knowledge or partners"
           ]
         },
         "country_team.q13": {
@@ -3074,11 +3095,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, or dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Rarely - the process is unclear or cumbersome"
+          "value": "Rarely – the process is unclear or cumbersome"
         },
         "country_team.q27": {
           "kind": "text",
@@ -3165,7 +3186,7 @@
           "values": [
             "Unclear objectives",
             "Unacceptable social or environmental risks",
-            "Grantee partner capacity limitations",
+            "Capacity limitations of grantee partner",
             "Weak sustainability"
           ]
         },
@@ -3174,10 +3195,10 @@
           "values": [
             "Helping shape project ideas",
             "Improving technical or operational quality",
-            "Implementation budgeting and planning",
+            "Budget and implementation planning",
             "Addressing unrealistic expectations",
             "Supporting monitoring and reporting plans",
-            "Assessing social and environmental risks"
+            "Screening social and environmental risks"
           ]
         },
         "country_team.q13": {
@@ -3254,7 +3275,7 @@
             "Monitoring and reporting support",
             "Social and environmental safeguards",
             "Community engagement or conflict resolution",
-            "Livelihoods or business-development expertise",
+            "Livelihood or business development expertise",
             "Support from agency country or regional teams"
           ]
         },
@@ -3273,44 +3294,46 @@
         "country_team.q22": {
           "kind": "multi",
           "values": [
-            "Step-by-step written instructions",
+            "Step-by-step written guidance",
             "Templates/checklists",
             "Short video",
             "Live webinar",
             "Peer exchange",
             "Structured e-learning",
-            "Practical field-based demonstration of learning",
-            "National",
-            "regional",
-            "and international workshops"
+            "Learning-by-doing field demonstration",
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Step-by-step written instructions, Templates/checklists, Short video, Live webinar, Peer exchange, Structured e-learning, Practical field-based demonstration of learning, National, regional, and international workshops"
           ]
         },
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Sufficient time or dedicated support for knowledge capture",
+            "Adequate time or dedicated support for knowledge capture",
             "Readily available templates"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "Integrated into the annual monitoring report or country data submission",
-            "Used to develop a good-practice case study or similar product",
-            "Shared informally with colleagues from the Global Coordination Team / SGP CPMT or GEF Agency",
-            "Presented at a national or regional knowledge fair or exchange event",
-            "Captured in a short video and shared on NGO/CBO",
-            "UNDP",
-            "and other platforms and networks"
+            "Incorporated into the annual monitoring report or country data submission",
+            "Used to develop a good practice case study (or similar)",
+            "Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues",
+            "Shared at a national or regional knowledge fair or exchange event",
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Integrated into the annual monitoring report or country data submission, Used to develop a good-practice case study or similar product, Shared informally with colleagues from the Global Coordination Team / SGP CPMT or GEF Agency, Presented at a national or regional knowledge fair or exchange event, Captured in a short video and shared on NGO/CBO, UNDP, and other platforms and networks"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "It is possible, but time-consuming and competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No, we do not know how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -3335,7 +3358,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "Ethiopia",
-        "role": "SGP National Streeting Committee member",
+        "role": "Other (free text)",
         "tenure": "6-10 years",
         "agency": "Conservation International",
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
@@ -3348,7 +3371,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "SGP National Streeting Committee member"
+          "value": "Other (free text)"
         },
         "country_team.q4": {
           "kind": "single",
@@ -3508,11 +3531,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Straightforward - we have a clear process and adequate time"
+          "value": "Straightforward – we have a clear process and adequate time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - regularly"
+          "value": "Yes – regularly"
         },
         "country_team.q27": {
           "kind": "text",
@@ -3640,7 +3663,10 @@
           "kind": "multi",
           "values": [
             "Difficult to find",
-            "Difficult to find time to look into other countries's experience"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Difficult to find, Difficult to find time to look into other countries's experience"
           ]
         },
         "country_team.q17": {
@@ -3708,16 +3734,19 @@
             "Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues",
             "Shared at a national or regional knowledge fair or exchange event",
             "Rarely goes further than the final report itself",
-            "I wrote other as Lack of support is a big hindrance to take the lessons learned further"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Incorporated into the annual monitoring report or country data submission, Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues, Shared at a national or regional knowledge fair or exchange event, Rarely goes further than the final report itself, I wrote other as Lack of support is a big hindrance to take the lessons learned further"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Rarely - the process is unclear or cumbersome"
+          "value": "Rarely – the process is unclear or cumbersome"
         },
         "country_team.q27": {
           "kind": "text",
@@ -3792,33 +3821,37 @@
         "country_team.q10": {
           "kind": "multi",
           "values": [
-            "We have not yet issued the OP8 call",
-            "as coordinator",
-            "I have not begun evaluating proposals"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "We have not yet issued the OP8 call; as coordinator, I have not begun evaluating proposals"
           ]
         },
         "country_team.q11": {
           "kind": "multi",
           "values": [
-            "We have not yet issued the OP8 call",
-            "as coordinator",
-            "I have not begun evaluating proposals"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "We have not yet issued the OP8 call; as coordinator, I have not begun evaluating proposals"
           ]
         },
         "country_team.q12": {
           "kind": "multi",
           "values": [
-            "We have not yet issued the OP8 call",
-            "as coordinator",
-            "I have not begun evaluating proposals"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "We have not yet issued the OP8 call; as coordinator, I have not begun evaluating proposals"
           ]
         },
         "country_team.q13": {
           "kind": "multi",
           "values": [
-            "We have not yet issued the OP8 call",
-            "as coordinator",
-            "I have not begun evaluating proposals"
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "We have not yet issued the OP8 call; as coordinator, I have not begun evaluating proposals"
           ]
         },
         "country_team.q14": {
@@ -3877,7 +3910,7 @@
         },
         "country_team.q19": {
           "kind": "single",
-          "value": "They are generally manageable, with some occasional challenges"
+          "value": "Mostly clear, with occasional challenges"
         },
         "country_team.q20": {
           "kind": "multi",
@@ -3886,8 +3919,8 @@
             "Legal or regulatory guidance",
             "Monitoring and reporting support",
             "Social and environmental safeguards",
-            "Community participation or conflict resolution",
-            "External consultants or technical advisers",
+            "Community engagement or conflict resolution",
+            "External consultants or technical advisors",
             "Support from agency country or regional teams",
             "Support from agency headquarters"
           ]
@@ -3905,7 +3938,7 @@
         "country_team.q22": {
           "kind": "multi",
           "values": [
-            "Step-by-step written instructions",
+            "Step-by-step written guidance",
             "Templates/checklists",
             "Short video",
             "Peer exchange",
@@ -3915,24 +3948,24 @@
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Having sufficient time or support for knowledge capture",
-            "Templates available to complete with the required information"
+            "Adequate time or dedicated support for knowledge capture",
+            "Readily available templates"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "By incorporating them into the annual monitoring report or country data submission",
-            "Sharing them at a national or regional knowledge fair or exchange event"
+            "Incorporated into the annual monitoring report or country data submission",
+            "Shared at a national or regional knowledge fair or exchange event"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "We have not produced knowledge products of this kind"
+          "value": "We have not produced knowledge products of this type"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "I don't know"
+          "value": "I do not know"
         },
         "country_team.q27": {
           "kind": "text",
@@ -3957,7 +3990,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "Botswana",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": "1-5 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
@@ -3970,7 +4003,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -4147,11 +4180,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, or dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we are not sure how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -4176,7 +4209,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "Botswana",
-        "role": "TAG member",
+        "role": "Other (free text)",
         "tenure": "1-5 years",
         "agency": "UNDP",
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
@@ -4189,7 +4222,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "TAG member"
+          "value": "Other (free text)"
         },
         "country_team.q4": {
           "kind": "single",
@@ -4351,7 +4384,7 @@
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Rarely - the process is unclear or cumbersome"
+          "value": "Rarely – the process is unclear or cumbersome"
         },
         "country_team.q27": {
           "kind": "text",
@@ -4434,7 +4467,7 @@
         "country_team.q11": {
           "kind": "multi",
           "values": [
-            "Lack of alignment with the country programme strategy",
+            "Lack of alignment with country program strategy",
             "Weak sustainability"
           ]
         },
@@ -4532,29 +4565,29 @@
           "values": [
             "Templates/checklists",
             "Structured e-learning",
-            "Practical field-based demonstration of learning"
+            "Learning-by-doing field demonstration"
           ]
         },
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Sufficient time or dedicated support for knowledge capture"
+            "Adequate time or dedicated support for knowledge capture"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "Integrated into the annual monitoring report or country data submission",
-            "Used to develop a good-practice case study or similar product"
+            "Incorporated into the annual monitoring report or country data submission",
+            "Used to develop a good practice case study (or similar)"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "It is possible, but time-consuming and competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Rarely - the process is unclear or complex"
+          "value": "Rarely – the process is unclear or cumbersome"
         },
         "country_team.q27": {
           "kind": "text",
@@ -4755,11 +4788,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Straightforward - we have a clear process and adequate time"
+          "value": "Straightforward – we have a clear process and adequate time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - occasionally, when Global Coordination Team/SGP CPMT requests it"
+          "value": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it"
         },
         "country_team.q27": {
           "kind": "text",
@@ -4957,11 +4990,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we are not sure how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -4986,7 +5019,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "Timor-Leste",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": "Less than one year (recently started)",
         "agency": "UNDP",
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
@@ -4999,7 +5032,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -5162,11 +5195,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Straightforward - we have a clear process and adequate time"
+          "value": "Straightforward – we have a clear process and adequate time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - occasionally, when Global Coordination Team/SGP CPMT requests it"
+          "value": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it"
         },
         "country_team.q27": {
           "kind": "text",
@@ -5362,11 +5395,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - occasionally, when Global Coordination Team/SGP CPMT requests it"
+          "value": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it"
         },
         "country_team.q27": {
           "kind": "text",
@@ -5391,7 +5424,7 @@
       "dimensions": {
         "response_language": "French",
         "country": "Burundi",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": "6-10 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
@@ -5404,7 +5437,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -5449,7 +5482,7 @@
           "kind": "multi",
           "values": [
             "Unclear objectives",
-            "Unrealistic workplan and timeline",
+            "Unrealistic work plan, timeframe",
             "Weak sustainability",
             "Weak monitoring and evaluation framework"
           ]
@@ -5460,9 +5493,9 @@
             "Helping shape project ideas",
             "Aligning proposals with SGP priorities",
             "Improving technical or operational quality",
-            "Implementation budgeting and planning",
+            "Budget and implementation planning",
             "Supporting monitoring and reporting plans",
-            "Connecting applicants with relevant knowledge or partners"
+            "Connecting applicants to relevant knowledge or partners"
           ]
         },
         "country_team.q13": {
@@ -5499,7 +5532,7 @@
         "country_team.q16": {
           "kind": "multi",
           "values": [
-            "Connectivity/access constraints"
+            "Login / access constraints"
           ]
         },
         "country_team.q17": {
@@ -5535,7 +5568,7 @@
           "values": [
             "Technical or engineering expertise",
             "Government approvals or coordination",
-            "Livelihoods or business-development expertise"
+            "Livelihood or business development expertise"
           ]
         },
         "country_team.q21": {
@@ -5544,7 +5577,7 @@
             "Grantee partner capacity limitations",
             "Unrealistic timelines or workplans",
             "Monitoring or reporting requirements",
-            "Safeguard requirements",
+            "Safeguards-related requirements",
             "Disaster-related disruptions",
             "Changes in priorities or external conditions"
           ]
@@ -5552,7 +5585,7 @@
         "country_team.q22": {
           "kind": "multi",
           "values": [
-            "Step-by-step written instructions",
+            "Step-by-step written guidance",
             "Templates/checklists",
             "Peer exchange"
           ]
@@ -5560,24 +5593,24 @@
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Sufficient time or dedicated support for knowledge capture",
+            "Adequate time or dedicated support for knowledge capture",
             "Recognition"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "Shared informally with colleagues from the Global Coordination Team / SGP CPMT or GEF Agency",
-            "Presented at a national or regional knowledge fair or exchange event"
+            "Shared informally with Global Coordination Team/SGP CPMT or GEF agency colleagues",
+            "Shared at a national or regional knowledge fair or exchange event"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, and dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No, we do not know how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -5602,7 +5635,7 @@
       "dimensions": {
         "response_language": "Spanish",
         "country": "Colombia",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": "6-10 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
@@ -5615,7 +5648,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -5656,20 +5689,20 @@
         "country_team.q11": {
           "kind": "multi",
           "values": [
-            "Lack of medium- and long-term sustainability in the proposal"
+            "Weak sustainability"
           ]
         },
         "country_team.q12": {
           "kind": "multi",
           "values": [
-            "Implementation budgeting and planning",
-            "Support for monitoring and reporting plans"
+            "Budget and implementation planning",
+            "Supporting monitoring and reporting plans"
           ]
         },
         "country_team.q13": {
           "kind": "multi",
           "values": [
-            "On a local office computer or hard drive",
+            "Local office computer or hard drive",
             "Shared cloud storage (Google Drive, OneDrive, etc.)",
             "Email records",
             "SGP database"
@@ -5743,41 +5776,41 @@
           "kind": "multi",
           "values": [
             "Grantee partner capacity limitations",
-            "Funding or disbursement delays",
+            "Delays in funding or disbursement",
             "Monitoring or reporting requirements"
           ]
         },
         "country_team.q22": {
           "kind": "multi",
           "values": [
-            "Step-by-step written instructions",
+            "Step-by-step written guidance",
             "Templates/checklists",
             "Short video",
             "Live webinar",
             "Peer exchange",
-            "Demonstration of how learning is integrated through practice"
+            "Learning-by-doing field demonstration"
           ]
         },
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Having sufficient time or support for knowledge capture",
-            "Templates available to complete with the required information"
+            "Adequate time or dedicated support for knowledge capture",
+            "Readily available templates"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "By incorporating them into the annual monitoring report or country data submission"
+            "Incorporated into the annual monitoring report or country data submission"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "It requires a great deal of time and competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No, we are not sure how to submit it"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -5858,7 +5891,7 @@
         "country_team.q11": {
           "kind": "multi",
           "values": [
-            "Unrealistic project workplan and timelines",
+            "Unrealistic work plan, timeframe",
             "Weak monitoring and evaluation framework"
           ]
         },
@@ -5866,14 +5899,14 @@
           "kind": "multi",
           "values": [
             "Improving technical or operational quality",
-            "Implementation budgeting and planning",
-            "Community participation"
+            "Budget and implementation planning",
+            "Community engagement"
           ]
         },
         "country_team.q13": {
           "kind": "multi",
           "values": [
-            "On a local office computer or hard drive",
+            "Local office computer or hard drive",
             "Shared cloud storage (Google Drive, OneDrive, etc.)"
           ]
         },
@@ -5904,7 +5937,7 @@
         "country_team.q16": {
           "kind": "multi",
           "values": [
-            "The information is difficult to find",
+            "Difficult to find",
             "Not relevant"
           ]
         },
@@ -5934,7 +5967,7 @@
         },
         "country_team.q19": {
           "kind": "single",
-          "value": "They are generally manageable, with some occasional challenges"
+          "value": "Mostly clear, with occasional challenges"
         },
         "country_team.q20": {
           "kind": "multi",
@@ -5943,9 +5976,9 @@
             "Procurement support",
             "Monitoring and reporting support",
             "Social and environmental safeguards",
-            "Community participation or conflict resolution",
-            "Business or livelihoods development expertise",
-            "External consultants or technical advisers",
+            "Community engagement or conflict resolution",
+            "Livelihood or business development expertise",
+            "External consultants or technical advisors",
             "Support from agency country or regional teams"
           ]
         },
@@ -5963,30 +5996,30 @@
           "values": [
             "Short video",
             "Peer exchange",
-            "Demonstration of how learning is integrated through practice"
+            "Learning-by-doing field demonstration"
           ]
         },
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Having sufficient time or support for knowledge capture",
-            "Templates available to complete with the required information"
+            "Adequate time or dedicated support for knowledge capture",
+            "Readily available templates"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "By incorporating them into the annual monitoring report or country data submission",
-            "Sharing them at a national or regional knowledge fair or exchange event"
+            "Incorporated into the annual monitoring report or country data submission",
+            "Shared at a national or regional knowledge fair or exchange event"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "It requires a great deal of time and competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No, we are not sure how to submit it"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -6011,7 +6044,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "Fiji",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": ">10 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
@@ -6024,7 +6057,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -6185,7 +6218,7 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, or dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
@@ -6391,11 +6424,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Difficult - we lack templates, guidance, or dedicated time"
+          "value": "Difficult – we lack templates, guidance, or dedicated time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we do not produce this type of content"
+          "value": "No – we do not produce this type of content"
         },
         "country_team.q27": {
           "kind": "text",
@@ -6420,11 +6453,11 @@
       "dimensions": {
         "response_language": "English",
         "country": "Viet Nam",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": "1-5 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
-        "device": "Mobile phone"
+        "device": "Mobile telephone"
       },
       "answers": {
         "country_team.q2": {
@@ -6433,7 +6466,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -6455,7 +6488,7 @@
         },
         "country_team.q8": {
           "kind": "single",
-          "value": "Mobile phone"
+          "value": "Mobile telephone"
         },
         "country_team.q9": {
           "kind": "multi",
@@ -6595,11 +6628,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - occasionally, when Global Coordination Team/SGP CPMT requests it"
+          "value": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it"
         },
         "country_team.q27": {
           "kind": "text",
@@ -6795,11 +6828,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Straightforward - we have a clear process and adequate time"
+          "value": "Straightforward – we have a clear process and adequate time"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we are not sure how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -6901,12 +6934,12 @@
             "Aligning proposals with SGP priorities",
             "Improving technical or operational quality",
             "Budget and implementation planning",
+            "NSC coordination and governance support",
             "Community engagement",
             "Addressing unrealistic expectations",
             "Supporting monitoring and reporting plans",
             "Screening social and environmental risks",
-            "Connecting applicants to relevant knowledge or partners",
-            "NSC coordination and governance support"
+            "Connecting applicants to relevant knowledge or partners"
           ]
         },
         "country_team.q13": {
@@ -6944,9 +6977,7 @@
         },
         "country_team.q16": {
           "kind": "multi",
-          "values": [
-            "NA"
-          ]
+          "values": []
         },
         "country_team.q17": {
           "kind": "matrix",
@@ -7034,11 +7065,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - occasionally, when Global Coordination Team/SGP CPMT requests it"
+          "value": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it"
         },
         "country_team.q27": {
           "kind": "text",
@@ -7063,7 +7094,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "Bhutan",
-        "role": "Supervisor",
+        "role": "Other (free text)",
         "tenure": "1-5 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
@@ -7076,7 +7107,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Supervisor"
+          "value": "Other (free text)"
         },
         "country_team.q4": {
           "kind": "single",
@@ -7141,12 +7172,12 @@
             "Aligning proposals with SGP priorities",
             "Improving technical or operational quality",
             "Budget and implementation planning",
+            "NSC coordination and governance support",
             "Community engagement",
             "Addressing unrealistic expectations",
             "Supporting monitoring and reporting plans",
             "Screening social and environmental risks",
-            "Connecting applicants to relevant knowledge or partners",
-            "NSC coordination and governance support"
+            "Connecting applicants to relevant knowledge or partners"
           ]
         },
         "country_team.q13": {
@@ -7265,11 +7296,11 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Possible but time-consuming - it competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "Yes - occasionally, when Global Coordination Team/SGP CPMT requests it"
+          "value": "Yes – occasionally, when Global Coordination Team/SGP CPMT requests it"
         },
         "country_team.q27": {
           "kind": "text",
@@ -7294,7 +7325,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "Bhutan",
-        "role": "Programme Assistant",
+        "role": "Program Assistant",
         "tenure": "1-5 years",
         "agency": "UNDP",
         "internet": "Reliable, with no problems downloading/uploading large files",
@@ -7307,7 +7338,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Assistant"
+          "value": "Program Assistant"
         },
         "country_team.q4": {
           "kind": "single",
@@ -7465,7 +7496,7 @@
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "Straightforward - we have a clear process and adequate time"
+          "value": "Straightforward – we have a clear process and adequate time"
         },
         "country_team.q26": {
           "kind": "single",
@@ -7494,7 +7525,7 @@
       "dimensions": {
         "response_language": "English",
         "country": "Botswana",
-        "role": "Programme Oversight",
+        "role": "Other (free text)",
         "tenure": "1-5 years",
         "agency": "UNDP",
         "internet": "Sometimes unreliable, but generally able to download/upload large files",
@@ -7507,7 +7538,7 @@
         },
         "country_team.q3": {
           "kind": "single",
-          "value": "Programme Oversight"
+          "value": "Other (free text)"
         },
         "country_team.q4": {
           "kind": "single",
@@ -7566,11 +7597,11 @@
           "kind": "multi",
           "values": [
             "Aligning proposals with SGP priorities",
+            "NSC coordination and governance support",
             "Community engagement",
             "Supporting monitoring and reporting plans",
             "Screening social and environmental risks",
-            "Connecting applicants to relevant knowledge or partners",
-            "NSC coordination and governance support"
+            "Connecting applicants to relevant knowledge or partners"
           ]
         },
         "country_team.q13": {
@@ -7695,7 +7726,7 @@
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No - we do not produce this type of content"
+          "value": "No – we do not produce this type of content"
         },
         "country_team.q27": {
           "kind": "text",
@@ -7770,21 +7801,21 @@
           "values": [
             "Revising project activities or objectives",
             "Budget corrections or revisions",
-            "Stakeholder coordination problems"
+            "Stakeholder coordination issues"
           ]
         },
         "country_team.q11": {
           "kind": "multi",
           "values": [
-            "Grantee partner capacity limitations",
+            "Capacity limitations of grantee partner",
             "Weak monitoring and evaluation framework"
           ]
         },
         "country_team.q12": {
           "kind": "multi",
           "values": [
-            "Implementation budgeting and planning",
-            "Support for NSC coordination and governance"
+            "Budget and implementation planning",
+            "NSC coordination and governance support"
           ]
         },
         "country_team.q13": {
@@ -7820,7 +7851,7 @@
         "country_team.q16": {
           "kind": "multi",
           "values": [
-            "Not applicable"
+            "Not relevant"
           ]
         },
         "country_team.q17": {
@@ -7849,7 +7880,7 @@
         },
         "country_team.q19": {
           "kind": "single",
-          "value": "I don't know"
+          "value": "Unsure"
         },
         "country_team.q20": {
           "kind": "multi",
@@ -7863,14 +7894,14 @@
           "kind": "multi",
           "values": [
             "Grantee partner capacity limitations",
-            "Funding or disbursement delays",
+            "Delays in funding or disbursement",
             "Stakeholder or partner coordination"
           ]
         },
         "country_team.q22": {
           "kind": "multi",
           "values": [
-            "Step-by-step written instructions",
+            "Step-by-step written guidance",
             "Peer exchange",
             "Structured e-learning"
           ]
@@ -7878,23 +7909,23 @@
         "country_team.q23": {
           "kind": "multi",
           "values": [
-            "Sufficient time or dedicated support for knowledge capture"
+            "Adequate time or dedicated support for knowledge capture"
           ]
         },
         "country_team.q24": {
           "kind": "multi",
           "values": [
-            "Presented at a national or regional knowledge fair or exchange event",
-            "It rarely goes beyond the final report itself"
+            "Shared at a national or regional knowledge fair or exchange event",
+            "Rarely goes further than the final report itself"
           ]
         },
         "country_team.q25": {
           "kind": "single",
-          "value": "It is possible, but time-consuming and competes with operational priorities"
+          "value": "Possible but time-consuming – it competes with operational priorities"
         },
         "country_team.q26": {
           "kind": "single",
-          "value": "No, we do not know how to submit"
+          "value": "No – we are not sure how to submit"
         },
         "country_team.q27": {
           "kind": "text",
@@ -7909,6 +7940,630 @@
         "country_team.q29": {
           "kind": "text",
           "value": "More regular support and more practical guidance on administrative, financial, and implementation procedures would have been especially useful at the right time.",
+          "approved": true
+        }
+      }
+    },
+    {
+      "id": "country_team-039",
+      "stakeholder": "country_team",
+      "dimensions": {
+        "response_language": "English",
+        "country": "Venezuela",
+        "role": "Program Assistant",
+        "tenure": "1-5 years",
+        "agency": "UNDP",
+        "internet": "Sometimes unreliable, but generally able to download/upload large files",
+        "device": "Laptop or desktop computer"
+      },
+      "answers": {
+        "country_team.q2": {
+          "kind": "single",
+          "value": "Venezuela"
+        },
+        "country_team.q3": {
+          "kind": "single",
+          "value": "Program Assistant"
+        },
+        "country_team.q4": {
+          "kind": "single",
+          "value": "1-5 years"
+        },
+        "country_team.q5": {
+          "kind": "single",
+          "value": "UNDP"
+        },
+        "country_team.q6": {
+          "kind": "multi",
+          "values": [
+            "Spanish"
+          ]
+        },
+        "country_team.q7": {
+          "kind": "single",
+          "value": "Sometimes unreliable, but generally able to download/upload large files"
+        },
+        "country_team.q8": {
+          "kind": "single",
+          "value": "Laptop or desktop computer"
+        },
+        "country_team.q9": {
+          "kind": "multi",
+          "values": [
+            "Early concept discussions",
+            "Proposal development",
+            "NSC coordination",
+            "Midterm and final reviews",
+            "Knowledge sharing and lessons learned"
+          ]
+        },
+        "country_team.q10": {
+          "kind": "multi",
+          "values": [
+            "Explaining SGP priorities or requirements",
+            "Revising project activities or objectives",
+            "Budget corrections or revisions",
+            "Technical feasibility concerns",
+            "Missing information or supporting documentation"
+          ]
+        },
+        "country_team.q11": {
+          "kind": "multi",
+          "values": [
+            "Capacity limitations of grantee partner",
+            "Unrealistic work plan, timeframe"
+          ]
+        },
+        "country_team.q12": {
+          "kind": "multi",
+          "values": [
+            "Improving technical or operational quality",
+            "Community engagement",
+            "Supporting monitoring and reporting plans"
+          ]
+        },
+        "country_team.q13": {
+          "kind": "multi",
+          "values": [
+            "Local office computer or hard drive",
+            "Email records",
+            "Unsure"
+          ]
+        },
+        "country_team.q14": {
+          "kind": "matrix",
+          "values": {
+            "SGP database": "Sometimes",
+            "SGP Intranet": "Inaccessible/unavailable",
+            "Innovation Library": "Inaccessible/unavailable",
+            "Guidance from agency country or regional offices": "Sometimes",
+            "Guidance from agency headquarters": "Sometimes",
+            "Previously approved proposal examples": "Frequently",
+            "Previous proposal review comments or reviewer feedback": "Frequently",
+            "External consultants or technical experts": "Never",
+            "NGOs or other partner organizations": "Sometimes",
+            "Government experts or agencies": "Inaccessible/unavailable",
+            "Public data or statistics": "Inaccessible/unavailable",
+            "Workshops, exchanges, or peer networks": "Never",
+            "NSC decisions or minutes (prior grant approvals, conditions)": "Inaccessible/unavailable",
+            "Other": "Inaccessible/unavailable"
+          }
+        },
+        "country_team.q15": {
+          "kind": "text",
+          "value": null,
+          "approved": false
+        },
+        "country_team.q16": {
+          "kind": "multi",
+          "values": [
+            "Difficult to find",
+            "Outdated"
+          ]
+        },
+        "country_team.q17": {
+          "kind": "matrix",
+          "values": {
+            "SGP database": "Frequently",
+            "SGP Intranet": "Inaccessible/unavailable",
+            "Innovation Library": "Inaccessible/unavailable",
+            "Guidance from agency country or regional offices": "Sometimes",
+            "Guidance from agency headquarters": "Frequently",
+            "Previous project implementation examples": "Frequently",
+            "Previous evaluation reports": "Frequently",
+            "External consultants or technical experts": "Inaccessible/unavailable",
+            "NGOs or other partner organizations": "Sometimes",
+            "Government experts or agencies": "Inaccessible/unavailable",
+            "Public data or statistics": "Inaccessible/unavailable",
+            "Non-SGP online resources": "Inaccessible/unavailable",
+            "Workshops, exchanges, or peer networks": "Rarely",
+            "Other": "Inaccessible/unavailable"
+          }
+        },
+        "country_team.q18": {
+          "kind": "text",
+          "value": null,
+          "approved": false
+        },
+        "country_team.q19": {
+          "kind": "single",
+          "value": "Sometimes difficult to interpret or apply consistently"
+        },
+        "country_team.q20": {
+          "kind": "multi",
+          "values": [
+            "Financial or disbursement support",
+            "Government approvals or coordination",
+            "Monitoring and reporting support"
+          ]
+        },
+        "country_team.q21": {
+          "kind": "multi",
+          "values": [
+            "Grantee partner capacity limitations",
+            "Delays in funding or disbursement",
+            "Unrealistic timelines or workplans",
+            "Government approvals or coordination",
+            "Disaster-related disruptions"
+          ]
+        },
+        "country_team.q22": {
+          "kind": "multi",
+          "values": [
+            "Step-by-step written guidance",
+            "Templates/checklists",
+            "Short video"
+          ]
+        },
+        "country_team.q23": {
+          "kind": "multi",
+          "values": [
+            "Adequate time or dedicated support for knowledge capture"
+          ]
+        },
+        "country_team.q24": {
+          "kind": "multi",
+          "values": [
+            "Rarely goes further than the final report itself"
+          ]
+        },
+        "country_team.q25": {
+          "kind": "single",
+          "value": "We have not produced knowledge products of this type"
+        },
+        "country_team.q26": {
+          "kind": "single",
+          "value": "I do not know"
+        },
+        "country_team.q27": {
+          "kind": "text",
+          "value": "First phases",
+          "approved": true
+        },
+        "country_team.q28": {
+          "kind": "text",
+          "value": "Time",
+          "approved": true
+        },
+        "country_team.q29": {
+          "kind": "text",
+          "value": "Step by step on OneUNOPS-Quantum process, paperwork processes",
+          "approved": true
+        }
+      }
+    },
+    {
+      "id": "country_team-040",
+      "stakeholder": "country_team",
+      "dimensions": {
+        "response_language": "English",
+        "country": "Rwanda",
+        "role": "National Coordinator",
+        "tenure": "Less than one year (recently started)",
+        "agency": "UNDP",
+        "internet": "Reliable, with no problems downloading/uploading large files",
+        "device": "Laptop or desktop computer"
+      },
+      "answers": {
+        "country_team.q2": {
+          "kind": "single",
+          "value": "Rwanda"
+        },
+        "country_team.q3": {
+          "kind": "single",
+          "value": "National Coordinator"
+        },
+        "country_team.q4": {
+          "kind": "single",
+          "value": "Less than one year (recently started)"
+        },
+        "country_team.q5": {
+          "kind": "single",
+          "value": "UNDP"
+        },
+        "country_team.q6": {
+          "kind": "multi",
+          "values": [
+            "English"
+          ]
+        },
+        "country_team.q7": {
+          "kind": "single",
+          "value": "Reliable, with no problems downloading/uploading large files"
+        },
+        "country_team.q8": {
+          "kind": "single",
+          "value": "Laptop or desktop computer"
+        },
+        "country_team.q9": {
+          "kind": "multi",
+          "values": [
+            "Proposal development",
+            "Proposal review/refinement",
+            "Monitoring and reporting"
+          ]
+        },
+        "country_team.q10": {
+          "kind": "multi",
+          "values": [
+            "Budget corrections or revisions",
+            "Monitoring indicators or reporting requirements",
+            "Aligning proposals with GEF focal areas or strategic priorities",
+            "Technical feasibility concerns"
+          ]
+        },
+        "country_team.q11": {
+          "kind": "multi",
+          "values": [
+            "Unclear objectives",
+            "Unrealistic work plan, timeframe",
+            "Weak sustainability",
+            "Weak monitoring and evaluation framework"
+          ]
+        },
+        "country_team.q12": {
+          "kind": "multi",
+          "values": [
+            "Aligning proposals with SGP priorities",
+            "Improving technical or operational quality",
+            "Budget and implementation planning",
+            "NSC coordination and governance support",
+            "Addressing unrealistic expectations",
+            "Supporting monitoring and reporting plans",
+            "Screening social and environmental risks"
+          ]
+        },
+        "country_team.q13": {
+          "kind": "multi",
+          "values": [
+            "Local office computer or hard drive",
+            "Shared cloud storage (Google Drive, OneDrive, etc.)",
+            "Email records"
+          ]
+        },
+        "country_team.q14": {
+          "kind": "matrix",
+          "values": {
+            "SGP database": "Rarely",
+            "SGP Intranet": "Rarely",
+            "Innovation Library": "Rarely",
+            "Guidance from agency country or regional offices": "Frequently",
+            "Guidance from agency headquarters": "Rarely",
+            "Previously approved proposal examples": "Frequently",
+            "Previous proposal review comments or reviewer feedback": "Frequently",
+            "External consultants or technical experts": "Sometimes",
+            "NGOs or other partner organizations": "Sometimes",
+            "Government experts or agencies": "Sometimes",
+            "Public data or statistics": "Sometimes",
+            "Workshops, exchanges, or peer networks": "Sometimes",
+            "NSC decisions or minutes (prior grant approvals, conditions)": "Frequently",
+            "Other": "Rarely"
+          }
+        },
+        "country_team.q15": {
+          "kind": "text",
+          "value": null,
+          "approved": false
+        },
+        "country_team.q16": {
+          "kind": "multi",
+          "values": [
+            "Difficult to find",
+            "Outdated"
+          ]
+        },
+        "country_team.q17": {
+          "kind": "matrix",
+          "values": {
+            "SGP database": "Rarely",
+            "SGP Intranet": "Rarely",
+            "Innovation Library": "Rarely",
+            "Guidance from agency country or regional offices": "Frequently",
+            "Guidance from agency headquarters": "Sometimes",
+            "Previous project implementation examples": "Frequently",
+            "Previous evaluation reports": "Frequently",
+            "External consultants or technical experts": "Sometimes",
+            "NGOs or other partner organizations": "Sometimes",
+            "Government experts or agencies": "Frequently",
+            "Public data or statistics": "Rarely",
+            "Non-SGP online resources": "Rarely",
+            "Workshops, exchanges, or peer networks": "Sometimes",
+            "Other": "Rarely"
+          }
+        },
+        "country_team.q18": {
+          "kind": "text",
+          "value": null,
+          "approved": false
+        },
+        "country_team.q19": {
+          "kind": "single",
+          "value": "Mostly clear, with occasional challenges"
+        },
+        "country_team.q20": {
+          "kind": "multi",
+          "values": [
+            "Monitoring and reporting support",
+            "Social and environmental safeguards"
+          ]
+        },
+        "country_team.q21": {
+          "kind": "multi",
+          "values": [
+            "Unrealistic timelines or workplans",
+            "Procurement or equipment delays",
+            "Stakeholder or partner coordination",
+            "Community participation or engagement challenges",
+            "Monitoring or reporting requirements",
+            "Changes in priorities or external conditions"
+          ]
+        },
+        "country_team.q22": {
+          "kind": "multi",
+          "values": [
+            "Step-by-step written guidance",
+            "Templates/checklists",
+            "Peer exchange"
+          ]
+        },
+        "country_team.q23": {
+          "kind": "multi",
+          "values": [
+            "Readily available templates"
+          ]
+        },
+        "country_team.q24": {
+          "kind": "multi",
+          "values": [
+            "Rarely goes further than the final report itself"
+          ]
+        },
+        "country_team.q25": {
+          "kind": "single",
+          "value": "We have not produced knowledge products of this type"
+        },
+        "country_team.q26": {
+          "kind": "single",
+          "value": "I do not know"
+        },
+        "country_team.q27": {
+          "kind": "text",
+          "value": "Hands on guidance or local experience is critical accross the entire project cycle because it shapes in addressing challenges ahead of time, collecting information from beneficiaires and identify bottlenecks that could require to redesign projects that might encounter delays. Projects that are closely monitored and interacting with beneficiaries regularly mostly concludes in success and results in tangible results and sustainaility plans informed by beneficiairies needs. Such practices aslo inform technical approaches on how projects can be best designed.",
+          "approved": true
+        },
+        "country_team.q28": {
+          "kind": "text",
+          "value": "The main challenges is to know the best performer countries and what they do to make their SGP portfolio relevant and continous growth. The high performing countries could then on semester basis share their knowledge on specific topics that could be selected by others countries who needs to also improvethe performance of their SGP countries operations.",
+          "approved": true
+        },
+        "country_team.q29": {
+          "kind": "text",
+          "value": "Availability of checlists for every requirements. For eg: governance checklist, projects implementation monitoring checklist, financial verification checklist, confirmed and uniform reporting templates.",
+          "approved": true
+        }
+      }
+    },
+    {
+      "id": "country_team-041",
+      "stakeholder": "country_team",
+      "dimensions": {
+        "response_language": "English",
+        "country": "Philippines",
+        "role": "Program Assistant",
+        "tenure": "Less than one year (recently started)",
+        "agency": "UNDP",
+        "internet": "Reliable, with no problems downloading/uploading large files",
+        "device": "Laptop or desktop computer"
+      },
+      "answers": {
+        "country_team.q2": {
+          "kind": "single",
+          "value": "Philippines"
+        },
+        "country_team.q3": {
+          "kind": "single",
+          "value": "Program Assistant"
+        },
+        "country_team.q4": {
+          "kind": "single",
+          "value": "Less than one year (recently started)"
+        },
+        "country_team.q5": {
+          "kind": "single",
+          "value": "UNDP"
+        },
+        "country_team.q6": {
+          "kind": "multi",
+          "values": [
+            "English"
+          ],
+          "rawUnclassified": [
+            "filipino"
+          ]
+        },
+        "country_team.q7": {
+          "kind": "single",
+          "value": "Reliable, with no problems downloading/uploading large files"
+        },
+        "country_team.q8": {
+          "kind": "single",
+          "value": "Laptop or desktop computer"
+        },
+        "country_team.q9": {
+          "kind": "multi",
+          "values": [
+            "Proposal review/refinement",
+            "NSC coordination",
+            "Project implementation support"
+          ]
+        },
+        "country_team.q10": {
+          "kind": "multi",
+          "values": [
+            "Explaining SGP priorities or requirements",
+            "Revising project activities or objectives",
+            "Budget corrections or revisions"
+          ]
+        },
+        "country_team.q11": {
+          "kind": "multi",
+          "values": [
+            "Unclear objectives",
+            "Lack of alignment with country program strategy"
+          ]
+        },
+        "country_team.q12": {
+          "kind": "multi",
+          "values": [
+            "Helping shape project ideas",
+            "Aligning proposals with SGP priorities",
+            "Improving technical or operational quality"
+          ]
+        },
+        "country_team.q13": {
+          "kind": "multi",
+          "values": [
+            "Local office computer or hard drive",
+            "Shared cloud storage (Google Drive, OneDrive, etc.)",
+            "Email records"
+          ]
+        },
+        "country_team.q14": {
+          "kind": "matrix",
+          "values": {
+            "SGP database": "Frequently",
+            "SGP Intranet": "Never",
+            "Innovation Library": "Never",
+            "Guidance from agency country or regional offices": "Frequently",
+            "Guidance from agency headquarters": "Sometimes",
+            "Previously approved proposal examples": "Rarely",
+            "Previous proposal review comments or reviewer feedback": "Rarely",
+            "External consultants or technical experts": "Sometimes",
+            "NGOs or other partner organizations": "Frequently",
+            "Government experts or agencies": "Frequently",
+            "Public data or statistics": "Frequently",
+            "Workshops, exchanges, or peer networks": "Sometimes",
+            "NSC decisions or minutes (prior grant approvals, conditions)": "Sometimes",
+            "Other": "Inaccessible/unavailable"
+          }
+        },
+        "country_team.q15": {
+          "kind": "text",
+          "value": "N/A",
+          "approved": true
+        },
+        "country_team.q16": {
+          "kind": "multi",
+          "values": [
+            "Difficult to find",
+            "Login / access constraints"
+          ]
+        },
+        "country_team.q17": {
+          "kind": "matrix",
+          "values": {
+            "SGP database": "Frequently",
+            "SGP Intranet": "Never",
+            "Innovation Library": "Never",
+            "Guidance from agency country or regional offices": "Frequently",
+            "Guidance from agency headquarters": "Frequently",
+            "Previous project implementation examples": "Sometimes",
+            "Previous evaluation reports": "Sometimes",
+            "External consultants or technical experts": "Frequently",
+            "NGOs or other partner organizations": "Frequently",
+            "Government experts or agencies": "Frequently",
+            "Public data or statistics": "Frequently",
+            "Non-SGP online resources": "Frequently",
+            "Workshops, exchanges, or peer networks": "Rarely",
+            "Other": "Inaccessible/unavailable"
+          }
+        },
+        "country_team.q18": {
+          "kind": "text",
+          "value": "N/A",
+          "approved": true
+        },
+        "country_team.q19": {
+          "kind": "single",
+          "value": "Frequently difficult to interpret or apply consistently"
+        },
+        "country_team.q20": {
+          "kind": "multi",
+          "values": [
+            "Technical or engineering expertise",
+            "Financial or disbursement support"
+          ]
+        },
+        "country_team.q21": {
+          "kind": "multi",
+          "values": [
+            "Grantee partner capacity limitations",
+            "Unrealistic timelines or workplans"
+          ]
+        },
+        "country_team.q22": {
+          "kind": "multi",
+          "values": [
+            "Step-by-step written guidance",
+            "Templates/checklists",
+            "Learning-by-doing field demonstration"
+          ]
+        },
+        "country_team.q23": {
+          "kind": "multi",
+          "values": [
+            "Adequate time or dedicated support for knowledge capture"
+          ]
+        },
+        "country_team.q24": {
+          "kind": "multi",
+          "values": [
+            "Incorporated into the annual monitoring report or country data submission",
+            "Used to develop a good practice case study (or similar)",
+            "Shared at a national or regional knowledge fair or exchange event"
+          ]
+        },
+        "country_team.q25": {
+          "kind": "single",
+          "value": "Possible but time-consuming – it competes with operational priorities"
+        },
+        "country_team.q26": {
+          "kind": "single",
+          "value": "I do not know"
+        },
+        "country_team.q27": {
+          "kind": "text",
+          "value": "During project implementation. In this phase, guidance on various ways on how implementers could connect and work with communities is significant, and thus, necessary.",
+          "approved": true
+        },
+        "country_team.q28": {
+          "kind": "text",
+          "value": "Some barriers includes inability to meet and connect with one another. A peer network would be beneficial in understanding best practices and learning various ways of doing.",
+          "approved": true
+        },
+        "country_team.q29": {
+          "kind": "text",
+          "value": "Effective and efficient project implementation styles and tips from exemplary partners around the globe.",
           "approved": true
         }
       }

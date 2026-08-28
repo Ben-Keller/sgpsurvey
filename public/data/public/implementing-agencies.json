@@ -55,14 +55,27 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Limited technical capacity, Connectivity constraints, Language barriers, Unclear agency roles, Lack of incentives to contribute content, Data-sharing concerns, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Limited technical capacity",
+            "Connectivity constraints",
+            "Language barriers",
+            "Unclear agency roles",
+            "Lack of incentives to contribute content",
+            "Data-sharing concerns",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems, Dedicated staffing structure, Formal governance agreements, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems",
+            "Dedicated staffing structure",
+            "Formal governance agreements",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -100,7 +113,7 @@
         },
         "implementing_agencies.q66": {
           "kind": "single",
-          "value": "A defined process exists: National Coordinators submit; the agency's GC team reviews and publishes"
+          "value": "There is a defined process: National Coordinators submit; agency KM team reviews and publishes"
         },
         "implementing_agencies.q67": {
           "kind": "matrix",
@@ -122,14 +135,19 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Connectivity constraints, Language barriers, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Connectivity constraints",
+            "Language barriers",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -189,14 +207,21 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Limited technical capacity, Connectivity constraints, Language barriers, Lack of incentives to contribute content",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Limited technical capacity",
+            "Connectivity constraints",
+            "Language barriers",
+            "Lack of incentives to contribute content"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -234,7 +259,7 @@
         },
         "implementing_agencies.q66": {
           "kind": "single",
-          "value": "We do not currently have a defined process for this"
+          "value": "We do not have a defined process for this at present"
         },
         "implementing_agencies.q67": {
           "kind": "matrix",
@@ -256,14 +281,27 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Limited technical capacity, Connectivity constraints, Language barriers, Lack of incentives to contribute content, Data-sharing concerns, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Limited technical capacity",
+            "Connectivity constraints",
+            "Language barriers",
+            "Lack of incentives to contribute content",
+            "Data-sharing concerns",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems, Dedicated staffing structure, Formal governance arrangements, Partnerships with external institutions, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems",
+            "Dedicated staffing structure",
+            "Formal governance agreements",
+            "Partnerships with external institutions",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -323,14 +361,20 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Language barriers, Unclear agency roles",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Language barriers",
+            "Unclear agency roles"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Formal governance agreements, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Formal governance agreements",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -368,19 +412,19 @@
         },
         "implementing_agencies.q66": {
           "kind": "single",
-          "value": "A defined process exists: National Coordinators submit the materials; the agency's GC team reviews and publishes them"
+          "value": "There is a defined process: National Coordinators submit; agency KM team reviews and publishes"
         },
         "implementing_agencies.q67": {
           "kind": "matrix",
           "values": {
-            "Searchable knowledge repository": "Invalid composite rating",
-            "Interactive dashboard of projects and results": "Invalid composite rating",
-            "Online training/learning resources": "Invalid composite rating",
-            "Communities of practice": "Invalid composite rating",
-            "Mentoring and peer-learning tools": "Invalid composite rating",
-            "AI-assisted search": "Invalid composite rating",
-            "AI-assisted proposal development support": "Important, Moderately important",
-            "AI-assisted reporting support": "Important, Moderately important",
+            "Searchable knowledge repository": null,
+            "Interactive dashboard of projects and results": null,
+            "Online training/learning resources": null,
+            "Communities of practice": null,
+            "Mentoring and peer-learning tools": null,
+            "AI-assisted search": null,
+            "AI-assisted proposal development support": null,
+            "AI-assisted reporting support": null,
             "Multilingual features": "Very important"
           }
         },
@@ -390,14 +434,19 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Connectivity constraints, Language barriers",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Connectivity constraints",
+            "Language barriers"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Integration into agency systems, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Integration into agency systems",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -448,7 +497,7 @@
             "AI-assisted search": "Very important",
             "AI-assisted proposal development support": "Important",
             "AI-assisted reporting support": "Very important",
-            "Multilingual features": "Invalid composite rating"
+            "Multilingual features": null
           }
         },
         "implementing_agencies.q68": {
@@ -457,14 +506,18 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems, Dedicated staffing structure",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems",
+            "Dedicated staffing structure"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -492,7 +545,7 @@
             "Project implementation tools and templates": "Valuable",
             "Monitoring & evaluation guidance": "Moderately valuable",
             "Case studies and lessons learned": "Not important",
-            "Technical guidance": "I'm not sure",
+            "Technical guidance": "Not sure",
             "Online e-learning resources": "Not important",
             "Community engagement tools": "Valuable",
             "Gender and social inclusion resources": "Valuable",
@@ -502,7 +555,7 @@
         },
         "implementing_agencies.q66": {
           "kind": "single",
-          "value": "We do not currently have a defined process for this"
+          "value": "We do not have a defined process for this at present"
         },
         "implementing_agencies.q67": {
           "kind": "matrix",
@@ -524,14 +577,21 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Limited technical capacity, Lack of incentives to contribute content, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Limited technical capacity",
+            "Lack of incentives to contribute content",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems, Partnerships with external institutions",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems",
+            "Partnerships with external institutions"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -591,14 +651,21 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited technical capacity, Connectivity constraints, Language barriers, Lack of incentives to contribute content, Data-sharing concerns",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited technical capacity",
+            "Connectivity constraints",
+            "Language barriers",
+            "Lack of incentives to contribute content",
+            "Data-sharing concerns"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -658,14 +725,23 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited technical capacity, Language barriers, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited technical capacity",
+            "Language barriers",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems, Dedicated staffing structure, Formal governance agreements, Partnerships with external institutions, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems",
+            "Dedicated staffing structure",
+            "Formal governance agreements",
+            "Partnerships with external institutions",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -725,14 +801,23 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Limited technical capacity, Unclear agency roles, Data-sharing concerns, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Limited technical capacity",
+            "Unclear agency roles",
+            "Data-sharing concerns",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Integration into agency systems, Dedicated staffing structure, Formal governance agreements, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Integration into agency systems",
+            "Dedicated staffing structure",
+            "Formal governance agreements",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -792,14 +877,21 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Unclear agency roles, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Unclear agency roles",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Dedicated staffing structure, Partnerships with external institutions, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Dedicated staffing structure",
+            "Partnerships with external institutions",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -859,14 +951,21 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Connectivity constraints, Unclear agency roles, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Connectivity constraints",
+            "Unclear agency roles",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Dedicated staffing structure, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Dedicated staffing structure",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -926,14 +1025,21 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Connectivity constraints, Data-sharing concerns, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Connectivity constraints",
+            "Data-sharing concerns",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems, Formal governance agreements",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems",
+            "Formal governance agreements"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -993,14 +1099,27 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Connectivity constraints, Language barriers, Unclear agency roles, Lack of incentives to contribute content, Data-sharing concerns, Insufficient funding",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Connectivity constraints",
+            "Language barriers",
+            "Unclear agency roles",
+            "Lack of incentives to contribute content",
+            "Data-sharing concerns",
+            "Insufficient funding"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems, Dedicated staffing structure, Formal governance agreements, Partnerships with external institutions, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems",
+            "Dedicated staffing structure",
+            "Formal governance agreements",
+            "Partnerships with external institutions",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -1060,14 +1179,29 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Connectivity constraints, Unclear agency roles, Lack of incentives to contribute content, Data-sharing concerns, IPRs, Cybersecurity risks",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Connectivity constraints",
+            "Unclear agency roles",
+            "Lack of incentives to contribute content",
+            "Data-sharing concerns",
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Limited staff time, Connectivity constraints, Unclear agency roles, Lack of incentives to contribute content, Data-sharing concerns, IPRs, Cybersecurity risks"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Integration into agency systems, Dedicated staffing structure, Formal governance agreements, Partnerships with external institutions, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Integration into agency systems",
+            "Dedicated staffing structure",
+            "Formal governance agreements",
+            "Partnerships with external institutions",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
@@ -1127,19 +1261,106 @@
           "approved": true
         },
         "implementing_agencies.q69": {
-          "kind": "text",
-          "value": "Limited staff time, Connectivity constraints, Unclear agency roles, Data-sharing concerns, Insufficient funding, Risks of cybersecurity, intellectual property and data privacy",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Connectivity constraints",
+            "Unclear agency roles",
+            "Data-sharing concerns",
+            "Insufficient funding",
+            "Other (free text)"
+          ],
+          "rawUnclassified": [
+            "Limited staff time, Connectivity constraints, Unclear agency roles, Data-sharing concerns, Insufficient funding, Risks of cybersecurity, intellectual property and data privacy"
+          ]
         },
         "implementing_agencies.q70": {
-          "kind": "text",
-          "value": "Dedicated GEF funding, Dedicated staffing structure, Formal governance agreements, Regular content updates and quality assurance",
-          "approved": true
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Dedicated staffing structure",
+            "Formal governance agreements",
+            "Regular content updates and quality assurance"
+          ]
         },
         "implementing_agencies.q71": {
           "kind": "text",
           "value": "Sustainable governance system and funding with regular annual governance review (budget reviews, staff adequacy from each agency/focal points...), Feedback loops and platform maintenance and content refresh planning, Sustainability of the hosting on Github, compatible with different devices and browsers, update for the AI models with minimal resources,",
           "approved": true
+        }
+      }
+    },
+    {
+      "id": "implementing_agencies-018",
+      "stakeholder": "implementing_agencies",
+      "dimensions": {
+        "response_language": "French",
+        "agency": "Conservation International"
+      },
+      "answers": {
+        "implementing_agencies.q64": {
+          "kind": "single",
+          "value": "Conservation International"
+        },
+        "implementing_agencies.q65": {
+          "kind": "matrix",
+          "values": {
+            "Proposal development guidance": "Valuable",
+            "Project implementation tools and templates": "Valuable",
+            "Monitoring & evaluation guidance": "Highly valuable",
+            "Case studies and lessons learned": "Moderately valuable",
+            "Technical guidance": "Moderately valuable",
+            "Online e-learning resources": "Moderately valuable",
+            "Community engagement tools": "Valuable",
+            "Gender and social inclusion resources": "Valuable",
+            "NSC governance tools and templates (e.g., proposal review checklists, site visit guides)": "Moderately valuable",
+            "Communication and visibility materials": "Highly valuable"
+          }
+        },
+        "implementing_agencies.q66": {
+          "kind": "single",
+          "value": "We do not have a defined process for this at present"
+        },
+        "implementing_agencies.q67": {
+          "kind": "matrix",
+          "values": {
+            "Searchable knowledge repository": "Important",
+            "Interactive dashboard of projects and results": "Very important",
+            "Online training/learning resources": "Moderately important",
+            "Communities of practice": "Moderately important",
+            "Mentoring and peer-learning tools": "Important",
+            "AI-assisted search": "Important",
+            "AI-assisted proposal development support": "Moderately important",
+            "AI-assisted reporting support": "Moderately important",
+            "Multilingual features": "Very important"
+          }
+        },
+        "implementing_agencies.q68": {
+          "kind": "text",
+          "value": "A collection of case studies and project development resources published on www.cepf.net",
+          "approved": true
+        },
+        "implementing_agencies.q69": {
+          "kind": "multi",
+          "values": [
+            "Limited staff time",
+            "Connectivity constraints",
+            "Language barriers",
+            "Lack of incentives to contribute content"
+          ]
+        },
+        "implementing_agencies.q70": {
+          "kind": "multi",
+          "values": [
+            "Dedicated GEF funding",
+            "Dedicated staffing structure",
+            "Regular content updates and quality assurance"
+          ]
+        },
+        "implementing_agencies.q71": {
+          "kind": "text",
+          "value": null,
+          "approved": false
         }
       }
     }
